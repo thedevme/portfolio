@@ -112,7 +112,7 @@ const Patriots = () => {
             <div
               className="img js-parallax"
               style={{
-                backgroundImage: "url(assets/images/nba-allstar-header.png)",
+                backgroundImage: "url(/assets/images/nba-allstar-header.png)",
                 width: "100%",
               }}
             />

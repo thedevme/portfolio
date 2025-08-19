@@ -1623,7 +1623,7 @@ hr {
 	position: relative;
 	margin-right: 30px;
 	float: left;
-	width: 121px;
+	width: 360px;
 	font-size: 0;
 }
 
@@ -1638,7 +1638,7 @@ hr {
 	-ms-flex-align: center;
 	align-items: center;
 	width: 100%;
-	height: 50px;
+	height: 70px;
 }
 
 .header .logo img {

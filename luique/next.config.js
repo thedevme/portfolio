@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+  output: "export",          // ✅ enables `next export`
+  images: {
+    unoptimized: true        // ✅ disables next/image optimization for static hosting
+  },
+  trailingSlash: true,       // ✅ ensures URLs like /about/ → about/index.html
+  assetPrefix: "/"           // ✅ makes sure assets resolve correctly
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

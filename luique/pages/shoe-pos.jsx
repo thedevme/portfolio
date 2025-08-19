@@ -112,7 +112,7 @@ const Patriots = () => {
             <div
               className="img js-parallax"
               style={{
-                backgroundImage: "url(assets/images/shoe-pos-header.png)",
+                backgroundImage: "url(/assets/images/shoe-pos-header.png)",
                 width: "100%",
               }}
             />
@@ -126,9 +126,9 @@ const Patriots = () => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-12">
-              <h2 className="text-center">Product Inventory Management</h2>
+              <h2 className="text-center">Product Default Screen</h2>
                 <p>
-                A companion iPhone app for admins that displays available products, pricing, and sales volume in real time. It provides a quick overview of items like Air Jordans, including inventory counts, sales history, and order management. The app ensures staff can monitor stock levels and place replenishment orders seamlessly while on the go.
+                A tablet-based product listing interface showcasing multiple styles of Jumpman Air Jordans. Includes category tabs for navigating between brands, detailed product cards with pricing, and a right-side cart summary showing customer selections, subtotal, and tax breakdown. Designed for quick product browsing and seamless checkout.
                 </p>
               </div>
             </div>
@@ -149,9 +149,9 @@ const Patriots = () => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-12">
-                <h2 className="text-center">roduct Size Inventory</h2>
+                <h2 className="text-center">Product Detail Screen</h2>
                 <p>
-                This screen shows a detailed product view for the Air Jordan 1, highlighting the total items in stock and breaking down inventory by shoe size. The grid layout allows an admin to quickly see available quantities across different sizes, making it easier to track stock levels and identify restocking needs.
+                A detailed view of an individual sneaker, showing size availability and quick add-to-cart options. The interface allows users to browse multiple sizes, view style information, and manage purchase quantities in a single glance. Designed for speed and simplicity in retail environments, this screen ensures seamless product selection and checkout flow.
                 </p>
               </div>
             </div>
@@ -172,9 +172,9 @@ const Patriots = () => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-12">
-                <h2 className="text-center">Product Editing Screen</h2>
+                <h2 className="text-center">Product Filter Screen</h2>
                 <p>
-                An editable product detail view where admins can update product information such as name, price, and available sizes. The screen includes an image selector for updating the product photo and structured input fields for managing shoe size inventory.
+                A filter overlay that lets customers quickly refine their shopping experience by brand, size, and gender. The interface highlights available options like Nike, Adidas, and Jordan, along with men’s and women’s sizing. Users can apply filters seamlessly while browsing, keeping the shopping cart and product list visible for a smooth point-of-sale experience.
                 </p>
               </div>
             </div>
@@ -195,9 +195,9 @@ const Patriots = () => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-12">
-                <h2 className="text-center">Edit Product Screen</h2>
+                <h2 className="text-center">Cart View</h2>
                 <p>
-                A product detail page that allows an admin to edit shoe information. Features fields for product name, price, and detailed inventory management by shoe size, ensuring accurate stock control for every variation.
+                A streamlined checkout interface showing selected items, quantities, and pricing with dynamic subtotal calculations. The screen includes options for adding discounts, shipping, and applying state/county taxes before presenting the final total. Designed for quick transactions with clear cost breakdowns to improve the customer checkout experience.
                 </p>
               </div>
             </div>
@@ -228,7 +228,7 @@ const Patriots = () => {
                 >
                   
                   <img
-                    src="/assets/images/shoe-pos-admin5.png"
+                    src="/assets/images/shoe-pos-admin1.png"
                     alt="Roster Screen"
                     style={{
                       borderTopLeftRadius: "20px",
@@ -240,9 +240,9 @@ const Patriots = () => {
                     }}
                   />
                   <div className="card-body text-white">
-                  <h2 className="text-center">Create New Product Screen</h2>
+                  <h2 className="text-center">Product Inventory Management</h2>
                     <p className="card-text">
-                    A product creation interface where admins can add new sneakers to the inventory. Includes fields for product name, pricing, and total stock count, with the ability to randomize inventory distribution by size. The screen also provides direct controls for editing size-specific quantities to ensure accurate and balanced stock management.
+                    A companion iPhone app for admins that displays available products, pricing, and sales volume in real time. It provides a quick overview of items like Air Jordans, including inventory counts, sales history, and order management. The app ensures staff can monitor stock levels and place replenishment orders seamlessly while on the go.
                     </p>
                   </div>
                 </div>
@@ -257,14 +257,14 @@ const Patriots = () => {
                     borderRadius: "20px",
                   }}
                 >
-                  <h2 className="text-center">Home Screen</h2>
+                  <h2 className="text-center">Product Size Inventory</h2>
                   <div className="card-body text-white">
                     <p className="card-text text-white">
-                    A tablet-based product listing interface showcasing multiple styles of Jumpman Air Jordans. Includes category tabs for navigating between brands, detailed product cards with pricing, and a right-side cart summary showing customer selections, subtotal, and tax breakdown. Designed for quick product browsing and seamless checkout.
+                    This screen shows a detailed product view for the Air Jordan 1, highlighting the total items in stock and breaking down inventory by shoe size. The grid layout allows an admin to quickly see available quantities across different sizes, making it easier to track stock levels and identify restocking needs.
                     </p>
                   </div>
                   <img
-                    src="/assets/images/shoe-pos-ipad1.png"
+                    src="/assets/images/shoe-pos-admin2.png"
                     alt="Roster Screen"
                     style={{
                       borderTopLeftRadius: "20px",
@@ -286,15 +286,15 @@ const Patriots = () => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-6">
-                <h2 className="text-left">Product Detail Screen</h2>
+                <h2 className="text-left">Product Editing Screen</h2>
                 <p>
-                A detailed view of an individual sneaker, showing size availability and quick add-to-cart options. The interface allows users to browse multiple sizes, view style information, and manage purchase quantities in a single glance. Designed for speed and simplicity in retail environments, this screen ensures seamless product selection and checkout flow.
+                An editable product detail view where admins can update product information such as name, price, and available sizes. The screen includes an image selector for updating the product photo and structured input fields for managing shoe size inventory.
                 </p>
               </div>
 
               <div className="col-lg-6">
                 <img
-                  src="/assets/images/shoe-pos-ipad2.png"
+                  src="/assets/images/shoe-pos-admin3.png"
                   width="425"
                   alt="Navigation Drawer"
                   class="float-end"
@@ -330,9 +330,9 @@ const Patriots = () => {
                     }}
                   />
                   <div className="card-body text-white">
-                  <h2 className="text-center">Product Filter Screen</h2>
+                  <h2 className="text-center">Edit Product Screen</h2>
                     <p className="card-text">
-                    A filter overlay that lets customers quickly refine their shopping experience by brand, size, and gender. The interface highlights available options like Nike, Adidas, and Jordan, along with men’s and women’s sizing. Users can apply filters seamlessly while browsing, keeping the shopping cart and product list visible for a smooth point-of-sale experience.
+                    A product detail page that lets an admin manage shoe information with fields for product name and price. Includes an interactive inventory manager that tracks stock by shoe size. To streamline testing and data entry, the screen also features a “Randomize Sizes” button that automatically generates randomized availability for each shoe size, helping quickly simulate stock variations.
                     </p>
                   </div>
                 </div>
@@ -347,10 +347,10 @@ const Patriots = () => {
                     borderRadius: "20px",
                   }}
                 >
-                  <h2 className="text-center">Cart View</h2>
+                  <h2 className="text-center">Product Brand Selection</h2>
                   <div className="card-body text-white">
                     <p className="card-text text-white">
-                    A streamlined checkout interface showing selected items, quantities, and pricing with dynamic subtotal calculations. The screen includes options for adding discounts, shipping, and applying state/county taxes before presenting the final total. Designed for quick transactions with clear cost breakdowns to improve the customer checkout experience.
+                    A catalog-style brand directory that showcases major footwear companies including Nike, Jordan, Adidas, Fila, Reebok, Champion, and Converse. Each brand tile highlights the available product count and allows users to quickly filter the inventory by brand, making browsing faster and more intuitive.
                     </p>
                   </div>
                   <img
