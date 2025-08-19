@@ -2,7 +2,6 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useState } from "react";
 import Layout from "../src/layouts/Layout";
-import { iPhoneCard, iPadCard } from "../src/components/PortfolioCards";
 const WorkSingleISotope = dynamic(
   () => import("../src/components/WorkSingleISotope"),
   {
@@ -83,7 +82,7 @@ const WorkSingle2 = () => {
               className="img js-parallax"
               style={{
                 backgroundImage:
-                  "url(https://luique.bslthemes.com/wp-content/uploads/2021/11/single6.jpg)",
+                  "url(assets/images/single6.jpg)",
               }}
             />
           </div>

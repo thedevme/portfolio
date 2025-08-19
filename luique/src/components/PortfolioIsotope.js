@@ -93,8 +93,8 @@ const PortfolioIsotope = ({ noViewMore }) => {
                     <a>
                       <img
                         decoding="async"
-                        src="assets/images/work4.jpeg"
-                        alt="Zorro"
+                        src="assets/images/nike-main.png"
+                        alt="Nike App"
                       />
                       <span className="overlay" />
                     </a>
@@ -105,13 +105,12 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 <span className="category"> Branding, Photography </span>
                 <h5 className="name">
                   <Link legacyBehavior href="/work-single">
-                    <a>Zorro</a>
+                    <a>Nike App</a>
                   </Link>
                 </h5>
                 <div className="text">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore.
+                  A sneaker shopping app with light/dark themes, bold visuals, intuitive navigation, and a live SwiftUI coding <br/>tutorial.
                   </p>
                 </div>
                 <Link legacyBehavior href="/work-single">
@@ -137,8 +136,8 @@ const PortfolioIsotope = ({ noViewMore }) => {
                     <a>
                       <img
                         decoding="async"
-                        src="assets/images/work2.jpeg"
-                        alt="Gooir"
+                        src="assets/images/bmw-main.png"
+                        alt="BMW App"
                       />
                       <span className="overlay" />
                     </a>
@@ -149,13 +148,12 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 <span className="category"> Branding, UI UX Design </span>
                 <h5 className="name">
                   <Link legacyBehavior href="/work-single">
-                    <a>Gooir</a>
+                    <a>BMW App</a>
                   </Link>
                 </h5>
                 <div className="text">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore.
+                  A premium BMW app concept combining connected-car data, driving insights, and curated content with sleek design and brand consistency.
                   </p>
                 </div>
                 <Link legacyBehavior href="/work-single">
@@ -181,8 +179,8 @@ const PortfolioIsotope = ({ noViewMore }) => {
                     <a>
                       <img
                         decoding="async"
-                        src="assets/images/work7.jpg"
-                        alt="Explore"
+                        src="assets/images/patriots-main.png"
+                        alt="Patriots App"
                       />
                       <span className="overlay" />
                     </a>
@@ -193,13 +191,12 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 <span className="category"> Development, UI UX Design </span>
                 <h5 className="name">
                   <Link legacyBehavior href="/work-single">
-                    <a>Explore</a>
+                    <a>Patriots App</a>
                   </Link>
                 </h5>
                 <div className="text">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore.
+                  A fan-focused sports app concept with multi-team navigation, live updates, and a menu-first design blending branding and usability.
                   </p>
                 </div>
                 <Link legacyBehavior href="/work-single">
@@ -225,8 +222,8 @@ const PortfolioIsotope = ({ noViewMore }) => {
                     <a>
                       <img
                         decoding="async"
-                        src="assets/images/work1.jpeg"
-                        alt="Mozar"
+                        src="assets/images/tesla-main.png"
+                        alt="Tesla App"
                       />
                       <span className="overlay" />
                     </a>
@@ -237,13 +234,12 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 <span className="category"> Branding, Photography </span>
                 <h5 className="name">
                   <Link legacyBehavior href="/work-single">
-                    <a>Mozar</a>
+                    <a>Tesla App</a>
                   </Link>
                 </h5>
                 <div className="text">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore.
+                  A Tesla charging app concept featuring real-time availability, smart route planning, battery insights, and minimalist design with intuitive controls.
                   </p>
                 </div>
                 <Link legacyBehavior href="/work-single">
@@ -269,8 +265,8 @@ const PortfolioIsotope = ({ noViewMore }) => {
                     <a>
                       <img
                         decoding="async"
-                        src="assets/images/single8.jpg"
-                        alt="Stay Fit"
+                        src="assets/images/allstar-main.png"
+                        alt="NBA All-Star App"
                       />
                       <span className="overlay" />
                     </a>
@@ -281,13 +277,12 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 <span className="category"> Development, UI UX Design </span>
                 <h5 className="name">
                   <Link legacyBehavior href="/work-single">
-                    <a>Stay Fit</a>
+                    <a>NBA All-Star App</a>
                   </Link>
                 </h5>
                 <div className="text">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore.
+                  An interactive NBA All-Star voting app with drag-and-drop lineups, player stats, and dynamic court visuals for fan engagement.
                   </p>
                 </div>
                 <Link legacyBehavior href="/work-single">
@@ -313,8 +308,8 @@ const PortfolioIsotope = ({ noViewMore }) => {
                     <a>
                       <img
                         decoding="async"
-                        src="assets/images/single6.jpg"
-                        alt="Kana"
+                        src="assets/images/financial-main.png"
+                        alt="Financial App"
                       />
                       <span className="overlay" />
                     </a>
@@ -325,13 +320,12 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 <span className="category"> Development, Photography </span>
                 <h5 className="name">
                   <Link legacyBehavior href="/work-single">
-                    <a>Kana</a>
+                    <a>Financial App</a>
                   </Link>
                 </h5>
                 <div className="text">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore.
+                  A financial dashboard offering real-time data, portfolio analytics, watchlists, risk analysis, and alerts with a responsive, user-friendly design.
                   </p>
                 </div>
                 <Link legacyBehavior href="/work-single">

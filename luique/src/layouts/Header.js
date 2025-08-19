@@ -27,9 +27,9 @@ const Header = () => {
                 <Link href="/" legacyBehavior>
                   <a>
                     <img
-                      width={228}
-                      height={38}
-                      src="assets/images/logo2.png"
+                      width={120}
+                      height={20}
+                      src="assets/images/mobile-logo-scaled.png"
                       alt=""
                     />
                   </a>

@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST={"work-single.jsx -> ../src/components/WorkSingleISotope":{"id":"work-single.jsx -> ../src/components/WorkSingleISotope","files":["static/chunks/src_components_WorkSingleISotope_js.js"]}}
+self.__REACT_LOADABLE_MANIFEST={}

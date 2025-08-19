@@ -71,7 +71,7 @@ body {
 	margin: 0;
 	padding: 0;
 	height: auto !important;
-	font-size: 19px;
+	font-size: 16px;
 	color: #262626;
 	font-family: "Jost", sans-serif;
 	font-weight: 400;
@@ -204,21 +204,9 @@ h6 {
 .post-content h1,
 .post-content h2,
 .post-content h3,
+.post-content h4,
 .post-content h5,
 .post-content h6 {
-	margin: 0;
-	margin-bottom: 30px;
-}
-
-.post-content h4 {
-	font-family: "Jost";
-	font-size: 34px;
-	font-weight: 700;
-	line-height: 1;
-	letter-spacing: 0.05em;
-	color: #000;
-	text-align: left;
-	text-transform: uppercase;
 	margin: 0;
 	margin-bottom: 30px;
 }
@@ -2257,7 +2245,7 @@ hr {
 }
 
 .portfolio-template .section.section-inner {
-	padding-bottom: 25px;
+	padding-bottom: 100px;
 }
 
 .section.section-inner.m-archive {
@@ -5667,44 +5655,17 @@ a.wp-block-button__link {
 
 /* Portfolio Section Layout */
 .portfolio-container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: stretch;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
-@media (min-width: 576px) {
-  .portfolio-container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .portfolio-container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .portfolio-container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .portfolio-container {
-    max-width: 1140px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .portfolio-container {
-    max-width: 1320px;
-  }
+.bg-custom {
+	background-color: #1d222a;
 }
 
 .portfolio-ipad-section {
@@ -5712,12 +5673,8 @@ a.wp-block-button__link {
   overflow: hidden;
 }
 
-.portfolio-iphone-section {
-  overflow: hidden;
-}
-
 .portfolio-grid-item {
-  background: #1d222a;
+  background: white;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -5730,100 +5687,53 @@ a.wp-block-button__link {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
-
-
 .portfolio-tile-content {
-  padding: 40px 40px 0px !important;
+  padding: 60px 50px 0px;
   display: flex;
   flex-direction: column;
-  gap: 30px !important;
+  gap: 40px;
   flex: 1;
-}
-
-.portfolio-grid-item:not(.portfolio-ipad-section) .portfolio-tile-content {
-  padding-bottom: 0px;
-}
-
-.portfolio-grid-item:not(.portfolio-ipad-section) .portfolio-image-wrapper {
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-}
-
-.portfolio-grid-item:not(.portfolio-ipad-section) .portfolio-phone-mockup {
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-}
-
-.portfolio-grid-item:not(.portfolio-ipad-section) {
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-}
-
-.portfolio-container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: stretch;
-  margin-bottom: 20px;
-}
-
-.portfolio-container.iphone-only {
-  gap: 40px;
 }
 
 .portfolio-copy-wrapper {
   flex: 1;
 }
 
-.portfolio-ipad-section .portfolio-copy-wrapper {
-  flex: 0 0 40% !important;
-}
-
 .portfolio-tile-headline {
-  font-family: "Jost";
-  font-size: 34px;
+  font-size: 3.5rem;
   font-weight: 700;
-  line-height: 1;
-  letter-spacing: 0.05em;
-  color: #000;
-  text-align: left;
-  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #1d1d1f;
   margin-bottom: 20px;
 }
 
 .portfolio-color-pop {
-  color: #29a587;
+  color: #06c;
 }
 
 .portfolio-tile-copy {
-  font-family: "Jost", sans-serif;
-  font-size: 19px;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #424245;
   font-weight: 400;
-  line-height: 1.7;
-  color: #fff;
 }
 
 .portfolio-image-wrapper {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 0;
   overflow: hidden;
-  height: 336px !important;
+  height: 500px;
 }
 
 .portfolio-phone-mockup {
-  width: 243px !important;
-  height: 336px !important;
+  width: 280px;
+  height: auto;
   max-width: 100%;
-  transform: translateY(0px);
-  overflow: hidden;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+  transform: translateY(80px);
 }
 
 .portfolio-phone-frame {
@@ -5893,35 +5803,24 @@ a.wp-block-button__link {
 }
 
 .portfolio-ipad-section .portfolio-tile-content {
-  padding: 60px 120px 0px 120px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 40px !important;
-  flex: 1 !important;
+  padding: 60px 0px 0px 50px;
 }
 
 .portfolio-ipad-section .portfolio-image-wrapper {
-  margin-right: 0 !important;
-  padding-right: 0 !important;
-  overflow: visible !important;
+  margin-right: 0;
+  padding-right: 0;
 }
 
 .portfolio-ipad-wrapper {
-  display: flex !important;
-  justify-content: flex-end !important;
-  align-items: flex-end !important;
-  margin-top: 20px !important;
-  margin-bottom: 0 !important;
-  overflow: visible !important;
-  height: 420px !important;
-  padding-right: 120px !important;
+  justify-content: flex-end;
+  overflow: hidden;
 }
 
 .portfolio-ipad-mockup {
-  width: 280px;
+  width: 600px;
   height: auto;
-  max-width: 100%;
-  transform: none !important;
+  max-width: none;
+  transform: translateX(80px);
 }
 
 .portfolio-ipad-frame {
@@ -6041,32 +5940,4 @@ a.wp-block-button__link {
   .portfolio-phone-frame {
     height: 420px;
   }
-}
-
-/* Left Device Card Styles */
-.left-device {
-  flex-direction: row-reverse !important;
-}
-
-.left-device .portfolio-tile-content {
-  padding: 60px 120px 0px 120px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 40px !important;
-  flex: 1 !important;
-}
-
-.left-device .portfolio-ipad-wrapper {
-  display: flex !important;
-  justify-content: flex-start !important;
-  align-items: flex-end !important;
-  margin-top: 20px !important;
-  margin-bottom: 0 !important;
-  overflow: visible !important;
-  height: 420px !important;
-  padding-left: 120px !important;
-}
-
-.left-device .portfolio-ipad-mockup {
-  transform: none !important;
 }

@@ -30,27 +30,27 @@ const educationData = [
 const experienceData = [
   {
     id: 1,
-    title: "UI Head & Manager",
-    company: "Soft Tech Inc.",
-    dec: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    startYear: "2020",
+    title: "FREELANCE iOS DESIGNER & DEVELOPER | REMOTE",
+    company: "AMERICAN HANDY CO.",
+    dec: "I spearheaded the design and launch of a mobile-first handyman booking app that allowed users to request services across multiple home repair categories. To streamline the onboarding process, I developed a dynamic SwiftUI-based form system that adapted in real time to user input, customizing flows for each request. I also architected reusable, API-driven components that ensured data consistency and reduced development time across the service request experience. Working closely with backend engineers, I aligned form logic with service tiers, real-time validations, and flexible navigation to deliver a seamless booking experience. NOTABLE IMPACT: Reduced onboarding time by 40% and accelerated feature rollout through a scalable form architecture that improved service request accuracy.",
+    startYear: "Oct 2024",
     endYear: false,
   },
   {
     id: 2,
-    title: "UI / UX Specialist",
-    company: "Kana Design Studio",
-    dec: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    startYear: "2018",
-    endYear: "2020",
+    title: "SR. iOS ENGINEER, INSTRUCTOR, MENTOR | REMOTE",
+    company: "ED FARM",
+    dec: "I led the end-to-end design and development of an education-focused iOS/iPadOS app built to support digital learning for K–12 students. To enhance personalization, I implemented a modular dynamic form experience that adapted in real time to user input, improving both onboarding and service flows. I designed intuitive UI/UX using SwiftUI, ensuring accessibility across devices and full alignment with Apple’s Human Interface Guidelines. In collaboration with backend engineers, I integrated reusable, API-driven components to streamline logic across service types and accelerate development. NOTABLE IMPACT: Increased onboarding completion by 35% and improved code reusability across features, reducing new form setup time by 50%.",
+    startYear: "Aug 2021",
+    endYear: "Oct 2023",
   },
   {
     id: 3,
-    title: "Plugins Developer",
-    company: "Fiverr.com",
-    dec: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    startYear: "2016",
-    endYear: "2018",
+    title: "iOS ENGINEER & SR. iOS ENGINEER | REMOTE",
+    company: "FAN REACH",
+    dec: "I architected and delivered scalable iOS apps for major sports organizations across the NFL, NHL, and MLS by leveraging reusable code frameworks. I developed the New England Patriots’ first watchOS app, centered on the NFL Draft, which was later featured by CBS Sports for its innovative fan engagement and wearable integration. Additionally, I created a modular sports app framework that streamlined onboarding and customization for client teams, accelerating delivery timelines across multiple projects. NOTABLE IMPACT: Reduced app setup time by 60% across franchises through a reusable core framework and boosted wearable engagement metrics for flagship teams.",
+    startYear: "Apr 2013",
+    endYear: "Apr 2021",
   },
 ];
 
@@ -87,55 +87,7 @@ const Resume = () => {
       <div className="v-line v-line-left">
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-              <h5
-                className="history-title scrolla-element-anim-1 scroll-animate"
-                data-animate="active"
-              >
-                <span> Education </span>
-              </h5>
-              <div className="history-items">
-                {educationData.map((education, i) => (
-                  <div
-                    key={education.id}
-                    className={`history-item lui-collapse-item scroll-animate ${
-                      educationToggle === education.id ? "opened" : ""
-                    }`}
-                    data-animate="active"
-                  >
-                    <h6
-                      className={`name lui-collapse-btn ${
-                        educationToggle == education.id ? "active" : ""
-                      }`}
-                      onClick={() =>
-                        setEducationToggle(
-                          educationToggle == education.id ? null : education.id
-                        )
-                      }
-                    >
-                      <span> {education.academy} </span>
-                    </h6>
-                    <div className="history-content">
-                      <div className="subname">
-                        <span> {education.title} </span>
-                      </div>
-                      <div className="date lui-subtitle">
-                        <span>
-                          {" "}
-                          {education.startYear} - {education.endYear}{" "}
-                        </span>
-                      </div>
-                      <div className="text">
-                        <div>
-                          <p>{education.dec}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <h5
                 className="history-title scrolla-element-anim-1 scroll-animate"
                 data-animate="active"
@@ -186,7 +138,7 @@ const Resume = () => {
             </div>
           </div>
           <div className="lui-bgtitle">
-            <span> History </span>
+            <span> Resume </span>
           </div>
         </div>
       </div>

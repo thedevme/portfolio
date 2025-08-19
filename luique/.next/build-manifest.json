@@ -25,15 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/bmw": [
+    "/shoe-pos": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/bmw.js"
-    ],
-    "/work-single": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/work-single.js"
+      "static/chunks/pages/shoe-pos.js"
     ]
   },
   "ampFirstPages": []
