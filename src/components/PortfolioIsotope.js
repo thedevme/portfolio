@@ -60,7 +60,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
             onClick={handleFilterKeyChange("sorting-photo")}
             data-href=".sorting-photo"
           >
-            Photography
+            App Store
           </a>
           <a
             className={`c-pointer lui-subtitle ${activeBtn(
