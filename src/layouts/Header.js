@@ -101,118 +101,15 @@ const Header = () => {
                                 Resume
                               </a>
                             </li>
-                                                         <li className="menu-item">
-                               <a
-                                 className="splitting-text-anim-2"
-                                 data-splitting="chars"
-                                 href="/#testimonials-section"
-                                 onClick={() => linkClick()}
-                               >
-                                 Testimonials
-                               </a>
-                             </li>
                             <li className="menu-item">
                               <a
                                 className="splitting-text-anim-2"
                                 data-splitting="chars"
-                                href="/#pricing-section"
+                                href="/#books-section"
                                 onClick={() => linkClick()}
                               >
-                                Pricing
+                                Books
                               </a>
-                            </li>
-                            <li className="menu-item">
-                              <a
-                                className="splitting-text-anim-2"
-                                data-splitting="chars"
-                                href="/#blog-section"
-                                onClick={() => linkClick()}
-                              >
-                                Blog
-                              </a>
-                            </li>
-                            <li className="menu-item">
-                              <a
-                                className="splitting-text-anim-2"
-                                data-splitting="chars"
-                                href="/#contact-section"
-                                onClick={() => linkClick()}
-                              >
-                                Contact
-                              </a>
-                            </li>
-                            <li
-                              className={`menu-item menu-item-has-children has-children ${
-                                pageToggle ? "opened" : "closed"
-                              }`}
-                            >
-                              <a
-                                className="splitting-text-anim-2"
-                                data-splitting="chars"
-                                onClick={() => setPageToggle(!pageToggle)}
-                              >
-                                Pages
-                                <i className="fas fa-chevron-down"></i>
-                              </a>
-
-                              <ul
-                                className="sub-menu"
-                                style={{
-                                  marginTop: "1rem",
-                                  display: `${pageToggle ? "block" : "none"}`,
-                                }}
-                              >
-                                <li className="menu-item">
-                                  <Link legacyBehavior href="/works-list">
-                                    <a
-                                      className="splitting-text-anim-1"
-                                      data-splitting="chars"
-                                    >
-                                      Works (List)
-                                    </a>
-                                  </Link>
-                                </li>
-                                <li className="menu-item">
-                                  <Link legacyBehavior href="/works">
-                                    <a
-                                      className="splitting-text-anim-1"
-                                      data-splitting="chars"
-                                    >
-                                      Works (Grid)
-                                    </a>
-                                  </Link>
-                                </li>
-                                <li className="menu-item">
-                                  <Link legacyBehavior href="/work-single">
-                                    <a
-                                      className="splitting-text-anim-1"
-                                      data-splitting="chars"
-                                    >
-                                      Work Single Page
-                                    </a>
-                                  </Link>
-                                </li>
-                                <li className="menu-item">
-                                  <Link legacyBehavior href="/blog">
-                                    <a
-                                      className=" splitting-text-anim-1"
-                                      data-splitting="chars"
-                                    >
-                                      Blog
-                                    </a>
-                                  </Link>
-                                </li>
-                                <li className="menu-item">
-                                  <Link legacyBehavior href="/blog-single">
-                                    <a
-                                      className="splitting-text-anim-1"
-                                      data-splitting="chars"
-                                    >
-                                      Single Post
-                                    </a>
-                                  </Link>
-                                </li>
-                              </ul>
                             </li>
                           </ul>
                         </div>

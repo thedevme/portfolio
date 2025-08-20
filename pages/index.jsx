@@ -508,7 +508,7 @@ const Index = () => {
       <Resume />
 
       {/* Section - Blog */}
-      <section className="lui-section lui-gradient-top" id="blog-section">
+      <section className="lui-section lui-gradient-top" id="books-section">
         {/* Heading */}
         <div className="lui-heading">
           <div className="container">
