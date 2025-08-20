@@ -3,3 +3,12 @@ node_modules
 public/assets/.DS_Store
 
 .DS_Store
+
+.next/
+out/
+
+.next/
+out/
+
+.next/
+out/
