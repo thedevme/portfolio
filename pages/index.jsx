@@ -229,7 +229,7 @@ const Index = () => {
                     <span>Interface Craft</span>
                   </div>
                   <h5 className="lui-title">
-                    <span> iOS Development </span>
+                    <span> iOS Design New</span>
                   </h5>
                   <div className="lui-text">
                     <div>
@@ -247,10 +247,6 @@ const Index = () => {
                   />
                 </div>
               </SwiperSlide>
-
-
-
-              
               <div className="swiper-pagination" />
             </Swiper>
             <div className="lui-bgtitle">
