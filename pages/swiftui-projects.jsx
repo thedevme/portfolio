@@ -108,12 +108,12 @@ const BlogSingle = () => {
                   <ul className="gallery gallery-columns-2">
                     <li className="gallery-item">
                       <figure>
-                        <img src="assets/images/blog8.jpg" alt="" />
+                        <img src="/assets/images/blog8.jpg" alt="" />
                       </figure>
                     </li>
                     <li className="gallery-item">
                       <figure>
-                        <img src="assets/images/blog6.jpg" alt="" />
+                        <img src="/assets/images/blog6.jpg" alt="" />
                       </figure>
                     </li>
                   </ul>

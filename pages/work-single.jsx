@@ -10,7 +10,7 @@ const WorkSingleISotope = dynamic(
 );
 const WorkSingle = () => {
   const [videoToggle, setVideoToggle] = useState(false);
-  
+
   // Always apply dark theme
   useEffect(() => {
     if (typeof document !== 'undefined') {
@@ -20,7 +20,7 @@ const WorkSingle = () => {
       document.body.className = 'dark-skin';
     }
   }, []);
-  
+
   return (
     <Layout pageClassName={"portfolio-template"}>
       {/* Section Started Heading */}
@@ -86,7 +86,7 @@ const WorkSingle = () => {
               className="img js-parallax"
               style={{
                 backgroundImage:
-                  "url(assets/images/single4.jpg)",
+                  "url(/assets/images/single4.jpg)",
               }}
             />
           </div>
@@ -172,7 +172,7 @@ const WorkSingle = () => {
         <div className={`video ${videoToggle ? "active" : ""}`}>
           <div
             className="img js-parallax"
-            style={{ backgroundImage: "url(assets/images/blog9.jpg)" }}
+            style={{ backgroundImage: "url(/assets/images/blog9.jpg)" }}
           />
           <iframe
             className="js-video-iframe"

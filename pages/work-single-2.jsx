@@ -82,7 +82,7 @@ const WorkSingle2 = () => {
               className="img js-parallax"
               style={{
                 backgroundImage:
-                  "url(assets/images/single6.jpg)",
+                  "url(/assets/images/single6.jpg)",
               }}
             />
           </div>
@@ -100,9 +100,9 @@ const WorkSingle2 = () => {
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div className="post-content">
                 <p>
-                  A modern weather application built for iOS that provides users with 
-                  real-time weather information, detailed forecasts, and beautiful 
-                  visual representations of weather data. The app features a clean, 
+                  A modern weather application built for iOS that provides users with
+                  real-time weather information, detailed forecasts, and beautiful
+                  visual representations of weather data. The app features a clean,
                   intuitive interface that makes checking the weather a delightful experience.
                 </p>
               </div>
@@ -110,9 +110,9 @@ const WorkSingle2 = () => {
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div className="post-content">
                 <p>
-                  Built using SwiftUI and following Apple's Human Interface Guidelines, 
-                  the app seamlessly integrates with iOS features like widgets, 
-                  notifications, and Siri shortcuts. The backend utilizes Core Data 
+                  Built using SwiftUI and following Apple's Human Interface Guidelines,
+                  the app seamlessly integrates with iOS features like widgets,
+                  notifications, and Siri shortcuts. The backend utilizes Core Data
                   for local storage and integrates with weather APIs for real-time data.
                 </p>
               </div>
@@ -127,7 +127,7 @@ const WorkSingle2 = () => {
           <WorkSingleISotope />
         </div>
       </div>
-      
+
       {/* Apple-style Feature Introduction */}
       <section className="section section-inner">
         <div className="container">
@@ -140,9 +140,9 @@ const WorkSingle2 = () => {
           </div>
         </div>
       </section>
-      
+
       <div className="portfolio-container">
-        <iPadCard 
+        <iPadCard
           title="Premium experience on every device."
           copy="Seamlessly sync your preferences across iPhone, iPad, and Mac for a unified reading experience wherever you are."
           colorPop="Premium experience"
@@ -150,12 +150,12 @@ const WorkSingle2 = () => {
       </div>
 
       <div className="portfolio-container">
-        <iPhoneCard 
+        <iPhoneCard
           title="The feed that feeds your interests."
           copy="As you read, Apple News gets a better understanding of your interests and suggests relevant stories that you can easily find throughout the app."
           colorPop="The feed that feeds"
         />
-        <iPhoneCard 
+        <iPhoneCard
           title="Smart feeds just for you."
           copy="AI-powered suggestions learn from your reading habits to deliver personalized content recommendations across all devices."
           colorPop="Smart feeds"
@@ -173,9 +173,9 @@ const WorkSingle2 = () => {
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div className="post-content">
                 <p>
-                  The app architecture follows MVVM pattern with SwiftUI, ensuring 
-                  clean separation of concerns and maintainable code. Core Data 
-                  manages local weather data caching, while Combine framework 
+                  The app architecture follows MVVM pattern with SwiftUI, ensuring
+                  clean separation of concerns and maintainable code. Core Data
+                  manages local weather data caching, while Combine framework
                   handles asynchronous data flow and state management.
                 </p>
               </div>
@@ -183,9 +183,9 @@ const WorkSingle2 = () => {
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div className="post-content">
                 <p>
-                  Performance optimization includes efficient image caching, 
-                  background refresh capabilities, and minimal battery usage. 
-                  The app supports both light and dark modes, accessibility 
+                  Performance optimization includes efficient image caching,
+                  background refresh capabilities, and minimal battery usage.
+                  The app supports both light and dark modes, accessibility
                   features, and localization for multiple languages.
                 </p>
               </div>
@@ -198,7 +198,7 @@ const WorkSingle2 = () => {
         <div className={`video ${videoToggle ? "active" : ""}`}>
           <div
             className="img js-parallax"
-            style={{ backgroundImage: "url(assets/images/blog8.jpg)" }}
+            style={{ backgroundImage: "url(/assets/images/blog8.jpg)" }}
           />
           <iframe
             className="js-video-iframe"

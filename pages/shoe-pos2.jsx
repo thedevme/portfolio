@@ -13,7 +13,7 @@ const ShoePos = () => {
       document.body.className = 'dark-skin';
     }
   }, []);
-  
+
   return (
     <Layout pageClassName={"portfolio-template"}>
       {/* Section Started Heading */}
@@ -114,7 +114,7 @@ const ShoePos = () => {
               className="img js-parallax"
               style={{
                 backgroundImage:
-                  "url(assets/images/bmw-header.png)"
+                  "url(/assets/images/bmw-header.png)"
               }}
             />
           </div>
@@ -127,7 +127,7 @@ const ShoePos = () => {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <div className="portfolio-container" style={{ marginTop: '70px' }}>
-                <PhoneCards 
+                <PhoneCards
                   title="Sales Interface"
                   copy="Streamlined sales interface with quick product lookup, barcode scanning, and multiple payment options. Process transactions efficiently with customer information and loyalty integration."
                   colorPop="Sales Interface"
@@ -136,13 +136,13 @@ const ShoePos = () => {
                 />
               </div>
               <div className="portfolio-container iphone-only">
-                <PhoneCards 
+                <PhoneCards
                   title="Inventory Management"
                   copy="Comprehensive inventory tracking with size and color variants, low stock alerts, and automated reorder suggestions. Manage multiple locations and track product performance."
                   colorPop="Inventory Management"
                   imageSrc="/assets/images/bmw2-cropped.png"
                 />
-                <PhoneCards 
+                <PhoneCards
                   title="Analytics Dashboard"
                   copy="Detailed sales analytics with performance metrics, customer insights, and trend analysis. Generate reports for business intelligence and strategic planning."
                   colorPop="Analytics Dashboard"
@@ -166,9 +166,9 @@ const ShoePos = () => {
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div className="post-content">
                 <p>
-                  Built with React for the frontend and Node.js with Express for the 
-                  backend API. PostgreSQL database handles complex inventory relationships 
-                  and transaction data. Real-time updates using WebSocket connections 
+                  Built with React for the frontend and Node.js with Express for the
+                  backend API. PostgreSQL database handles complex inventory relationships
+                  and transaction data. Real-time updates using WebSocket connections
                   ensure synchronized data across multiple terminals and locations.
                 </p>
               </div>
@@ -176,10 +176,10 @@ const ShoePos = () => {
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div className="post-content">
                 <p>
-                  Advanced features include barcode scanner integration, receipt 
-                  printing, and payment gateway integration. Offline capability 
-                  ensures business continuity during network interruptions. 
-                  Comprehensive security measures protect sensitive customer and 
+                  Advanced features include barcode scanner integration, receipt
+                  printing, and payment gateway integration. Offline capability
+                  ensures business continuity during network interruptions.
+                  Comprehensive security measures protect sensitive customer and
                   financial data with role-based access controls.
                 </p>
               </div>

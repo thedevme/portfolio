@@ -93,7 +93,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
                     <a>
                       <img
                         decoding="async"
-                        src="assets/images/nike-main.png"
+                        src="/assets/images/nike-main.png"
                         alt="Nike App"
                       />
                       <span className="overlay" />
@@ -120,7 +120,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
               <div
                 className="bg-img"
                 style={{
-                  backgroundImage: "url(assets/images/pat-2.png)",
+                  backgroundImage: "url(/assets/images/pat-2.png)",
                 }}
               />
             </div>
@@ -136,7 +136,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
                     <a>
                       <img
                         decoding="async"
-                        src="assets/images/bmw-main.png"
+                        src="/assets/images/bmw-main.png"
                         alt="BMW App"
                       />
                       <span className="overlay" />
@@ -163,7 +163,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
               <div
                 className="bg-img"
                 style={{
-                  backgroundImage: "url(assets/images/pat-2.png)",
+                  backgroundImage: "url(/assets/images/pat-2.png)",
                 }}
               />
             </div>
@@ -179,7 +179,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
                     <a>
                       <img
                         decoding="async"
-                        src="assets/images/patriots-main.png"
+                        src="/assets/images/patriots-main.png"
                         alt="Patriots App"
                       />
                       <span className="overlay" />
@@ -206,7 +206,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
               <div
                 className="bg-img"
                 style={{
-                  backgroundImage: "url(assets/images/pat-2.png)",
+                  backgroundImage: "url(/assets/images/pat-2.png)",
                 }}
               />
             </div>
@@ -222,7 +222,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
                     <a>
                       <img
                         decoding="async"
-                        src="assets/images/tesla-main.png"
+                        src="/assets/images/tesla-main.png"
                         alt="Tesla App"
                       />
                       <span className="overlay" />
@@ -249,7 +249,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
               <div
                 className="bg-img"
                 style={{
-                  backgroundImage: "url(assets/images/pat-2.png)",
+                  backgroundImage: "url(/assets/images/pat-2.png)",
                 }}
               />
             </div>
@@ -265,7 +265,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
                     <a>
                       <img
                         decoding="async"
-                        src="assets/images/allstar-main.png"
+                        src="/assets/images/allstar-main.png"
                         alt="NBA All-Star App"
                       />
                       <span className="overlay" />
@@ -292,7 +292,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
               <div
                 className="bg-img"
                 style={{
-                  backgroundImage: "url(assets/images/pat-2.png)",
+                  backgroundImage: "url(/assets/images/pat-2.png)",
                 }}
               />
             </div>
@@ -308,7 +308,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
                     <a>
                       <img
                         decoding="async"
-                        src="assets/images/financial-main.png"
+                        src="/assets/images/financial-main.png"
                         alt="Financial App"
                       />
                       <span className="overlay" />
@@ -335,7 +335,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
               <div
                 className="bg-img"
                 style={{
-                  backgroundImage: "url(assets/images/pat-2.png)",
+                  backgroundImage: "url(/assets/images/pat-2.png)",
                 }}
               />
             </div>

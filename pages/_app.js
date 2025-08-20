@@ -17,7 +17,7 @@ const App = ({ Component, pageProps }) => {
       document.body.classList.remove('light-skin');
       // Force the body class
       document.body.className = 'dark-skin';
-      
+
       // Set up a mutation observer to ensure dark theme stays applied
       const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
@@ -29,9 +29,9 @@ const App = ({ Component, pageProps }) => {
           }
         });
       });
-      
+
       observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
-      
+
       return () => observer.disconnect();
     }
   }, []);
@@ -61,49 +61,49 @@ const App = ({ Component, pageProps }) => {
         {/* CSS STYLES */}
         <link
           rel="stylesheet"
-          href="assets/css/vendors/bootstrap.css"
+          href="/assets/css/vendors/bootstrap.css"
           type="text/css"
           media="all"
         />
         <link
           rel="stylesheet"
-          href="assets/fonts/font-awesome/css/font-awesome.css"
+          href="/assets/fonts/font-awesome/css/font-awesome.css"
           type="text/css"
           media="all"
         />
         <link
           rel="stylesheet"
-          href="assets/css/vendors/magnific-popup.css"
+          href="/assets/css/vendors/magnific-popup.css"
           type="text/css"
           media="all"
         />
         <link
           rel="stylesheet"
-          href="assets/css/vendors/splitting.css"
+          href="/assets/css/vendors/splitting.css"
           type="text/css"
           media="all"
         />
         <link
           rel="stylesheet"
-          href="assets/css/vendors/swiper.css"
+          href="/assets/css/vendors/swiper.css"
           type="text/css"
           media="all"
         />
         <link
           rel="stylesheet"
-          href="assets/css/vendors/animate.css"
+          href="/assets/css/vendors/animate.css"
           type="text/css"
           media="all"
         />
         <link
           rel="stylesheet"
-          href="assets/css/style.css"
+          href="/assets/css/style.css"
           type="text/css"
           media="all"
         />
         <link
           rel="stylesheet"
-          href="assets/css/dark.css"
+          href="/assets/css/dark.css"
           type="text/css"
           media="all"
         />
@@ -120,7 +120,7 @@ const App = ({ Component, pageProps }) => {
                   document.body.classList.add('dark-skin');
                   document.body.classList.remove('light-skin');
                 }
-                
+
                 // Also watch for body changes and reapply
                 if (document.readyState === 'loading') {
                   document.addEventListener('DOMContentLoaded', function() {

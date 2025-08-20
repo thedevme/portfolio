@@ -40,7 +40,7 @@ const Blog = () => {
                     <Link legacyBehavior href="/blog-single">
                       <a>
                         <img
-                          src="assets/images/single7.jpg"
+                          src="/assets/images/single7.jpg"
                           alt="The Main Thing For The Designer"
                           loading="lazy"
                         />
@@ -78,7 +78,7 @@ const Blog = () => {
                     <Link legacyBehavior href="/blog-single">
                       <a>
                         <img
-                          src="assets/images/blog-4-scaled-1.jpg"
+                          src="/assets/images/blog-4-scaled-1.jpg"
                           alt="Follow Your Own Design Process"
                           loading="lazy"
                         />
@@ -116,7 +116,7 @@ const Blog = () => {
                     <Link legacyBehavior href="/blog-single">
                       <a>
                         <img
-                          src="assets/images/blog-2.jpg"
+                          src="/assets/images/blog-2.jpg"
                           alt="Usability Secrets to Create Better Interfaces"
                           loading="lazy"
                         />

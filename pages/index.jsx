@@ -91,26 +91,26 @@ const Index = () => {
                 <div className="circle circle-1">
                    <img
                     decoding="async"
-                    src="assets/images/craig-clayton-profile.jpg"
+                    src="/assets/images/craig-clayton-profile.jpg"
                     alt="<b>Craig</b> Clayton"
                   />
                 </div>
                 <span
                   className="circle img-1"
                   style={{
-                    backgroundImage: "url(assets/images/pat-1.png)",
+                    backgroundImage: "url(/assets/images/pat-1.png)",
                   }}
                 />
                 <span
                   className="circle img-2"
                   style={{
-                    backgroundImage: "url(assets/images/pat-2.png)",
+                    backgroundImage: "url(/assets/images/pat-2.png)",
                   }}
                 />
                 <span
                   className="circle img-3"
                   style={{
-                    backgroundImage: "url(assets/images/pat-2.png)",
+                    backgroundImage: "url(/assets/images/pat-2.png)",
                   }}
                 />
                 <div className="info-list">
@@ -195,7 +195,7 @@ const Index = () => {
                   <div
                     className="image"
                     style={{
-                      backgroundImage: "url(assets/images/pat-2.png)",
+                      backgroundImage: "url(/assets/images/pat-2.png)",
                     }}
                   />
                 </div>
@@ -219,7 +219,7 @@ const Index = () => {
                   <div
                     className="image"
                     style={{
-                      backgroundImage: "url(assets/images/pat-2.png)",
+                      backgroundImage: "url(/assets/images/pat-2.png)",
                     }}
                   />
                 </div>
@@ -243,7 +243,7 @@ const Index = () => {
                   <div
                     className="image"
                     style={{
-                      backgroundImage: "url(assets/images/pat-2.png)",
+                      backgroundImage: "url(/assets/images/pat-2.png)",
                     }}
                   />
                 </div>
@@ -547,7 +547,7 @@ const Index = () => {
                       <a>
                         <img
                           decoding="async"
-                          src="assets/images/swiftui-projects.jpg"
+                          src="/assets/images/swiftui-projects.jpg"
                           alt="The Main Thing For The Designer"
                         />
                       </a>
@@ -586,7 +586,7 @@ const Index = () => {
                       <a>
                         <img
                           decoding="async"
-                          src="assets/images/ios12.jpg"
+                          src="/assets/images/ios12.jpg"
                           alt="iOS 12 Programming for Beginners"
                         />
                       </a>
@@ -625,7 +625,7 @@ const Index = () => {
                       <a>
                         <img
                           decoding="async"
-                          src="assets/images/ios11.jpg"
+                          src="/assets/images/ios11.jpg"
                           alt="Usability Secrets to Create Better Interfaces"
                         />
                       </a>

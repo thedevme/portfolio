@@ -29,7 +29,7 @@ const Header = () => {
                     <img
                       width={240}
                       height={40}
-                      src="assets/images/mobile-logo-scaled.png"
+                      src="/assets/images/mobile-logo-scaled.png"
                       alt=""
                     />
                   </a>
