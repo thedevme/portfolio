@@ -187,7 +187,7 @@ const Index = () => {
                     <div>
                       <p>
                         From concept to App Store launch, I create iOS applications that are visually striking and user-focused.
-                        My work blends creative design with the technical precision of over a decade in mobile development.
+                        My work blends creative design with the technical precision.
                       </p>
                     </div>
                   </div>
