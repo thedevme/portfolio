@@ -546,7 +546,7 @@ const Index = () => {
                       <a>
                         <img
                           decoding="async"
-                          src="assets/images/single7.jpg"
+                          src="assets/images/swiftui-projects.jpg"
                           alt="The Main Thing For The Designer"
                         />
                       </a>
@@ -554,21 +554,20 @@ const Index = () => {
                   </div>
                   <div className="desc">
                     <div className="category lui-subtitle">
-                      <span>October 31, 2022</span>
+                      <span>December 11, 2020</span>
                     </div>
                     <h5 className="lui-title">
-                      <Link legacyBehavior href="/blog-single">
-                        <a>The Main Thing For The Designer</a>
+                      <Link legacyBehavior href="/swiftui-projects">
+                        <a>SwiftUI Projects</a>
                       </Link>
                     </h5>
                     <div className="lui-text">
                       <p>
-                        Vivamus interdum suscipit lacus. Nunc ultrices accumsan
-                        mattis. Aliquam vel sem vel velit efficitur malesuada.
-                        Donec arcu lacus, ornare eget…{" "}
+                      Discover SwiftUI through six hands-on projects for iPhone, iPad, and watchOS. 
+                      Learn layouts, JSON APIs, and declarative design with Xcode.{" "}
                       </p>
                       <div className="readmore">
-                        <Link legacyBehavior href="/blog-single">
+                        <Link legacyBehavior href="/swiftui-projects">
                           <a className="lnk">Read more</a>
                         </Link>
                       </div>
@@ -582,33 +581,32 @@ const Index = () => {
                   data-animate="active"
                 >
                   <div className="image">
-                    <Link legacyBehavior href="/blog-single">
+                    <Link legacyBehavior href="/ios12-programming-for-beginners">
                       <a>
                         <img
                           decoding="async"
-                          src="assets/images/blog-4-scaled-1.jpg"
-                          alt="Follow Your Own Design Process"
+                          src="assets/images/ios12.jpg"
+                          alt="iOS 12 Programming for Beginners"
                         />
                       </a>
                     </Link>
                   </div>
                   <div className="desc">
                     <div className="category lui-subtitle">
-                      <span>October 31, 2022</span>
+                      <span>December 24, 2018</span>
                     </div>
                     <h5 className="lui-title">
-                      <Link legacyBehavior href="/blog-single">
-                        <a>Follow Your Own Design Process</a>
+                      <Link legacyBehavior href="/ios12-programming-for-beginners">
+                        <a>iOS 12 Programming for Beginners</a>
                       </Link>
                     </h5>
                     <div className="lui-text">
                       <p>
-                        Vivamus interdum suscipit lacus. Nunc ultrices accumsan
-                        mattis. Aliquam vel sem vel velit efficitur malesuada.
-                        Donec arcu lacus, ornare eget…{" "}
+                      Master iOS 12 development with Swift 4.2. From basics in Xcode to advanced 
+                      features like custom notifications, SiriKit, & TestFlight.{" "}
                       </p>
                       <div className="readmore">
-                        <Link legacyBehavior href="/blog-single">
+                        <Link legacyBehavior href="/ios12-programming-for-beginners">
                           <a className="lnk">Read more</a>
                         </Link>
                       </div>
@@ -626,7 +624,7 @@ const Index = () => {
                       <a>
                         <img
                           decoding="async"
-                          src="assets/images/blog-2.jpg"
+                          src="assets/images/ios11.jpg"
                           alt="Usability Secrets to Create Better Interfaces"
                         />
                       </a>
@@ -634,21 +632,21 @@ const Index = () => {
                   </div>
                   <div className="desc">
                     <div className="category lui-subtitle">
-                      <span>November 28, 2021</span>
+                      <span>January 31, 2018</span>
                     </div>
                     <h5 className="lui-title">
-                      <Link legacyBehavior href="/blog-single">
-                        <a>Usability Secrets to Create Better Interfaces</a>
+                      <Link legacyBehavior href="/learn-ios11-with-swift4">
+                        <a>Learn iOS 11 with Swift 4</a>
                       </Link>
                     </h5>
                     <div className="lui-text">
                       <p>
-                        Vivamus interdum suscipit lacus. Nunc ultrices accumsan
-                        mattis. Aliquam vel sem vel velit efficitur malesuada.
-                        Donec arcu lacus, ornare eget…{" "}
+                      Learn iOS 11 with Swift 4 in a practical way. 
+                      From building your first app to adding advanced features 
+                      like drag & drop, SiriKit, and TestFlight.{" "}
                       </p>
                       <div className="readmore">
-                        <Link legacyBehavior href="/blog-single">
+                        <Link legacyBehavior href="/learn-ios11-with-swift4">
                           <a className="lnk">Read more</a>
                         </Link>
                       </div>
@@ -673,118 +671,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      {/* Section - Contacts */}
-      <section className="lui-section lui-gradient-bottom" id="contact-section">
-        {/* Heading */}
-        <div className="lui-heading">
-          <div className="container">
-            <div className="m-titles align-center">
-              <h2
-                className="m-title splitting-text-anim-1 scroll-animate"
-                data-splitting="words"
-                data-animate="active"
-              >
-                <span> Contact Me </span>
-              </h2>
-              <div
-                className="m-subtitle splitting-text-anim-1 scroll-animate"
-                data-splitting="words"
-                data-animate="active"
-              >
-                <span>
-                  {" "}
-                  Let’s <b>Talk About Ideas</b>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Contact */}
-        <div className="lui-contacts v-line v-line-left">
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-                <div className="numbers-items">
-                  <div
-                    className="numbers-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <div className="icon">
-                      <i aria-hidden="true" className="far fa-map" />
-                    </div>
-                    <div className="title">
-                      <span> Address </span>
-                    </div>
-                    <div className="lui-text">
-                      <span> North Tower, Toronto, Canada </span>
-                    </div>
-                  </div>
-                  <div
-                    className="numbers-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <div className="icon">
-                      <i aria-hidden="true" className="far fa-user" />
-                    </div>
-                    <div className="title">
-                      <span> Freelance </span>
-                    </div>
-                    <div className="lui-text">
-                      <span> Available Right Now </span>
-                    </div>
-                  </div>
-                  <div
-                    className="numbers-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <div className="icon">
-                      <i aria-hidden="true" className="far fa-envelope" />
-                    </div>
-                    <div className="title">
-                      <span> Email </span>
-                    </div>
-                    <div className="lui-text">
-                      <span> craig.clayton@mydomain.com </span>
-                    </div>
-                  </div>
-                  <div
-                    className="numbers-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <div className="icon">
-                      <i aria-hidden="true" className="far fa-address-book" />
-                    </div>
-                    <div className="title">
-                      <span> Phone </span>
-                    </div>
-                    <div className="lui-text">
-                      <span> +1 900 - 900 - 9000 </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-                <div
-                  className="contacts-form scrolla-element-anim-1 scroll-animate"
-                  data-animate="active"
-                >
-                  <div
-                    className="bg-img"
-                    style={{
-                      backgroundImage: "url(assets/images/pat-1.png)",
-                    }}
-                  />
-                  
-                  <ContactForm />
-                </div>
-              </div>
-            </div>
-            <div className="lui-bgtitle">
-              <span> Contact Me </span>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </Layout>
   );
 };
