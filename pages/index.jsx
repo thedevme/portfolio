@@ -54,7 +54,7 @@ const Index = () => {
                 <div className="description">
                   <div>
                     <p>
-                    With 10+ years in iOS design and development, I specialize in creating intuitive, 
+                    With 10+ years in iOS design and development, I specialize in creating intuitive,
                     visually appealing apps. I love designing experiences that delight and connect with users.
                     </p>
                   </div>
@@ -88,12 +88,13 @@ const Index = () => {
                 className="slide scrolla-element-anim-1 scroll-animate"
                 data-animate="active"
               >
-                <img
-                  decoding="async"
-                  src="assets/images/craig-clayton-profile.jpeg"
-                  alt="<b>Craig</b> Clayton"
-                />
-                <span className="circle circle-1" />
+                <div className="circle circle-1">
+                   <img
+                    decoding="async"
+                    src="assets/images/craig-clayton-profile.jpg"
+                    alt="<b>Craig</b> Clayton"
+                  />
+                </div>
                 <span
                   className="circle img-1"
                   style={{
@@ -297,8 +298,8 @@ const Index = () => {
                     <div className="text">
                       <div>
                         <p>
-                        I build robust, maintainable applications with Swift, applying clean 
-                        code principles and leveraging the latest language features for 
+                        I build robust, maintainable applications with Swift, applying clean
+                        code principles and leveraging the latest language features for
                         performance and reliability.
                         </p>
                       </div>
@@ -324,8 +325,8 @@ const Index = () => {
                     <div className="text">
                       <div>
                         <p>
-                        I develop polished, high-performance macOS 
-                        applications that feel native, integrating 
+                        I develop polished, high-performance macOS
+                        applications that feel native, integrating
                         desktop-specific workflows and Apple ecosystem features.
                         </p>
                       </div>
@@ -355,7 +356,7 @@ const Index = () => {
                     <div className="text">
                       <div>
                         <p>
-                        I design and implement modern, responsive interfaces using SwiftUI, 
+                        I design and implement modern, responsive interfaces using SwiftUI,
                         creating seamless user experiences across iOS, macOS, watchOS, and tvOS.
                         </p>
                       </div>
@@ -381,8 +382,8 @@ const Index = () => {
                     <div className="text">
                       <div>
                         <p>
-                        I design intuitive, visually appealing interfaces 
-                        with a strong focus on usability, ensuring each 
+                        I design intuitive, visually appealing interfaces
+                        with a strong focus on usability, ensuring each
                         interaction feels natural and engaging.
                         </p>
                       </div>
@@ -412,8 +413,8 @@ const Index = () => {
                     <div className="text">
                       <div>
                         <p>
-                        I craft high-quality iOS apps from concept 
-                        to App Store release, combining design expertise 
+                        I craft high-quality iOS apps from concept
+                        to App Store release, combining design expertise
                         with deep technical knowledge of Apple’s frameworks.
                         </p>
                       </div>
@@ -439,8 +440,8 @@ const Index = () => {
                     <div className="text">
                       <div>
                         <p>
-                        I create detailed, production-ready design assets 
-                        in Figma and Sketch, streamlining the handoff between 
+                        I create detailed, production-ready design assets
+                        in Figma and Sketch, streamlining the handoff between
                         design and development for smooth, efficient project delivery.
                         </p>
                       </div>
@@ -505,7 +506,7 @@ const Index = () => {
 
       {/* Section - Resume */}
       <Resume />
-      
+
       {/* Section - Blog */}
       <section className="lui-section lui-gradient-top" id="blog-section">
         {/* Heading */}
@@ -563,7 +564,7 @@ const Index = () => {
                     </h5>
                     <div className="lui-text">
                       <p>
-                      Discover SwiftUI through six hands-on projects for iPhone, iPad, and watchOS. 
+                      Discover SwiftUI through six hands-on projects for iPhone, iPad, and watchOS.
                       Learn layouts, JSON APIs, and declarative design with Xcode.{" "}
                       </p>
                       <div className="readmore">
@@ -602,7 +603,7 @@ const Index = () => {
                     </h5>
                     <div className="lui-text">
                       <p>
-                      Master iOS 12 development with Swift 4.2. From basics in Xcode to advanced 
+                      Master iOS 12 development with Swift 4.2. From basics in Xcode to advanced
                       features like custom notifications, SiriKit, & TestFlight.{" "}
                       </p>
                       <div className="readmore">
@@ -641,8 +642,8 @@ const Index = () => {
                     </h5>
                     <div className="lui-text">
                       <p>
-                      Learn iOS 11 with Swift 4 in a practical way. 
-                      From building your first app to adding advanced features 
+                      Learn iOS 11 with Swift 4 in a practical way.
+                      From building your first app to adding advanced features
                       like drag & drop, SiriKit, and TestFlight.{" "}
                       </p>
                       <div className="readmore">
@@ -671,7 +672,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
+
     </Layout>
   );
 };
