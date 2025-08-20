@@ -229,16 +229,16 @@ const Index = () => {
                     <span>Interface Craft</span>
                   </div>
                   <h5 className="lui-title">
-                    <span> iOS Design </span>
+                    <span> iOS Development </span>
                   </h5>
                   <div className="lui-text">
                     <div>
-                      {" "}
+                      <p>
                       My approach to iOS design blends creativity, usability, and attention to detail.
-                      The result: interfaces that look great, perform flawlessly, and keep users engaged.{" "}
+                      The result: interfaces that look great, perform flawlessly, and keep users engaged.
+                      </p>
                     </div>
                   </div>
-                  
                   <div
                     className="image"
                     style={{
@@ -247,6 +247,10 @@ const Index = () => {
                   />
                 </div>
               </SwiperSlide>
+
+
+
+              
               <div className="swiper-pagination" />
             </Swiper>
             <div className="lui-bgtitle">
