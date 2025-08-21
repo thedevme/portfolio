@@ -415,7 +415,7 @@ const Index = () => {
               >
                 <span>
                   {" "}
-                  my <b>Casesss</b>
+                  my <b>Work</b>
                 </span>
               </div>
             </div>

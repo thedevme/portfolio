@@ -28,7 +28,7 @@ const WorksList = () => {
             >
               <span>
                 {" "}
-                my <b>Cases</b>
+                my <b>Work</b>
               </span>
             </div>
           </div>

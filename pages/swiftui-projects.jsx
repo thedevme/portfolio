@@ -165,7 +165,7 @@ const BlogSingle = () => {
                       data-splitting="chars"
                       data-animate="active"
                     >
-                      iOS 12 Development for Newbies
+                      iOS 12 Development for Beginners
                     </span>
                   </a>
                 </Link>

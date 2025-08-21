@@ -47,49 +47,31 @@ const PortfolioIsotope = ({ noViewMore }) => {
             All
           </a>
           <a
-            className={`c-pointer lui-subtitle ${activeBtn(
-              "sorting-ui-ux-design"
-            )}`}
-            onClick={handleFilterKeyChange("sorting-ui-ux-design")}
-            data-href=".sorting-ui-ux-design"
-          >
-            UI UX Design
-          </a>
-          <a
-            className={`c-pointer lui-subtitle ${activeBtn("sorting-photo")}`}
-            onClick={handleFilterKeyChange("sorting-photo")}
-            data-href=".sorting-photo"
+            className={`c-pointer lui-subtitle ${activeBtn("sorting-appstore")}`}
+            onClick={handleFilterKeyChange("sorting-appstore")}
+            data-href=".sorting-appstore"
           >
             App Store
           </a>
           <a
             className={`c-pointer lui-subtitle ${activeBtn(
-              "sorting-development"
+              "sorting-design"
             )}`}
-            onClick={handleFilterKeyChange("sorting-development")}
-            data-href=".sorting-development"
+            onClick={handleFilterKeyChange("sorting-design")}
+            data-href=".sorting-design"
           >
-            Development
-          </a>
-          <a
-            className={`c-pointer lui-subtitle ${activeBtn(
-              "sorting-branding"
-            )}`}
-            onClick={handleFilterKeyChange("sorting-branding")}
-            data-href=".sorting-branding"
-          >
-            Branding
+            Design
           </a>
         </div>
         <div className="works-items works-masonry-items row">
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-branding sorting-photo ">
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-design ">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/work-single">
+                  <Link legacyBehavior href="/nike">
                     <a>
                       <img
                         decoding="async"
@@ -102,9 +84,9 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 </div>
               </div>
               <div className="desc">
-                <span className="category"> Branding, Photography </span>
+                <span className="category"> Swift, Design, YouTube</span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/work-single">
+                  <Link legacyBehavior href="/nike">
                     <a>Nike App</a>
                   </Link>
                 </h5>
@@ -113,7 +95,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
                   A sneaker shopping app with light/dark themes, bold visuals, intuitive navigation, and a live SwiftUI coding <br/>tutorial.
                   </p>
                 </div>
-                <Link legacyBehavior href="/work-single">
+                <Link legacyBehavior href="/nike">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -125,14 +107,14 @@ const PortfolioIsotope = ({ noViewMore }) => {
               />
             </div>
           </div>
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-branding sorting-ui-ux-design ">
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-design ">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/work-single">
+                  <Link legacyBehavior href="/bmw">
                     <a>
                       <img
                         decoding="async"
@@ -145,9 +127,9 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 </div>
               </div>
               <div className="desc">
-                <span className="category"> Branding, UI UX Design </span>
+                <span className="category">Design, SwiftUI Projects</span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/work-single">
+                  <Link legacyBehavior href="/bmw">
                     <a>BMW App</a>
                   </Link>
                 </h5>
@@ -156,7 +138,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
                   A premium BMW app concept combining connected-car data, driving insights, and curated content with sleek design and brand consistency.
                   </p>
                 </div>
-                <Link legacyBehavior href="/work-single">
+                <Link legacyBehavior href="/bmw">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -168,14 +150,14 @@ const PortfolioIsotope = ({ noViewMore }) => {
               />
             </div>
           </div>
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-development sorting-ui-ux-design ">
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-appstore ">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/work-single">
+                  <Link legacyBehavior href="/patriots">
                     <a>
                       <img
                         decoding="async"
@@ -188,9 +170,9 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 </div>
               </div>
               <div className="desc">
-                <span className="category"> Development, UI UX Design </span>
+                <span className="category">Development, Design, App Store </span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/work-single">
+                  <Link legacyBehavior href="/patriots">
                     <a>Patriots App</a>
                   </Link>
                 </h5>
@@ -199,7 +181,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
                   A fan-focused sports app concept with multi-team navigation, live updates, and a menu-first design blending branding and usability.
                   </p>
                 </div>
-                <Link legacyBehavior href="/work-single">
+                <Link legacyBehavior href="/patriots">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -211,19 +193,19 @@ const PortfolioIsotope = ({ noViewMore }) => {
               />
             </div>
           </div>
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-branding sorting-photo ">
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-appstore ">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/work-single">
+                  <Link legacyBehavior href="/chl">
                     <a>
                       <img
                         decoding="async"
                         src="/assets/images/tesla-main.png"
-                        alt="Tesla App"
+                        alt="CHL App"
                       />
                       <span className="overlay" />
                     </a>
@@ -231,18 +213,18 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 </div>
               </div>
               <div className="desc">
-                <span className="category"> Branding, Photography </span>
+                <span className="category"> Development, Design, App Store </span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/work-single">
-                    <a>Tesla App</a>
+                  <Link legacyBehavior href="/chl">
+                    <a>CHL App</a>
                   </Link>
                 </h5>
                 <div className="text">
                   <p>
-                  A Tesla charging app concept featuring real-time availability, smart route planning, battery insights, and minimalist design with intuitive controls.
+                  A CHL app concept featuring real-time scores, smart game schedules, player insights, and a streamlined design with intuitive controls.
                   </p>
                 </div>
-                <Link legacyBehavior href="/work-single">
+                <Link legacyBehavior href="/tesla">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -254,14 +236,14 @@ const PortfolioIsotope = ({ noViewMore }) => {
               />
             </div>
           </div>
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-development sorting-ui-ux-design ">
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-design ">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/work-single">
+                  <Link legacyBehavior href="/nba-allstar">
                     <a>
                       <img
                         decoding="async"
@@ -276,7 +258,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category"> Development, UI UX Design </span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/work-single">
+                  <Link legacyBehavior href="/nba-allstar">
                     <a>NBA All-Star App</a>
                   </Link>
                 </h5>
@@ -285,7 +267,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
                   An interactive NBA All-Star voting app with drag-and-drop lineups, player stats, and dynamic court visuals for fan engagement.
                   </p>
                 </div>
-                <Link legacyBehavior href="/work-single">
+                <Link legacyBehavior href="/nba-allstar">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -297,19 +279,19 @@ const PortfolioIsotope = ({ noViewMore }) => {
               />
             </div>
           </div>
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-development sorting-photo ">
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-appstore ">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/work-single">
+                  <Link legacyBehavior href="/sharks">
                     <a>
                       <img
                         decoding="async"
-                        src="/assets/images/financial-main.png"
-                        alt="Financial App"
+                        src="/assets/images/sharks-main.png"
+                        alt="Sharks"
                       />
                       <span className="overlay" />
                     </a>
@@ -317,15 +299,15 @@ const PortfolioIsotope = ({ noViewMore }) => {
                 </div>
               </div>
               <div className="desc">
-                <span className="category"> Development, Photography </span>
+                <span className="category"> Development, Design, App Store</span>
                 <h5 className="name">
                   <Link legacyBehavior href="/work-single">
-                    <a>Financial App</a>
+                    <a>Sharks App</a>
                   </Link>
                 </h5>
                 <div className="text">
                   <p>
-                  A financial dashboard offering real-time data, portfolio analytics, watchlists, risk analysis, and alerts with a responsive, user-friendly design.
+                  A sharks dashboard offering real-time data, habitat tracking, migration patterns, risk analysis, and alerts with a responsive, user-friendly design
                   </p>
                 </div>
                 <Link legacyBehavior href="/work-single">
