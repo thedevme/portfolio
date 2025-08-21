@@ -585,7 +585,7 @@ const Index = () => {
               </div>
             </div>
             <div className="load-more">
-              <Link legacyBehavior href="/blog">
+              <Link legacyBehavior href="/books">
                 <a
                   className="btn scrolla-element-anim-1 scroll-animate"
                   data-animate="active"
