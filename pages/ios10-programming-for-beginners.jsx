@@ -19,13 +19,13 @@ const BlogSingle = () => {
               <Link legacyBehavior href="/blog">
                 <a>UIKit</a>
               </Link>{" "}
-              / December 11, 2020 / by Craig Clayton
+              / December 27, 2016 / by admin
             </div>
             <h1
               className="m-title scrolla-element-anim-1 scroll-animate"
               data-animate="active"
             >
-              iOS 12 Programming for Beginners
+              iOS 10 Programming for Beginners
             </h1>
           </div>
         </div>
@@ -43,7 +43,7 @@ const BlogSingle = () => {
           <div
             className="img scrolla-element-anim-1 scroll-animate"
             data-animate="active"
-            style={{ backgroundImage: "url(/assets/images/ios12.jpg)" }}
+            style={{ backgroundImage: "url(/assets/images/ios10.jpg)" }}
           />
         </div>
       </div>
@@ -59,45 +59,35 @@ const BlogSingle = () => {
           data-animate="active"
         >
           <p>
-            <strong>iOS 12 Projects for Beginners</strong> is more than a step-by-step manual — it’s a practical path to building real apps with UIKit. Each project mirrors challenges I’ve tackled with teams: planning screens, wiring data, and shaping a smooth user experience while shipping polished results for iPhone and iPad. Instead of stopping at “it compiles,” the book walks through the choices you’ll make in production: organizing view controllers, managing performance, and keeping designs flexible with Auto Layout. The goal is to bridge the gap between quick tutorials and complete, App Store-ready projects using Xcode 10 and Swift 4.2.
+            <strong>iOS 10 Projects for Beginners</strong> is a practical, first-edition path into Apple development with Swift 3 and UIKit. Each project mirrors real challenges I’ve shipped with teams: planning screens, wiring data, and shaping a smooth user experience on iPhone and iPad. Rather than stopping at “it runs,” the book covers production choices—organizing view controllers, using Auto Layout effectively, and preparing a build for submission with Xcode 8. The aim is to bridge quick tutorials and complete, App Store–ready apps you can confidently publish.
           </p>
 
           <h3>Key Features</h3>
           <ul className="book-list">
-            <li>Hands-on projects that teach by doing, from blank screen to app</li>
-            <li>
-              Design considerations for iPhone and iPad with Storyboards and
-              Auto Layout
-            </li>
-            <li>
-              Practical UI patterns with SF Symbols, tables, grids, forms, and
-              smooth transitions
-            </li>
-            <li>
-              Real-world guidance to take a rough prototype to a submission-ready
-              build
-            </li>
+            <li>Hands-on projects that teach by doing, from prototype to App Store</li>
+            <li>Design for iPhone and iPad using Storyboards, size classes, and Auto Layout</li>
+            <li>Practical UI patterns with tables, grids, forms, and simple animations</li>
+            <li>Step-by-step guidance using Swift 3 and the latest iOS 10 APIs</li>
           </ul>
 
           <h3>Book Description</h3>
           <p>
-            iOS 12 brings a refined toolkit for building apps with UIKit. This guide moves beyond theory with six end-to-end apps built from scratch. As you progress, you’ll see how real products take shape: structuring view hierarchies that scale, deciding when to use custom views, and designing layouts that adapt across devices. Each project builds on the last, layering concepts like data persistence, networking, and accessibility so you learn not just what UIKit offers, but how to apply it under real-world constraints. By the end, you’ll have reusable patterns you can drop into your own apps — whether you’re prototyping, iterating with a team, or preparing for release.
+            iOS 10 introduced a developer-friendly toolkit that makes learning UIKit approachable. This guide goes beyond theory with end-to-end apps built from scratch. As you progress, you’ll see how real products come together: structuring view hierarchies that scale, deciding when to create custom views, and designing layouts that adapt across devices. Each project layers essentials like data persistence, networking, and accessibility so you learn not just what the SDK offers, but how to apply it under real constraints. By the end, you’ll have reusable patterns to accelerate your own apps—whether you’re prototyping or preparing for release.
           </p>
 
           <ul>
             <li><strong>Foundations:</strong> Xcode setup · Storyboards · Auto Layout</li>
-            <li><strong>Core Apps:</strong> Restaurant browser · Photo filters · Reviews flow</li>
-            <li><strong>Platform:</strong> iMessage extension · Notifications · Siri Shortcuts</li>
+            <li><strong>Core Apps:</strong> Grid &amp; list UIs · Restaurant browser · Reviews flow</li>
+            <li><strong>Platform:</strong> iMessage extension · Notifications · SiriKit basics</li>
           </ul>
 
           <blockquote>
             <p>
-              “This isn’t another ‘hello world’ tour. Each chapter feels like
-              pairing with a dev shipping a real feature. The projects are
-              polished, thoughtfully scoped, and full of details that matter —
-              adaptive layouts, clean navigation, and submission-ready touches
-              most tutorials skip. You won’t just copy code; you’ll learn how to
-              think through building iOS apps the way pros do.”
+              “A beginner-friendly path that still feels like real development.
+              The projects are thoughtfully scoped with the details that matter—
+              adaptive layouts, clean navigation, and submission-ready touches.
+              You won’t just copy code; you’ll learn how to think through an iOS
+              feature from prototype to TestFlight.”
             </p>
             <p>
               <cite>— Reader Review</cite>
@@ -106,28 +96,27 @@ const BlogSingle = () => {
 
           <h3>What You Will Learn</h3>
           <ul>
-            <li>Build UIKit screens with Storyboards, tables, collections, and stacks</li>
-            <li>Embed custom views and integrate media (e.g., simple video layers)</li>
+            <li>Use Storyboards, table/collection views, and stack views to build screens</li>
+            <li>Prototype with Playgrounds and move code into projects cleanly</li>
             <li>Fetch and parse JSON with URLSession using clear data flow</li>
-            <li>Organize view controllers for scalability and testability</li>
-            <li>Create adaptive iPad layouts with size classes, split view, and toolbars</li>
-            <li>Apply best practices used in real client and product launches</li>
+            <li>Persist data with Core Data basics and manage simple models</li>
+            <li>Add CoreLocation, photos, and basic media to enrich your app</li>
+            <li>Ship confidently with TestFlight and App Store submission steps</li>
           </ul>
 
           <h3>Who This Book Is For</h3>
           <p>
             For beginners and new iOS developers who want a project-based path
-            into UIKit on iOS 12. Concepts start from first principles and build
-            toward production-ready techniques. Even if you skim, you’ll see a
-            practical, real-world approach focused on the details that matter
-            when shipping to the App Store.
+            into UIKit on iOS 10. Concepts start from first principles and build
+            toward production-ready techniques, with a practical, real-world
+            approach focused on shipping to the App Store.
           </p>
 
           <span className="tags-links">
             <span>Tags:</span>
-            <a href="#">iOS 12</a>
-            <a href="#">Swift 4.2</a>
-            <a href="#">Xcode 10</a>
+            <a href="#">iOS 10</a>
+            <a href="#">Swift 3</a>
+            <a href="#">Xcode 8</a>
             <a href="#">UIKit</a>
           </span>
         </div>
@@ -147,7 +136,7 @@ const BlogSingle = () => {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
               <div className="h-titles h-navs">
-                <Link legacyBehavior href="/learn-ios11-with-swift4">
+                <Link legacyBehavior href="/ios12-programming-for-beginners">
                   <a>
                     <span
                       className="nav-arrow splitting-text-anim-1 scroll-animate"
@@ -160,7 +149,8 @@ const BlogSingle = () => {
                       className="h-title splitting-text-anim-2 scroll-animate"
                       data-splitting="chars"
                       data-animate="active"
-                    >Learn iOS 11 with Swift 4
+                    >
+                      iOS 12 Programming for Beginners
                     </span>
                   </a>
                 </Link>

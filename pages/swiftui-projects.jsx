@@ -19,7 +19,7 @@ const BlogSingle = () => {
               <Link legacyBehavior href="/blog">
                 <a>Swift UI</a>
               </Link>{" "}
-              / December 11, 2020 / by admin
+              / December 11, 2020 / Craig Clayton
             </div>
             <h1
               className="m-title scrolla-element-anim-1 scroll-animate"

@@ -13,19 +13,19 @@ const BlogSingle = () => {
               data-animate="active"
             >
               <Link legacyBehavior href="/blog">
-                <a>Branding</a>
+                <a>Book</a>
               </Link>
               ,{" "}
               <Link legacyBehavior href="/blog">
-                <a>UI Design</a>
+                <a>UIKit</a>
               </Link>{" "}
-              / October 31, 2022 / by admin
+              / Janurary 31, 2018 / by Craig Clayton
             </div>
             <h1
               className="m-title scrolla-element-anim-1 scroll-animate"
               data-animate="active"
             >
-              The Main Thing For The Designer
+              Learn iOS 11 with Swift 4
             </h1>
           </div>
         </div>
@@ -43,7 +43,7 @@ const BlogSingle = () => {
           <div
             className="img scrolla-element-anim-1 scroll-animate"
             data-animate="active"
-            style={{ backgroundImage: "url(/assets/images/single7.jpg)" }}
+            style={{ backgroundImage: "url(/assets/images/ios11.jpg)" }}
           />
         </div>
       </div>
@@ -59,220 +59,66 @@ const BlogSingle = () => {
                   data-animate="active"
                 >
                   <p>
-                    Vivamus interdum suscipit lacus. Nunc ultrices accumsan
-                    mattis. Aliquam vel sem vel velit efficitur malesuada. Donec
-                    arcu lacus, ornare eget ligula vel, commodo luctus felis. Ut
-                    dignissim sapien sit amet molestie rutrum. Orci varius
-                    natoque penatibus et magnis dis parturient montes, nascetur
-                    ridiculus mus. Pellentesque in porta dolor, a suscipit
-                    risus. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Cras ac arcu in lorem rhoncus ullamcorper. Ut at nulla
-                    ut libero mollis viverra sed vitae purus.
+                    <strong>iOS 11 Projects for Beginners</strong> is a practical second edition designed to help you learn Swift 4 and Xcode 9 while building apps that look and feel real. Each project reflects challenges I’ve worked through on teams: connecting data, shaping layouts, and shipping features that run smoothly on iPhone and iPad. Instead of stopping at “hello world,” the book shows how to manage data, integrate iOS features like photos and GPS, and prepare your app for the App Store. The goal is to give you a clear path from your first line of code to complete, working projects you can confidently share.
                   </p>
+
+                  <h3>Key Features</h3>
+                  <ul className="book-list">
+                    <li>Hands-on projects that teach by doing, from first app to final build</li>
+                    <li>Explore iOS 11 features like drag &amp; drop, notifications, and SiriKit</li>
+                    <li>Work with photos, GPS, and data storage to add real-world functionality</li>
+                    <li>Step-by-step guidance using Swift 4 and Xcode 9</li>
+                  </ul>
+
+                  <h3>Book Description</h3>
                   <p>
-                    Nam dui mauris, congue vel nisi in, tempus gravida enim.
-                    Nulla et tristique orci. Pellentesque lectus sapien, maximus
-                    id gravida sit amet, tristique non eros. Etiam aliquet, sem
-                    vitae sagittis convallis, ante sapien tincidunt nisl, eget
-                    dapibus tortor velit quis ex. Proin et condimentum est, sed
-                    pretium ex. Mauris posuere est metus, vitae commodo sem
-                    posuere eget. Praesent maximus augue rutrum, consequat magna
-                    id, facilisis lorem. Quisque molestie, turpis ac interdum
-                    gravida
+                    iOS 11 introduces new APIs and refinements that make UIKit even more powerful. This guide goes beyond theory with apps built from scratch so you can see how real products take shape. You’ll learn to structure your projects in Xcode, write clean Swift code, and design adaptive interfaces that look great across devices. Each project layers in core skills like data persistence, notifications, and animations so you learn not just what Swift and iOS 11 can do, but how to apply them under practical constraints. By the end, you’ll have patterns and techniques you can reuse in your own apps, whether you’re just starting out or adding the latest features to existing projects.
                   </p>
+
+                  <ul>
+                    <li><strong>Foundations:</strong> Swift basics · Xcode setup · Interface building</li>
+                    <li><strong>Core Apps:</strong> Notifications · Location services · Image filters</li>
+                    <li><strong>Platform:</strong> Drag &amp; drop · SiriKit · TestFlight submission</li>
+                  </ul>
+
                   <blockquote>
                     <p>
-                      Photography is the story I fail to put into words get
-                      ligula vel, commodo luctus felis. Ut dignissim sapien sit
-                      amet molestie rutr
+                      “A beginner-friendly introduction that still feels practical.
+                      The projects cover the essentials—navigation, data, and layout—
+                      while layering in iOS 11’s new features like drag &amp; drop and
+                      rich notifications. By the end you don’t just know Swift 4, you
+                      understand how to bring an app from concept to the App Store.”
                     </p>
                     <p>
-                      <cite>– Destin Sparks</cite>
+                      <cite>— Reader Review</cite>
                     </p>
                   </blockquote>
-                  <p>
-                    <br />
-                  </p>
-                  <h3>Aliquam vel sem vel vellesuada</h3>
-                  <p>
-                    Vivamus interdum suscipit lacus. Nunc ultrices accumsan
-                    mattis. Aliquam vel sem vel velit efficitur malesuada. Donec
-                    arcu lacus, ornare eget ligula vel, commodo luctus felis. Ut
-                    dignissim sapien sit amet molestie rutrum. Orci varius
-                    natoque penatibus et magnis dis parturient montes, nascetur
-                    ridiculus mus. Pellentesque in porta dolor, a suscipit
-                    risus. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Cras ac arcu in lorem rhoncus ullamcorper. Ut at nulla
-                    ut libero mollis viverra sed vitae purus.
-                  </p>
-                  <ul className="gallery gallery-columns-2">
-                    <li className="gallery-item">
-                      <figure>
-                        <img src="/assets/images/blog8.jpg" alt="" />
-                      </figure>
-                    </li>
-                    <li className="gallery-item">
-                      <figure>
-                        <img src="/assets/images/blog6.jpg" alt="" />
-                      </figure>
-                    </li>
-                  </ul>
-                  <p>
-                    Nam dui mauris, congue vel nisi in, tempus gravida enim.
-                    Nulla et tristique orci. Pellentesque lectus sapien, maximus
-                    id gravida sit amet, tristique non eros. Etiam aliquet, sem
-                    vitae sagittis convallis, ante sapien tincidunt nisl, eget
-                    dapibus tortor velit quis ex. Proin et condimentum est, sed
-                    pretium ex. Mauris posuere est metus, vitae commodo sem
-                    posuere eget. Praesent maximus augue rutrum, consequat magna
-                    id, facilisis lorem. Quisque molestie, turpis ac interdum
-                    gravida
-                  </p>
+
+                  <h3>What You Will Learn</h3>
                   <ul>
-                    <li>
-                      Donec arcu lacus, ornare eget ligula vel, commodo luctus
-                      felis.
-                    </li>
-                    <li>Ut dignissim sapien sit amet molestie rutrum.</li>
-                    <li>
-                      Orci varius natoque penatibus et magnis dis parturient
-                      montes.
-                    </li>
-                    <li>
-                      Ut at nulla ut libero mollis viverra sed vitae purus.
-                    </li>
+                    <li>Use Swift 4 and Xcode 9 to build real iOS apps step by step</li>
+                    <li>Understand variables, constants, strings, and control flow</li>
+                    <li>Design responsive UIs with Auto Layout and adaptive principles</li>
+                    <li>Integrate photos, GPS, and privacy controls into your projects</li>
+                    <li>Create custom-rich notifications and simple animations</li>
+                    <li>Leverage SiriKit and TestFlight to polish and release your app</li>
                   </ul>
+
+                  <h3>Who This Book Is For</h3>
                   <p>
-                    Nam dui mauris, congue vel nisi in, tempus gravida enim.
-                    Nulla et tristique orci. Pellentesque lectus sapien, maximus
-                    id gravida sit amet, tristique non eros. Etiam aliquet, sem
-                    vitae sagittis convallis, ante sapien tincidunt nisl, eget
-                    dapibus tortor velit quis ex.
+                    For beginners and aspiring iOS developers who want a project-based
+                    introduction to iOS 11. Concepts start from first principles and
+                    build toward production-ready skills, with a focus on learning by
+                    building real apps you can run, test, and submit to the App Store.
                   </p>
+
                   <span className="tags-links">
                     <span>Tags:</span>
-                    <a href="#">Design</a>
-                    <a href="#">HTML</a>
-                    <a href="#">UX</a>
-                    <a href="#">WordPress</a>
+                    <a href="#">iOS 11</a>
+                    <a href="#">Swift 4</a>
+                    <a href="#">Xcode 9</a>
+                    <a href="#">UIKit</a>
                   </span>
-                </div>
-              </div>
-              {/* Comments */}
-              <div
-                className="comments-post scrolla-element-anim-1 scroll-animate"
-                data-animate="active"
-              >
-                <div className="section__comments">
-                  <div className="m-titles">
-                    <div className="m-title align-left">2 Comments</div>
-                  </div>
-                  <ul className="comments">
-                    <li className="comment comment-item">
-                      <div className="comment comment-box">
-                        <img
-                          src="/assets/images/avatar.png"
-                          className="avatar"
-                          alt=""
-                        />
-                        <div className="comment-box__body">
-                          <div className="content-caption post-content description">
-                            <h5 className="comment-box__details">
-                              Robert Brown <span>December 9, 2021</span>
-                            </h5>
-                            <p>
-                              Nam dui mauris, congue vel nisi in, tempus gravida
-                              enim. Nulla et tristique orci. Pellentesque lectus
-                              sapien, maximus id gravida sit amet, tristique non
-                              eros. Etiam aliquet, sem vitae sagittis convallis,
-                              ante sapien tincidunt nisl, eget dapibus tortor
-                              velit quis ex.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="comment-footer">
-                          <a className="comment-reply-link" href="#">
-                            Reply
-                          </a>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="comment comment-item">
-                      <div className="comment comment-box">
-                        <img
-                          src="/assets/images/avatar.png"
-                          className="avatar"
-                          alt=""
-                        />
-                        <div className="comment-box__body">
-                          <div className="content-caption post-content description">
-                            <h5 className="comment-box__details">
-                              Ryan Berg <span>December 9, 2021</span>
-                            </h5>
-                            <p>
-                              Proin et condimentum est, sed pretium ex. Mauris
-                              posuere est metus, vitae commodo sem posuere eget.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="comment-footer">
-                          <a className="comment-reply-link" href="#">
-                            Reply
-                          </a>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                  <div className="form-comment">
-                    <div className="comment-respond">
-                      <div className="m-titles">
-                        <div className="m-title align-left">
-                          Leave a comment
-                        </div>
-                      </div>
-                      <form
-                        onSubmit={(e) => e.preventDefault()}
-                        className="comment-form"
-                      >
-                        <div className="group-row">
-                          <div className="group">
-                            <textarea
-                              className="textarea"
-                              name="comment"
-                              rows={3}
-                              placeholder="Comment"
-                              defaultValue={""}
-                            />
-                          </div>
-                        </div>
-                        <div className="group-row">
-                          <div className="group">
-                            <input
-                              type="text"
-                              name="author"
-                              className="input"
-                              placeholder="Name"
-                            />
-                          </div>
-                          <div className="group">
-                            <input
-                              type="text"
-                              name="email"
-                              className="input"
-                              placeholder="Email"
-                            />
-                          </div>
-                        </div>
-                        <div className="group-row">
-                          <div className="group">
-                            <button type="submit" name="submit" className="btn">
-                              Submit
-                            </button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -290,7 +136,7 @@ const BlogSingle = () => {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
               <div className="h-titles h-navs">
-                <Link legacyBehavior href="/blog-single">
+                <Link legacyBehavior href="/ios10-programming-for-beginners">
                   <a>
                     <span
                       className="nav-arrow splitting-text-anim-1 scroll-animate"
@@ -303,8 +149,7 @@ const BlogSingle = () => {
                       className="h-title splitting-text-anim-2 scroll-animate"
                       data-splitting="chars"
                       data-animate="active"
-                    >
-                      Follow Your Own Design Process
+                    >iOS 10 Programming for Beginners
                     </span>
                   </a>
                 </Link>
