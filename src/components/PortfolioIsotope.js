@@ -99,12 +99,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
                   <a className="lnk">See project</a>
                 </Link>
               </div>
-              <div
-                className="bg-img"
-                style={{
-                  backgroundImage: "url(/assets/images/pat-2.png)",
-                }}
-              />
+              
             </div>
           </div>
           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-design ">
@@ -142,12 +137,6 @@ const PortfolioIsotope = ({ noViewMore }) => {
                   <a className="lnk">See project</a>
                 </Link>
               </div>
-              <div
-                className="bg-img"
-                style={{
-                  backgroundImage: "url(/assets/images/pat-2.png)",
-                }}
-              />
             </div>
           </div>
           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-appstore ">
@@ -185,12 +174,6 @@ const PortfolioIsotope = ({ noViewMore }) => {
                   <a className="lnk">See project</a>
                 </Link>
               </div>
-              <div
-                className="bg-img"
-                style={{
-                  backgroundImage: "url(/assets/images/pat-2.png)",
-                }}
-              />
             </div>
           </div>
           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-appstore ">
@@ -228,12 +211,6 @@ const PortfolioIsotope = ({ noViewMore }) => {
                   <a className="lnk">See project</a>
                 </Link>
               </div>
-              <div
-                className="bg-img"
-                style={{
-                  backgroundImage: "url(/assets/images/pat-2.png)",
-                }}
-              />
             </div>
           </div>
           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-design ">
@@ -271,12 +248,6 @@ const PortfolioIsotope = ({ noViewMore }) => {
                   <a className="lnk">See project</a>
                 </Link>
               </div>
-              <div
-                className="bg-img"
-                style={{
-                  backgroundImage: "url(/assets/images/pat-2.png)",
-                }}
-              />
             </div>
           </div>
           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-appstore ">
@@ -314,12 +285,6 @@ const PortfolioIsotope = ({ noViewMore }) => {
                   <a className="lnk">See project</a>
                 </Link>
               </div>
-              <div
-                className="bg-img"
-                style={{
-                  backgroundImage: "url(/assets/images/pat-2.png)",
-                }}
-              />
             </div>
           </div>
         </div>

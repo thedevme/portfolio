@@ -102,12 +102,6 @@ const Index = () => {
                   }}
                 />
                 <span
-                  className="circle img-2"
-                  style={{
-                    backgroundImage: "url(/assets/images/pat-2.png)",
-                  }}
-                />
-                <span
                   className="circle img-3"
                   style={{
                     backgroundImage: "url(/assets/images/pat-2.png)",
@@ -192,12 +186,6 @@ const Index = () => {
                       </p>
                     </div>
                   </div>
-                  <div
-                    className="image"
-                    style={{
-                      backgroundImage: "url(/assets/images/pat-2.png)",
-                    }}
-                  />
                 </div>
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
@@ -216,12 +204,6 @@ const Index = () => {
                       </p>
                     </div>
                   </div>
-                  <div
-                    className="image"
-                    style={{
-                      backgroundImage: "url(/assets/images/pat-2.png)",
-                    }}
-                  />
                 </div>
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
@@ -240,12 +222,6 @@ const Index = () => {
                       </p>
                     </div>
                   </div>
-                  <div
-                    className="image"
-                    style={{
-                      backgroundImage: "url(/assets/images/pat-2.png)",
-                    }}
-                  />
                 </div>
               </SwiperSlide>
               <div className="swiper-pagination" />
