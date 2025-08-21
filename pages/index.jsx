@@ -285,161 +285,108 @@ const Index = () => {
         {/* Skills */}
         <div className="v-line v-line-left">
           <div className="container">
-            <div className="row">
-              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Swift </span>
-                    </h6>
-                    <div className="text">
-                      <div>
-                        <p>
-                        I build robust, maintainable applications with Swift, applying clean
-                        code principles and leveraging the latest language features for
-                        performance and reliability.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="dots">
-                      <div className="dot" style={{ width: "95%" }}>
-                      </div>
-                    </div>
-                    <div className="value">
+              <div className="skills-items-flexed">
+                <div className="skills-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                  <h6 className="name">
+                    <span> Swift </span>
+                  </h6>
+                  <div className="text">
+                    <div>
+                      <p>
+                      I build robust, maintainable applications with Swift, applying clean
+                      code principles and leveraging the latest language features for
+                      performance and reliability.
+                      </p>
                     </div>
                   </div>
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> macOS Development </span>
-                    </h6>
-                    <div className="text">
-                      <div>
-                        <p>
-                        I develop polished, high-performance macOS
-                        applications that feel native, integrating
-                        desktop-specific workflows and Apple ecosystem features.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="dots">
-                      <div className="dot" style={{ width: "85%" }}>
-                        
-                      </div>
-                    </div>
-                    <div className="value">
-                      <span className="num">
-                        
-                      </span>
-                    </div>
+                  <div className="dots">
+                    <div className="dot" style={{ width: "95%" }}></div>
                   </div>
                 </div>
-              </div>
-              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> SwiftUI </span>
-                    </h6>
-                    <div className="text">
-                      <div>
-                        <p>
-                        I design and implement modern, responsive interfaces using SwiftUI,
-                        creating seamless user experiences across iOS, macOS, watchOS, and tvOS.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="dots">
-                      <div className="dot" style={{ width: "90%" }}>
-                      </div>
-                    </div>
-                    <div className="value">
+                <div className="skills-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                  <h6 className="name">
+                    <span> SwiftUI </span>
+                  </h6>
+                  <div className="text">
+                    <div>
+                      <p>
+                      I design and implement modern, responsive interfaces using SwiftUI,
+                      creating seamless user experiences across iOS, macOS, watchOS, and tvOS.
+                      </p>
                     </div>
                   </div>
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> UI/UX Design </span>
-                    </h6>
-                    <div className="text">
-                      <div>
-                        <p>
-                        I design intuitive, visually appealing interfaces
-                        with a strong focus on usability, ensuring each
-                        interaction feels natural and engaging.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="dots">
-                      <div className="dot" style={{ width: "90%" }}>
-                      </div>
-                    </div>
-                    <div className="value">
-                     
-                    </div>
+                  <div className="dots">
+                    <div className="dot" style={{ width: "90%" }}></div>
                   </div>
                 </div>
-              </div>
-              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                <div className="skills-items">
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> iOS Development </span>
-                    </h6>
-                    <div className="text">
-                      <div>
-                        <p>
-                        I craft high-quality iOS apps from concept
-                        to App Store release, combining design expertise
-                        with deep technical knowledge of Apple’s frameworks.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="dots">
-                      <div className="dot" style={{ width: "95%" }}>
-                      </div>
-                    </div>
-                    <div className="value">
+                <div className="skills-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                  <h6 className="name">
+                    <span> iOS Development </span>
+                  </h6>
+                  <div className="text">
+                    <div>
+                      <p>
+                      I craft high-quality iOS apps from concept
+                      to App Store release, combining design expertise
+                      with deep technical knowledge of Apple’s frameworks.
+                      </p>
                     </div>
                   </div>
-                  <div
-                    className="skills-item scrolla-element-anim-1 scroll-animate"
-                    data-animate="active"
-                  >
-                    <h6 className="name">
-                      <span> Figma / Sketch </span>
-                    </h6>
-                    <div className="text">
-                      <div>
-                        <p>
-                        I create detailed, production-ready design assets
-                        in Figma and Sketch, streamlining the handoff between
-                        design and development for smooth, efficient project delivery.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="dots">
-                      <div className="dot" style={{ width: "85%" }}>
-                      </div>
-                    </div>
-                    <div className="value">
-                    </div>
+                  <div className="dots">
+                    <div className="dot" style={{ width: "95%" }}></div>
                   </div>
                 </div>
-              </div>
+                <div className="skills-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                  <h6 className="name">
+                    <span> macOS Development </span>
+                  </h6>
+                  <div className="text">
+                    <div>
+                      <p>
+                      I develop polished, high-performance macOS
+                      applications that feel native, integrating
+                      desktop-specific workflows and Apple ecosystem features.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="dots">
+                    <div className="dot" style={{ width: "85%" }}></div>
+                  </div>
+                </div>
+                <div className="skills-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                  <h6 className="name">
+                    <span> UI/UX Design </span>
+                  </h6>
+                  <div className="text">
+                    <div>
+                      <p>
+                      I design intuitive, visually appealing interfaces
+                      with a strong focus on usability, ensuring each
+                      interaction feels natural and engaging.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="dots">
+                    <div className="dot" style={{ width: "90%" }}></div>
+                  </div>
+                </div>
+                <div className="skills-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                  <h6 className="name">
+                    <span> Figma / Sketch </span>
+                  </h6>
+                  <div className="text">
+                    <div>
+                      <p>
+                      I create detailed, production-ready design assets
+                      in Figma and Sketch, streamlining the handoff between
+                      design and development for smooth, efficient project delivery.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="dots">
+                    <div className="dot" style={{ width: "85%" }}></div>
+                  </div>
+                </div>
             </div>
             <div className="lui-bgtitle">
               <span> Skills </span>

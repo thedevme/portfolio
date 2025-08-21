@@ -2564,7 +2564,7 @@ hr {
 	position: relative;
 	height: 6px;
 	background: rgba(0,0,0,0.1);
-	
+
 }
 
 .skills-item .dots .dot {
@@ -2618,6 +2618,36 @@ hr {
 
 .skills-item .value .num span {
 	color: #29a587;
+}
+
+/* new skill items */
+.skills-items-flexed {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+
+	.skills-item {
+		margin:0 0 2rem;
+		display: flex;
+		flex-direction: column;
+		width:  100%;
+
+		.dots {
+			margin-top: auto;
+		}
+	}
+
+	@media screen and ( min-width:48rem) {
+		.skills-item {
+			width: calc( 100%/2 - 2rem );
+		}
+	}
+
+	@media screen and ( min-width:64rem) {
+		.skills-item {
+			width: calc( 100%/3 - 2rem );
+		}
+	}
 }
 
 .history-title {
