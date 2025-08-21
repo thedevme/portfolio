@@ -306,13 +306,9 @@ const Index = () => {
                     </div>
                     <div className="dots">
                       <div className="dot" style={{ width: "95%" }}>
-                        <span />
                       </div>
                     </div>
                     <div className="value">
-                      <span className="num">
-                        95 <span>%</span>
-                      </span>
                     </div>
                   </div>
                   <div
@@ -333,12 +329,12 @@ const Index = () => {
                     </div>
                     <div className="dots">
                       <div className="dot" style={{ width: "85%" }}>
-                        <span />
+                        
                       </div>
                     </div>
                     <div className="value">
                       <span className="num">
-                        85 <span>%</span>
+                        
                       </span>
                     </div>
                   </div>
@@ -363,13 +359,9 @@ const Index = () => {
                     </div>
                     <div className="dots">
                       <div className="dot" style={{ width: "90%" }}>
-                        <span />
                       </div>
                     </div>
                     <div className="value">
-                      <span className="num">
-                        90 <span>%</span>
-                      </span>
                     </div>
                   </div>
                   <div
@@ -390,13 +382,10 @@ const Index = () => {
                     </div>
                     <div className="dots">
                       <div className="dot" style={{ width: "90%" }}>
-                        <span />
                       </div>
                     </div>
                     <div className="value">
-                      <span className="num">
-                        90 <span>%</span>
-                      </span>
+                     
                     </div>
                   </div>
                 </div>
@@ -421,13 +410,9 @@ const Index = () => {
                     </div>
                     <div className="dots">
                       <div className="dot" style={{ width: "95%" }}>
-                        <span />
                       </div>
                     </div>
                     <div className="value">
-                      <span className="num">
-                        95 <span>%</span>
-                      </span>
                     </div>
                   </div>
                   <div
@@ -448,13 +433,9 @@ const Index = () => {
                     </div>
                     <div className="dots">
                       <div className="dot" style={{ width: "85%" }}>
-                        <span />
                       </div>
                     </div>
                     <div className="value">
-                      <span className="num">
-                        85 <span>%</span>
-                      </span>
                     </div>
                   </div>
                 </div>
