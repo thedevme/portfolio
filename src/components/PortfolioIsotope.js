@@ -272,7 +272,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category"> Development, Design, App Store</span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/work-single">
+                  <Link legacyBehavior href="/sharks">
                     <a>Sharks App</a>
                   </Link>
                 </h5>
@@ -281,7 +281,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
                     A sharks dashboard offering real-time data, habitat tracking, migration patterns, risk analysis, and alerts with a responsive, user-friendly design
                   </p>
                 </div>
-                <Link legacyBehavior href="/work-single">
+                <Link legacyBehavior href="/sharks">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
