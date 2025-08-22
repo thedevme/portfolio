@@ -212,7 +212,7 @@ const Index = () => {
                     <span>Interface Craft</span>
                   </div>
                   <h5 className="lui-title">
-                    <span> iOS Design New</span>
+                    <span> iOS Design</span>
                   </h5>
                   <div className="lui-text">
                     <div>
