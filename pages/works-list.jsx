@@ -19,7 +19,7 @@ const WorksList = () => {
               data-splitting="words"
               data-animate="active"
             >
-              <span> Portfolio (List) </span>
+              <span>Portfolio</span>
             </h1>
             <div
               className="m-subtitle splitting-text-anim-1 scroll-animate"
@@ -28,7 +28,7 @@ const WorksList = () => {
             >
               <span>
                 {" "}
-                my <b>Work</b>
+                All my <b>Work</b>
               </span>
             </div>
           </div>
