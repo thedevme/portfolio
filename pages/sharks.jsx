@@ -67,7 +67,7 @@ const Patriots = () => {
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 align-right">
                 <a
                   target="_blank"
-                  href="https://apps.apple.com"
+                  href="https://apps.apple.com/us/app/san-jose-sharks-sap-center/id711570954"
                   className="btn scrolla-element-anim-1 scroll-animate"
                   data-animate="active"
                 >
