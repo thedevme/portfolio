@@ -88,13 +88,13 @@ const Index = () => {
                 className="slide scrolla-element-anim-1 scroll-animate"
                 data-animate="active"
               >
-                <div className="circle circle-1">
+                {/* <div className="circle circle-1">
                    <img
                     decoding="async"
                     src="/assets/images/craig-clayton-profile.jpg"
                     alt="<b>Craig</b> Clayton"
                   />
-                </div>
+                </div> */}
                 <span
                   className="circle img-1"
                   style={{
