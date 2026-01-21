@@ -1,20 +1,8 @@
 import Link from "next/link";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 import { linkClick, toggleMenu } from "../utils";
 
 const Header = () => {
-  // Always apply dark theme
-  useEffect(() => {
-    if (typeof document !== 'undefined') {
-      document.body.classList.add("dark-skin");
-      document.body.classList.remove("light-skin");
-      // Force the body class
-      document.body.className = 'dark-skin';
-    }
-  }, []);
-
-  const [pageToggle, setPageToggle] = useState(true);
-
   return (
     <Fragment>
       {/* Header */}
@@ -30,7 +18,7 @@ const Header = () => {
                       width={240}
                       height={40}
                       src="/assets/images/mobile-logo-scaled.png"
-                      alt=""
+                      alt="Craig Clayton - iOS Developer"
                     />
                   </a>
                 </Link>
@@ -38,7 +26,13 @@ const Header = () => {
             </div>
             <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8 align-right">
               {/* menu btn */}
-              <a href="#" className="menu-btn" onClick={(e) => toggleMenu(e)}>
+              <a
+                href="#"
+                className="menu-btn"
+                onClick={(e) => toggleMenu(e)}
+                role="button"
+                aria-label="Toggle navigation menu"
+              >
                 <span />
                 <span />
               </a>

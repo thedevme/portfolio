@@ -9,38 +9,63 @@ export function initCursor() {
     w: 30,
     h: 30,
     update: function () {
+      if (!this.el) return;
       let l = this.x - this.w / 2;
       let t = this.y - this.h / 2;
       this.el.style.transform = "translate3d(" + l + "px," + t + "px, 0)";
     },
   };
 
-  window.addEventListener("mousemove", (e) => {
+  if (!cursor.el) return () => {};
+
+  const handleMouseMove = (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-  });
+  };
 
-  const link = document.querySelectorAll(
+  window.addEventListener("mousemove", handleMouseMove);
+
+  const links = document.querySelectorAll(
     "a, .swiper-pagination, .swiper-button-prev, .swiper-button-next, button, .button, .btn, .lnk"
   );
-  link.forEach((link) => {
-    link.addEventListener("mouseenter", () => {
-      cursor.el.classList.add("cursor-zoom");
-    });
-    link.addEventListener("mouseleave", () => {
-      cursor.el.classList.remove("cursor-zoom");
-    });
+
+  const handleMouseEnter = () => {
+    cursor.el.classList.add("cursor-zoom");
+  };
+
+  const handleMouseLeave = () => {
+    cursor.el.classList.remove("cursor-zoom");
+  };
+
+  links.forEach((link) => {
+    link.addEventListener("mouseenter", handleMouseEnter);
+    link.addEventListener("mouseleave", handleMouseLeave);
   });
 
-  setInterval(move, 1000 / 60);
+  function lerp(start, end, amt) {
+    return (1 - amt) * start + amt * end;
+  }
+
+  let animationId;
   function move() {
     cursor.x = lerp(cursor.x, mouseX, 0.1);
     cursor.y = lerp(cursor.y, mouseY, 0.1);
     cursor.update();
+    animationId = requestAnimationFrame(move);
   }
-  function lerp(start, end, amt) {
-    return (1 - amt) * start + amt * end;
-  }
+  animationId = requestAnimationFrame(move);
+
+  // Return cleanup function
+  return () => {
+    window.removeEventListener("mousemove", handleMouseMove);
+    links.forEach((link) => {
+      link.removeEventListener("mouseenter", handleMouseEnter);
+      link.removeEventListener("mouseleave", handleMouseLeave);
+    });
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+    }
+  };
 }
 export const activeAnimation = () => {
   const progress_inner = document.querySelectorAll(".scroll-animate"),

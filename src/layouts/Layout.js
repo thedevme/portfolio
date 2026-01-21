@@ -9,11 +9,25 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 const Layout = ({ children, pageClassName }) => {
+  // Force dark theme on all pages
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.body.classList.add("dark-skin");
+      document.body.classList.remove("light-skin");
+    }
+  }, []);
+
   useEffect(() => {
     activeAnimation();
-    initCursor();
+    const cleanupCursor = initCursor();
     window.addEventListener("scroll", activeAnimation);
     window.addEventListener("scroll", stickyNav);
+
+    return () => {
+      window.removeEventListener("scroll", activeAnimation);
+      window.removeEventListener("scroll", stickyNav);
+      if (cleanupCursor) cleanupCursor();
+    };
   }, []);
 
   useEffect(() => {
@@ -22,10 +36,17 @@ const Layout = ({ children, pageClassName }) => {
     }
     Splitting();
     jarallaxAnimation();
-    document.querySelector("body").className = pageClassName
-      ? pageClassName
-      : "";
-  });
+    const body = document.querySelector("body");
+    if (body && pageClassName) {
+      body.classList.add(pageClassName);
+    }
+
+    return () => {
+      if (body && pageClassName) {
+        body.classList.remove(pageClassName);
+      }
+    };
+  }, [pageClassName]);
 
   return (
     <Fragment>
