@@ -1,24 +1,26 @@
-const ProjectHeader = ({ title, subtitle, year, technology, categories, appStoreUrl }) => {
+const ProjectHeader = ({ title, subtitle, year, technology, categories, appStoreUrl, hideTitle = false }) => {
   return (
-    <section className="section section-inner started-heading">
-      <div className="container">
-        <div className="m-titles align-left">
-          <h1
-            className="m-title splitting-text-anim-1 scroll-animate"
-            data-splitting="words"
-            data-animate="active"
-          >
-            <span>{title}</span>
-          </h1>
-          <div
-            className="m-subtitle splitting-text-anim-1 scroll-animate"
-            data-splitting="words"
-            data-animate="active"
-          >
-            <span>{subtitle}</span>
+    <section className={`section section-inner started-heading ${hideTitle ? 'started-heading--compact' : ''}`}>
+      {!hideTitle && (
+        <div className="container">
+          <div className="m-titles align-left">
+            <h1
+              className="m-title splitting-text-anim-1 scroll-animate"
+              data-splitting="words"
+              data-animate="active"
+            >
+              <span>{title}</span>
+            </h1>
+            <div
+              className="m-subtitle splitting-text-anim-1 scroll-animate"
+              data-splitting="words"
+              data-animate="active"
+            >
+              <span>{subtitle}</span>
+            </div>
           </div>
         </div>
-      </div>
+      )}
       <div className="v-line v-line-right v-line-top">
         <div className="container">
           <div className="row">

@@ -1,0 +1,1678 @@
+/* ==========================================================================
+   Device Mockups CSS
+   Pure CSS device frames for iPhone, iPad, Apple Watch, and Android
+   ========================================================================== */
+
+/* CSS Custom Properties for Device Dimensions */
+:root {
+  /* iPhone 15 Pro dimensions - sized to match ~425px content width */
+  --iphone-width: 380px;
+  --iphone-height: 776px;
+  --iphone-bezel: 14px;
+  --iphone-radius: 54px;
+  --iphone-notch-width: 160px;
+  --iphone-notch-height: 42px;
+
+  /* iPad Pro dimensions */
+  --ipad-width: 720px;
+  --ipad-height: 540px;
+  --ipad-bezel: 18px;
+  --ipad-radius: 28px;
+
+  /* Apple Watch dimensions */
+  --watch-width: 180px;
+  --watch-height: 220px;
+  --watch-bezel: 10px;
+  --watch-radius: 48px;
+  --watch-crown-width: 14px;
+  --watch-crown-height: 32px;
+
+  /* Android (Samsung-style) dimensions */
+  --android-width: 380px;
+  --android-height: 776px;
+  --android-bezel: 12px;
+  --android-radius: 44px;
+  --android-punch-hole: 16px;
+
+  /* Frame colors */
+  --frame-space-gray: #1a1a1a;
+  --frame-silver: #e0e0e0;
+  --frame-gold: #f5deb3;
+  --frame-black: #0a0a0a;
+  --frame-titanium: #8a8a8a;
+}
+
+/* ==========================================================================
+   Base Device Mockup Styles
+   ========================================================================== */
+.device-mockup {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.device-mockup__frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+.device-mockup__screen {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.device-mockup__screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* ==========================================================================
+   iPhone 15 Pro Style
+   ========================================================================== */
+.device-mockup--iphone .device-mockup__frame {
+  width: var(--iphone-width);
+  height: var(--iphone-height);
+  padding: var(--iphone-bezel);
+  border-radius: var(--iphone-radius);
+  background: var(--frame-space-gray);
+}
+
+.device-mockup--iphone .device-mockup__screen {
+  width: 100%;
+  height: 100%;
+  border-radius: calc(var(--iphone-radius) - var(--iphone-bezel));
+}
+
+/* Dynamic Island - only show when not using noNotch variant */
+.device-mockup--iphone:not(.device-mockup--no-notch) .device-mockup__screen::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--iphone-notch-width);
+  height: var(--iphone-notch-height);
+  background: #000;
+  border-radius: 20px;
+  z-index: 10;
+}
+
+/* No notch variant - for screenshots that already have the notch */
+.device-mockup--no-notch .device-mockup__screen::before {
+  display: none;
+}
+
+/* Side buttons */
+.device-mockup--iphone .device-mockup__frame::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 160px;
+  width: 4px;
+  height: 40px;
+  background: var(--frame-space-gray);
+  border-radius: 2px 0 0 2px;
+  box-shadow: 0 54px 0 var(--frame-space-gray), 0 100px 0 var(--frame-space-gray);
+}
+
+.device-mockup--iphone .device-mockup__frame::after {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 200px;
+  width: 4px;
+  height: 80px;
+  background: var(--frame-space-gray);
+  border-radius: 0 2px 2px 0;
+}
+
+/* ==========================================================================
+   iPad Pro Style
+   ========================================================================== */
+.device-mockup--ipad .device-mockup__frame {
+  width: var(--ipad-width);
+  height: var(--ipad-height);
+  padding: var(--ipad-bezel);
+  border-radius: var(--ipad-radius);
+  background: var(--frame-space-gray);
+}
+
+.device-mockup--ipad .device-mockup__screen {
+  width: 100%;
+  height: 100%;
+  border-radius: calc(var(--ipad-radius) - var(--ipad-bezel) + 4px);
+}
+
+/* Landscape orientation default for iPad */
+.device-mockup--ipad.device-mockup--portrait .device-mockup__frame {
+  width: var(--ipad-height);
+  height: var(--ipad-width);
+}
+
+/* Camera notch for iPad */
+.device-mockup--ipad .device-mockup__screen::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #2a2a2a;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.device-mockup--ipad.device-mockup--landscape .device-mockup__screen::before {
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ==========================================================================
+   Apple Watch Series 9 Style
+   ========================================================================== */
+.device-mockup--watch .device-mockup__frame {
+  width: var(--watch-width);
+  height: var(--watch-height);
+  padding: var(--watch-bezel);
+  border-radius: var(--watch-radius);
+  background: var(--frame-space-gray);
+}
+
+.device-mockup--watch .device-mockup__screen {
+  width: 100%;
+  height: 100%;
+  border-radius: calc(var(--watch-radius) - var(--watch-bezel));
+}
+
+/* Digital Crown */
+.device-mockup--watch .device-mockup__frame::before {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 50px;
+  width: var(--watch-crown-width);
+  height: var(--watch-crown-height);
+  background: linear-gradient(90deg, var(--frame-space-gray), #333);
+  border-radius: 0 4px 4px 0;
+}
+
+/* Side Button */
+.device-mockup--watch .device-mockup__frame::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 95px;
+  width: 10px;
+  height: 22px;
+  background: var(--frame-space-gray);
+  border-radius: 0 3px 3px 0;
+}
+
+/* ==========================================================================
+   Android Samsung-Style
+   ========================================================================== */
+.device-mockup--android .device-mockup__frame {
+  width: var(--android-width);
+  height: var(--android-height);
+  padding: var(--android-bezel);
+  border-radius: var(--android-radius);
+  background: var(--frame-black);
+}
+
+.device-mockup--android .device-mockup__screen {
+  width: 100%;
+  height: 100%;
+  border-radius: calc(var(--android-radius) - var(--android-bezel));
+}
+
+/* Punch-hole camera */
+.device-mockup--android .device-mockup__screen::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--android-punch-hole);
+  height: var(--android-punch-hole);
+  background: #000;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 0 2px #1a1a1a;
+}
+
+/* Side buttons */
+.device-mockup--android .device-mockup__frame::before {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 180px;
+  width: 4px;
+  height: 60px;
+  background: var(--frame-black);
+  border-radius: 0 2px 2px 0;
+  box-shadow: 0 80px 0 var(--frame-black);
+}
+
+/* ==========================================================================
+   Frame Color Variants
+   ========================================================================== */
+.device-mockup--silver .device-mockup__frame {
+  background: var(--frame-silver);
+}
+.device-mockup--silver .device-mockup__frame::before,
+.device-mockup--silver .device-mockup__frame::after {
+  background: var(--frame-silver);
+}
+
+.device-mockup--gold .device-mockup__frame {
+  background: var(--frame-gold);
+}
+.device-mockup--gold .device-mockup__frame::before,
+.device-mockup--gold .device-mockup__frame::after {
+  background: var(--frame-gold);
+}
+
+.device-mockup--black .device-mockup__frame {
+  background: var(--frame-black);
+}
+.device-mockup--black .device-mockup__frame::before,
+.device-mockup--black .device-mockup__frame::after {
+  background: var(--frame-black);
+}
+
+.device-mockup--titanium .device-mockup__frame {
+  background: var(--frame-titanium);
+}
+.device-mockup--titanium .device-mockup__frame::before,
+.device-mockup--titanium .device-mockup__frame::after {
+  background: var(--frame-titanium);
+}
+
+/* ==========================================================================
+   Size Variants
+   ========================================================================== */
+.device-mockup--sm {
+  transform: scale(0.75);
+  transform-origin: center center;
+}
+
+.device-mockup--md {
+  transform: scale(1);
+  transform-origin: center center;
+}
+
+.device-mockup--lg {
+  transform: scale(1.1);
+  transform-origin: center center;
+}
+
+.device-mockup--full {
+  transform: scale(1.25);
+  transform-origin: center center;
+}
+
+/* Responsive scaling */
+@media (max-width: 992px) {
+  .device-mockup--sm { transform: scale(0.6); }
+  .device-mockup--md { transform: scale(0.8); }
+  .device-mockup--lg { transform: scale(0.9); }
+  .device-mockup--full { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .device-mockup--sm { transform: scale(0.5); }
+  .device-mockup--md { transform: scale(0.65); }
+  .device-mockup--lg { transform: scale(0.75); }
+  .device-mockup--full { transform: scale(0.85); }
+}
+
+@media (max-width: 576px) {
+  .device-mockup--sm { transform: scale(0.45); }
+  .device-mockup--md { transform: scale(0.55); }
+  .device-mockup--lg { transform: scale(0.65); }
+  .device-mockup--full { transform: scale(0.75); }
+}
+
+/* ==========================================================================
+   Orientation
+   ========================================================================== */
+.device-mockup--landscape .device-mockup__frame {
+  transform: rotate(0deg);
+}
+
+.device-mockup--iphone.device-mockup--landscape .device-mockup__frame,
+.device-mockup--android.device-mockup--landscape .device-mockup__frame {
+  width: var(--iphone-height);
+  height: var(--iphone-width);
+}
+
+.device-mockup--iphone.device-mockup--landscape .device-mockup__screen::before {
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: var(--iphone-notch-height);
+  height: var(--iphone-notch-width);
+  border-radius: 20px;
+}
+
+/* ==========================================================================
+   Hero Mockup Component Styles
+   ========================================================================== */
+.hero-mockup {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+  perspective: 1200px;
+}
+
+.hero-mockup__background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(80px, 20vw, 280px);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+  animation: textPulse 4s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+  0%, 100% { opacity: 0.03; }
+  50% { opacity: 0.06; }
+}
+
+/* Header text styles */
+.hero-mockup__header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-mockup__title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.hero-mockup__subtitle {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  color: rgba(255, 255, 255, 0.6);
+  margin: -2px 0 0 0;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero-mockup__devices {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  z-index: 1;
+  transform-style: preserve-3d;
+}
+
+/* Device wrapper - 3D entrance from alternating sides */
+.hero-mockup__device-wrapper {
+  opacity: 0;
+  transform-style: preserve-3d;
+  animation: 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Odd devices come from left with rotation */
+.hero-mockup__device-wrapper:nth-child(odd) {
+  animation-name: deviceEnterLeft;
+}
+
+/* Even devices come from right with rotation */
+.hero-mockup__device-wrapper:nth-child(even) {
+  animation-name: deviceEnterRight;
+}
+
+/* Staggered delays */
+.hero-mockup__device-wrapper:nth-child(1) { animation-delay: 0.2s; }
+.hero-mockup__device-wrapper:nth-child(2) { animation-delay: 0.4s; }
+.hero-mockup__device-wrapper:nth-child(3) { animation-delay: 0.6s; }
+.hero-mockup__device-wrapper:nth-child(4) { animation-delay: 0.8s; }
+
+/* After entrance, add continuous floating */
+.hero-mockup__device-wrapper:nth-child(1) .device-mockup {
+  animation: float1 6s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+.hero-mockup__device-wrapper:nth-child(2) .device-mockup {
+  animation: float2 7s ease-in-out infinite;
+  animation-delay: 1.4s;
+}
+
+.hero-mockup__device-wrapper:nth-child(3) .device-mockup {
+  animation: float3 5s ease-in-out infinite;
+  animation-delay: 1.6s;
+}
+
+.hero-mockup__device-wrapper:nth-child(4) .device-mockup {
+  animation: float1 6.5s ease-in-out infinite;
+  animation-delay: 1.8s;
+}
+
+/* Entrance animations */
+@keyframes deviceEnterLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px) translateZ(-300px) rotateY(45deg) scale(0.5);
+    filter: blur(10px);
+  }
+  60% {
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateZ(0) rotateY(0deg) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes deviceEnterRight {
+  0% {
+    opacity: 0;
+    transform: translateX(200px) translateZ(-300px) rotateY(-45deg) scale(0.5);
+    filter: blur(10px);
+  }
+  60% {
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateZ(0) rotateY(0deg) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Floating animations - each slightly different */
+@keyframes float1 {
+  0%, 100% { transform: translateY(0) rotateX(0deg) rotateY(0deg); }
+  25% { transform: translateY(-12px) rotateX(2deg) rotateY(-1deg); }
+  50% { transform: translateY(-6px) rotateX(0deg) rotateY(1deg); }
+  75% { transform: translateY(-15px) rotateX(-1deg) rotateY(0deg); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0) rotateX(0deg) rotateY(0deg); }
+  33% { transform: translateY(-14px) rotateX(-2deg) rotateY(1deg); }
+  66% { transform: translateY(-8px) rotateX(1deg) rotateY(-1deg); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translateY(0) rotateX(0deg) rotateY(0deg); }
+  20% { transform: translateY(-10px) rotateX(1deg) rotateY(1deg); }
+  40% { transform: translateY(-16px) rotateX(-1deg) rotateY(-1deg); }
+  60% { transform: translateY(-8px) rotateX(2deg) rotateY(0deg); }
+  80% { transform: translateY(-12px) rotateX(0deg) rotateY(1deg); }
+}
+
+/* Add glow effect to devices in hero */
+.hero-mockup .device-mockup__frame {
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    0 0 60px -20px rgba(100, 150, 255, 0.15);
+}
+
+/* Row Layout */
+.hero-mockup--row .hero-mockup__devices {
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Staggered Layout */
+.hero-mockup--staggered .hero-mockup__devices {
+  align-items: flex-end;
+}
+
+.hero-mockup--staggered .hero-mockup__device-wrapper:nth-child(odd) {
+  margin-top: -40px;
+}
+
+.hero-mockup--staggered .hero-mockup__device-wrapper:nth-child(even) {
+  margin-top: 40px;
+}
+
+/* Fan Layout */
+.hero-mockup--fan .hero-mockup__devices {
+  gap: 0;
+}
+
+.hero-mockup--fan .hero-mockup__device-wrapper:nth-child(1) {
+  z-index: 1;
+  margin-right: -30px;
+}
+
+.hero-mockup--fan .hero-mockup__device-wrapper:nth-child(2) {
+  z-index: 3;
+}
+
+.hero-mockup--fan .hero-mockup__device-wrapper:nth-child(3) {
+  z-index: 2;
+  margin-left: -30px;
+}
+
+.hero-mockup--fan .hero-mockup__device-wrapper:nth-child(1) .device-mockup {
+  transform: rotate(-8deg);
+}
+
+.hero-mockup--fan .hero-mockup__device-wrapper:nth-child(3) .device-mockup {
+  transform: rotate(8deg);
+}
+
+/* ==========================================================================
+   Showcase Layout - Apple-style perspective row
+   ========================================================================== */
+.hero-mockup--showcase {
+  padding: 100px 0 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, transparent 100%);
+  overflow: hidden;
+  max-height: 700px;
+}
+
+.hero-mockup--showcase .hero-mockup__devices {
+  gap: 0;
+  align-items: flex-end;
+  perspective: 1000px;
+}
+
+.hero-mockup--showcase .hero-mockup__device-wrapper {
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+/* Reset default animations for showcase */
+.hero-mockup--showcase .hero-mockup__device-wrapper {
+  animation: none;
+  opacity: 1;
+}
+
+.hero-mockup--showcase .hero-mockup__device-wrapper .device-mockup {
+  animation: none;
+}
+
+/* Showcase entrance animation */
+.hero-mockup--showcase .hero-mockup__device-wrapper {
+  animation: showcaseEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+@keyframes showcaseEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 5 devices layout (like Apple image) - tight overlap for depth */
+.hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(1) {
+  z-index: 1;
+  margin-right: -140px;
+  animation-delay: 0.1s;
+}
+.hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(1) .device-mockup {
+  transform: scale(0.72) translateY(25px);
+  filter: brightness(0.8);
+}
+
+.hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(2) {
+  z-index: 2;
+  margin-right: -100px;
+  animation-delay: 0.2s;
+}
+.hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(2) .device-mockup {
+  transform: scale(0.82) translateY(12px);
+  filter: brightness(0.88);
+}
+
+.hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(3) {
+  z-index: 5;
+  animation-delay: 0.3s;
+}
+.hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(3) .device-mockup {
+  transform: scale(1);
+}
+/* Ensure center device frame is always visible */
+.hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(3) .device-mockup__frame {
+  background: var(--frame-space-gray) !important;
+}
+
+.hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(4) {
+  z-index: 2;
+  margin-left: -100px;
+  animation-delay: 0.4s;
+}
+.hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(4) .device-mockup {
+  transform: scale(0.82) translateY(12px);
+  filter: brightness(0.88);
+}
+
+.hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(5) {
+  z-index: 1;
+  margin-left: -140px;
+  animation-delay: 0.5s;
+}
+.hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(5) .device-mockup {
+  transform: scale(0.72) translateY(25px);
+  filter: brightness(0.8);
+}
+
+/* 6 devices */
+.hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(6) {
+  z-index: 0;
+  margin-left: -160px;
+  animation-delay: 0.6s;
+}
+.hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(6) .device-mockup {
+  transform: scale(0.62) translateY(38px);
+  filter: brightness(0.72);
+}
+
+/* 7+ devices - add more to left side */
+.hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(7) {
+  z-index: 0;
+  margin-right: -160px;
+  animation-delay: 0.05s;
+  order: -1;
+}
+.hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(7) .device-mockup {
+  transform: scale(0.62) translateY(38px);
+  filter: brightness(0.72);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(1) .device-mockup,
+  .hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(5) .device-mockup {
+    transform: scale(0.6) translateY(25px);
+  }
+  .hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(2) .device-mockup,
+  .hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(4) .device-mockup {
+    transform: scale(0.7) translateY(15px);
+  }
+  .hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(3) .device-mockup {
+    transform: scale(0.85);
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-mockup--showcase .hero-mockup__devices {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 20px 40px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .hero-mockup--showcase .hero-mockup__device-wrapper {
+    flex-shrink: 0;
+    margin: 0 -20px;
+  }
+
+  .hero-mockup--showcase .hero-mockup__device-wrapper .device-mockup {
+    transform: scale(0.7) !important;
+    filter: none !important;
+  }
+
+  .hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(3) .device-mockup {
+    transform: scale(0.8) !important;
+  }
+}
+
+/* Spacing Variants */
+.hero-mockup--spacing-sm .hero-mockup__devices {
+  gap: 10px;
+}
+
+.hero-mockup--spacing-md .hero-mockup__devices {
+  gap: 30px;
+}
+
+.hero-mockup--spacing-lg .hero-mockup__devices {
+  gap: 50px;
+}
+
+/* ==========================================================================
+   Spotlight Layout - Single dramatic device with cinematic glow
+   Use with 1 device for best effect
+   ========================================================================== */
+.hero-mockup--spotlight {
+  padding: 80px 0 0;
+  background: radial-gradient(ellipse at center top, rgba(41, 165, 135, 0.15) 0%, transparent 60%),
+              linear-gradient(180deg, #1d222a 0%, #0d1117 100%);
+  overflow: hidden;
+  min-height: 600px;
+  position: relative;
+}
+
+.hero-mockup--spotlight::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(41, 165, 135, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-mockup--spotlight .hero-mockup__header {
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-mockup--spotlight .hero-mockup__title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  letter-spacing: -0.03em;
+}
+
+.hero-mockup--spotlight .hero-mockup__subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-top: 10px;
+}
+
+.hero-mockup--spotlight .hero-mockup__devices {
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-mockup--spotlight .hero-mockup__device-wrapper {
+  animation: spotlightFloat 6s ease-in-out infinite;
+}
+
+.hero-mockup--spotlight .device-mockup {
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5))
+          drop-shadow(0 0 40px rgba(41, 165, 135, 0.15));
+}
+
+.hero-mockup--spotlight .device-mockup__frame {
+  box-shadow:
+    0 50px 100px -20px rgba(0, 0, 0, 0.6),
+    0 0 60px -10px rgba(41, 165, 135, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+@keyframes spotlightFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Spotlight with multiple devices - side by side with glow */
+.hero-mockup--spotlight .hero-mockup__device-wrapper:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.hero-mockup--spotlight .hero-mockup__device-wrapper:nth-child(3) {
+  animation-delay: 1s;
+}
+
+/* Spotlight responsive */
+@media (max-width: 768px) {
+  .hero-mockup--spotlight {
+    min-height: 500px;
+    padding: 60px 0 0;
+  }
+
+  .hero-mockup--spotlight::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-mockup--spotlight .hero-mockup__title {
+    font-size: 2.5rem;
+  }
+}
+
+/* ==========================================================================
+   Split Layout - Device on one side, text on the other
+   Apple product page style
+   ========================================================================== */
+.hero-mockup--split {
+  padding: 0;
+  background: linear-gradient(135deg, #1d222a 0%, #0d1117 100%);
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-mockup--split .hero-mockup__header {
+  position: absolute;
+  left: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: left;
+  margin: 0;
+  max-width: 40%;
+  z-index: 2;
+}
+
+.hero-mockup--split .hero-mockup__title {
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  margin-bottom: 20px;
+  background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-mockup--split .hero-mockup__subtitle {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: rgba(255,255,255,0.6);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  max-width: 400px;
+}
+
+.hero-mockup--split .hero-mockup__devices {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  justify-content: flex-end;
+  z-index: 1;
+}
+
+.hero-mockup--split .hero-mockup__device-wrapper {
+  animation: splitSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-mockup--split .device-mockup {
+  filter: drop-shadow(-30px 30px 60px rgba(0, 0, 0, 0.4));
+}
+
+.hero-mockup--split .device-mockup__frame {
+  box-shadow:
+    -20px 40px 80px -20px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+@keyframes splitSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Split with 2 devices - staggered */
+.hero-mockup--split .hero-mockup__device-wrapper:nth-child(2) {
+  margin-left: -80px;
+  margin-top: 60px;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.hero-mockup--split .hero-mockup__device-wrapper:nth-child(2) .device-mockup {
+  transform: scale(0.85);
+  filter: drop-shadow(-20px 20px 40px rgba(0, 0, 0, 0.3)) brightness(0.9);
+}
+
+/* Split responsive */
+@media (max-width: 1200px) {
+  .hero-mockup--split .hero-mockup__header {
+    max-width: 35%;
+  }
+
+  .hero-mockup--split .hero-mockup__title {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-mockup--split {
+    flex-direction: column;
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .hero-mockup--split .hero-mockup__header {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto 40px;
+  }
+
+  .hero-mockup--split .hero-mockup__title {
+    font-size: 3rem;
+  }
+
+  .hero-mockup--split .hero-mockup__subtitle {
+    margin: 0 auto;
+  }
+
+  .hero-mockup--split .hero-mockup__devices {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    justify-content: center;
+  }
+
+  .hero-mockup--split .hero-mockup__device-wrapper:nth-child(2) {
+    margin-left: -60px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-mockup--split .hero-mockup__title {
+    font-size: 2.5rem;
+  }
+
+  .hero-mockup--split .hero-mockup__device-wrapper:nth-child(2) {
+    display: none;
+  }
+}
+
+/* Device Wrapper for positioning */
+.hero-mockup__device-wrapper {
+  transition: transform 0.3s ease;
+}
+
+/* Responsive hero */
+@media (max-width: 992px) {
+  .hero-mockup__background-text {
+    font-size: clamp(60px, 15vw, 160px);
+  }
+
+  .hero-mockup--staggered .hero-mockup__device-wrapper:nth-child(odd),
+  .hero-mockup--staggered .hero-mockup__device-wrapper:nth-child(even) {
+    transform: translateY(0);
+  }
+
+  .hero-mockup--fan .hero-mockup__device-wrapper:nth-child(1),
+  .hero-mockup--fan .hero-mockup__device-wrapper:nth-child(2),
+  .hero-mockup--fan .hero-mockup__device-wrapper:nth-child(3),
+  .hero-mockup--fan .hero-mockup__device-wrapper:nth-child(4) {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-mockup__devices {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .hero-mockup {
+    padding: 40px 0;
+  }
+}
+
+/* ==========================================================================
+   Section Integration Styles - Apple-inspired
+   ========================================================================== */
+.device-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+/* Floating effect for devices in cards */
+.device-card-container .device-mockup {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card:hover .device-card-container .device-mockup {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.device-section-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Floating animation for full-width sections */
+.device-section-container .device-mockup {
+  animation: gentleFloat 6s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Ensure device mockups don't overflow their containers */
+.card .device-mockup,
+.device-card-container .device-mockup {
+  max-width: 100%;
+}
+
+/* Special handling for tablets in sections */
+.tablet-device-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: visible;
+}
+
+.tablet-device-container .device-mockup--ipad {
+  transform-origin: center center;
+}
+
+/* ==========================================================================
+   Apple-style Feature Cards
+   ========================================================================== */
+.card.feature-card {
+  background: linear-gradient(145deg, #1d222a 0%, #12151a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.card.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+}
+
+.card.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
+}
+
+.card.feature-card h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.card.feature-card p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* ==========================================================================
+   Apple-style Full Width Sections
+   ========================================================================== */
+.container-fluid.bg-custom {
+  background: linear-gradient(180deg, #0a0c0f 0%, #12151a 50%, #0a0c0f 100%);
+  position: relative;
+  padding: 100px 0;
+}
+
+.container-fluid.bg-custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+}
+
+.container-fluid.bg-custom h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.container-fluid.bg-custom p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 500px;
+}
+
+/* ==========================================================================
+   Feature Gallery - Apple-style horizontal scroll
+   ========================================================================== */
+.feature-gallery {
+  padding: 80px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.feature-gallery::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+}
+
+.feature-gallery__track {
+  display: flex;
+  gap: 60px;
+  padding: 40px 60px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.feature-gallery__track::-webkit-scrollbar {
+  display: none;
+}
+
+.feature-gallery__item {
+  flex: 0 0 auto;
+  width: 340px;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature-gallery__device {
+  margin-bottom: 30px;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.feature-gallery__item:hover .feature-gallery__device {
+  transform: translateY(-15px) scale(1.03);
+}
+
+.feature-gallery__image {
+  max-width: 280px;
+  border-radius: 20px;
+}
+
+.feature-gallery__content {
+  padding: 0 20px;
+}
+
+.feature-gallery__number {
+  display: block;
+  font-family: "Jost", sans-serif;
+  font-size: 100px;
+  line-height: 1;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.1);
+  letter-spacing: -0.02em;
+  margin-bottom: -15px;
+}
+
+.feature-gallery__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+
+.feature-gallery__description {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Scroll hint gradient */
+.feature-gallery::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  background: linear-gradient(90deg, transparent, rgba(18, 21, 26, 0.95));
+  pointer-events: none;
+}
+
+/* Drag cursor for mouse users */
+.feature-gallery__track {
+  cursor: grab;
+  user-select: none;
+}
+
+.feature-gallery__track:active {
+  cursor: grabbing;
+}
+
+/* Prevent text selection while dragging */
+.feature-gallery__track * {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@media (max-width: 768px) {
+  .feature-gallery__track {
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .feature-gallery__item {
+    width: 280px;
+  }
+
+  .feature-gallery__number {
+    font-size: 60px;
+    margin-bottom: -10px;
+  }
+
+  .feature-gallery__title {
+    font-size: 20px;
+  }
+}
+
+/* ==========================================================================
+   Bento Grid - Apple-style mixed-size card layout
+   ========================================================================== */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.bento-grid__item {
+  background: #1d222a;
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-grid__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Large item spans 2 columns */
+.bento-grid__item--large {
+  grid-column: span 2;
+  flex-direction: row;
+  align-items: center;
+  min-height: 500px;
+}
+
+.bento-grid__item--large .bento-grid__content {
+  flex: 1;
+  max-width: 45%;
+  padding-right: 40px;
+}
+
+.bento-grid__item--large .bento-grid__media {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bento-grid__item--large .bento-grid__number {
+  font-size: 74px;
+}
+
+.bento-grid__item--large .bento-grid__title {
+  font-size: 32px;
+}
+
+.bento-grid__content {
+  position: relative;
+  z-index: 2;
+}
+
+.bento-grid__number {
+  display: block;
+  font-family: "Jost", sans-serif;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.05em;
+  margin-bottom: 15px;
+}
+
+.bento-grid__title {
+  font-family: "Jost", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 12px;
+}
+
+.bento-grid__description {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.bento-grid__media {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1;
+}
+
+.bento-grid__media .device-mockup {
+  transform: scale(0.8);
+  transform-origin: bottom center;
+}
+
+.bento-grid__item--large .bento-grid__media .device-mockup {
+  transform: scale(0.9);
+}
+
+.bento-grid__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .bento-grid__item--large {
+    grid-column: span 1;
+    flex-direction: column;
+    min-height: 400px;
+  }
+
+  .bento-grid__item--large .bento-grid__content {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .bento-grid__item--large .bento-grid__number {
+    font-size: 48px;
+  }
+
+  .bento-grid__item--large .bento-grid__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bento-grid__item {
+    padding: 30px;
+    min-height: 350px;
+  }
+
+  .bento-grid__number {
+    font-size: 36px;
+  }
+
+  .bento-grid__title {
+    font-size: 18px;
+  }
+
+  .bento-grid__media .device-mockup {
+    transform: scale(0.65);
+  }
+}
+
+/* ==========================================================================
+   Feature Scroll - Full-height sections, Apple keynote style
+   ========================================================================== */
+.feature-scroll {
+  background: #000;
+}
+
+.feature-scroll__section {
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-scroll__section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(41, 165, 135, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.feature-scroll__section--alt::before {
+  background: radial-gradient(ellipse at 70% 50%, rgba(41, 165, 135, 0.08) 0%, transparent 50%);
+}
+
+.feature-scroll__container {
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.feature-scroll__section--alt .feature-scroll__container {
+  flex-direction: row-reverse;
+}
+
+.feature-scroll__text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.feature-scroll__number {
+  display: block;
+  font-family: "Jost", sans-serif;
+  font-size: 120px;
+  line-height: 1;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.1);
+  letter-spacing: -0.02em;
+  margin-bottom: -20px;
+}
+
+.feature-scroll__title {
+  font-family: "Jost", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  margin: 0 0 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.feature-scroll__description {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.feature-scroll__device {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-scroll__device .device-mockup {
+  filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.5));
+}
+
+.feature-scroll__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .feature-scroll__number {
+    font-size: 80px;
+  }
+
+  .feature-scroll__title {
+    font-size: 36px;
+  }
+
+  .feature-scroll__container {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .feature-scroll__section {
+    min-height: auto;
+    padding: 80px 30px;
+  }
+
+  .feature-scroll__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-scroll__section--alt .feature-scroll__container {
+    flex-direction: column;
+  }
+
+  .feature-scroll__text {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .feature-scroll__number {
+    font-size: 60px;
+    margin-bottom: -10px;
+  }
+
+  .feature-scroll__title {
+    font-size: 32px;
+  }
+
+  .feature-scroll__description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-scroll__section {
+    padding: 60px 20px;
+  }
+
+  .feature-scroll__number {
+    font-size: 48px;
+  }
+
+  .feature-scroll__title {
+    font-size: 28px;
+  }
+
+  .feature-scroll__device .device-mockup {
+    transform: scale(0.8);
+  }
+}
+
+/* ==========================================================================
+   Animation effects (optional hover)
+   ========================================================================== */
+.device-mockup--animated {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.device-mockup--animated:hover {
+  transform: translateY(-8px);
+}
+
+.device-mockup--animated:hover .device-mockup__frame {
+  box-shadow:
+    0 35px 60px -15px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+}
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+.device-mockup-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.device-mockup-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}

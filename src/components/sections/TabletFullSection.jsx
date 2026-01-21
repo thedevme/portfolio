@@ -1,5 +1,47 @@
-const TabletFullSection = ({ image, title, description, background = "default", imageWidth = 1000 }) => {
+import DeviceMockup from '../DeviceMockup';
+
+const TabletFullSection = ({
+  image,
+  screenshot,
+  device,
+  orientation = 'landscape',
+  frameColor = 'space-gray',
+  noNotch = true,
+  title,
+  description,
+  background = "default",
+  imageWidth = 1000
+}) => {
   const containerClass = background === "custom" ? "container-fluid bg-custom py-5" : "container-fluid py-5";
+
+  const renderImage = () => {
+    // If device is specified (typically 'ipad'), use DeviceMockup
+    if (device) {
+      return (
+        <div className="tablet-device-container">
+          <DeviceMockup
+            screenshot={screenshot || image}
+            device={device}
+            orientation={orientation}
+            frameColor={frameColor}
+            size="lg"
+            noNotch={noNotch}
+            alt={title}
+          />
+        </div>
+      );
+    }
+
+    // Fallback to regular image
+    return (
+      <img
+        src={image}
+        width={imageWidth}
+        alt={title}
+        className="mx-auto d-block"
+      />
+    );
+  };
 
   return (
     <div className={containerClass}>
@@ -12,12 +54,7 @@ const TabletFullSection = ({ image, title, description, background = "default", 
         </div>
         <div className="row align-items-middle">
           <div className="col-lg-12">
-            <img
-              src={image}
-              width={imageWidth}
-              alt={title}
-              className="mx-auto d-block"
-            />
+            {renderImage()}
           </div>
         </div>
       </div>

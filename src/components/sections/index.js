@@ -4,4 +4,7 @@ export { default as HeroImage } from "./HeroImage";
 export { default as TwoColumnCards } from "./TwoColumnCards";
 export { default as FullWidthSection } from "./FullWidthSection";
 export { default as TabletFullSection } from "./TabletFullSection";
+export { default as FeatureGallery } from "./FeatureGallery";
+export { default as BentoGrid } from "./BentoGrid";
+export { default as FeatureScroll } from "./FeatureScroll";
 export { default as NextProject } from "./NextProject";
