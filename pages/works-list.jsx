@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Layout from "../src/layouts/Layout";
+import SEO from "../src/components/SEO";
 const PortfolioIsotopeList = dynamic(
   () => import("../src/components/PortfolioIsotopeList"),
   {
@@ -9,6 +10,10 @@ const PortfolioIsotopeList = dynamic(
 const WorksList = () => {
   return (
     <Layout>
+      <SEO
+        title="Portfolio"
+        description="Browse Craig Clayton's portfolio of iOS apps, SwiftUI projects, and UI/UX designs. Featuring App Store releases and design concepts."
+      />
       {/* Section Started Heading */}
       <section className="section section-inner started-heading">
         <div className="container">

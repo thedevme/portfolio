@@ -1,8 +1,13 @@
 import Link from "next/link";
 import Layout from "../src/layouts/Layout";
+import SEO from "../src/components/SEO";
 const Blog = () => {
   return (
     <Layout>
+      <SEO
+        title="Books"
+        description="Published iOS development books by Craig Clayton covering Swift, SwiftUI, iOS 10, iOS 11, and iOS 12 programming for beginners and experienced developers."
+      />
       {/* Section Started Heading */}
       <section className="section section-inner started-heading">
         <div className="container">

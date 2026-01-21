@@ -71,7 +71,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/nike">
+                  <Link legacyBehavior href="/projects/nike">
                     <a>
                       <img
                         decoding="async"
@@ -86,7 +86,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category"> Swift, Design, YouTube</span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/nike">
+                  <Link legacyBehavior href="/projects/nike">
                     <a>Nike App</a>
                   </Link>
                 </h5>
@@ -95,7 +95,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
                     A sneaker shopping app with light/dark themes, bold visuals, intuitive navigation, and a live SwiftUI coding <br />tutorial.
                   </p>
                 </div>
-                <Link legacyBehavior href="/nike">
+                <Link legacyBehavior href="/projects/nike">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -110,7 +110,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/bmw">
+                  <Link legacyBehavior href="/projects/bmw">
                     <a>
                       <img
                         decoding="async"
@@ -125,7 +125,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category">Design, SwiftUI Projects</span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/bmw">
+                  <Link legacyBehavior href="/projects/bmw">
                     <a>BMW App</a>
                   </Link>
                 </h5>
@@ -134,7 +134,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
                     A premium BMW app concept combining connected-car data, driving insights, and curated content with sleek design and brand consistency.
                   </p>
                 </div>
-                <Link legacyBehavior href="/bmw">
+                <Link legacyBehavior href="/projects/bmw">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -148,7 +148,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/patriots">
+                  <Link legacyBehavior href="/projects/patriots">
                     <a>
                       <img
                         decoding="async"
@@ -163,7 +163,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category">Development, Design, App Store </span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/patriots">
+                  <Link legacyBehavior href="/projects/patriots">
                     <a>Patriots App</a>
                   </Link>
                 </h5>
@@ -172,7 +172,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
                     A fan-focused sports app concept with multi-team navigation, live updates, and a menu-first design blending branding and usability.
                   </p>
                 </div>
-                <Link legacyBehavior href="/patriots">
+                <Link legacyBehavior href="/projects/patriots">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -186,7 +186,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/chl">
+                  <Link legacyBehavior href="/projects/chl">
                     <a>
                       <img
                         decoding="async"
@@ -201,7 +201,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category"> Development, Design, App Store </span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/chl">
+                  <Link legacyBehavior href="/projects/chl">
                     <a>CHL App</a>
                   </Link>
                 </h5>
@@ -210,7 +210,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
                     A CHL app concept featuring real-time scores, smart game schedules, player insights, and a streamlined design with intuitive controls.
                   </p>
                 </div>
-                <Link legacyBehavior href="/tesla">
+                <Link legacyBehavior href="/projects/chl">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -224,7 +224,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/nba-allstar">
+                  <Link legacyBehavior href="/projects/nba-allstar">
                     <a>
                       <img
                         decoding="async"
@@ -239,7 +239,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category"> Development, UI UX Design </span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/nba-allstar">
+                  <Link legacyBehavior href="/projects/nba-allstar">
                     <a>NBA All-Star App</a>
                   </Link>
                 </h5>
@@ -248,7 +248,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
                     An interactive NBA All-Star voting app with drag-and-drop lineups, player stats, and dynamic court visuals for fan engagement.
                   </p>
                 </div>
-                <Link legacyBehavior href="/nba-allstar">
+                <Link legacyBehavior href="/projects/nba-allstar">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -262,7 +262,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/sharks">
+                  <Link legacyBehavior href="/projects/sharks">
                     <a>
                       <img
                         decoding="async"
@@ -277,7 +277,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category"> Development, Design, App Store</span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/sharks">
+                  <Link legacyBehavior href="/projects/sharks">
                     <a>Sharks App</a>
                   </Link>
                 </h5>
@@ -286,7 +286,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
                     A sharks dashboard offering real-time data, habitat tracking, migration patterns, risk analysis, and alerts with a responsive, user-friendly design
                   </p>
                 </div>
-                <Link legacyBehavior href="/sharks">
+                <Link legacyBehavior href="/projects/sharks">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -300,7 +300,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/american-handy">
+                  <Link legacyBehavior href="/projects/american-handy">
                     <a>
                       <img
                         decoding="async"
@@ -315,7 +315,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category"> Development, Design, App Store</span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/american-handy">
+                  <Link legacyBehavior href="/projects/american-handy">
                     <a>American Handy App</a>
                   </Link>
                 </h5>
@@ -324,7 +324,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
                     American Handy app offering real-time booking, service tracking, order management, cost estimates, and alerts with a responsive, user-friendly design.
                   </p>
                 </div>
-                <Link legacyBehavior href="/american-handy">
+                <Link legacyBehavior href="/projects/american-handy">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -338,7 +338,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/analyzer">
+                  <Link legacyBehavior href="/projects/analyzer">
                     <a>
                       <img
                         decoding="async"
@@ -353,7 +353,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category">Design, App Store</span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/analyzer">
+                  <Link legacyBehavior href="/projects/analyzer">
                     <a>Fantast Football Analyzer App</a>
                   </Link>
                 </h5>
@@ -362,7 +362,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
                     A fantasy trade tool built to track players in real time, grade offers, analyze value shifts, and review past trades — all in a clean, intuitive interface.
                   </p>
                 </div>
-                <Link legacyBehavior href="/analyzer">
+                <Link legacyBehavior href="/projects/analyzer">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -376,7 +376,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/movement">
+                  <Link legacyBehavior href="/projects/movement">
                     <a>
                       <img
                         decoding="async"
@@ -391,7 +391,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category"> Development, Design, App Store</span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/movement">
+                  <Link legacyBehavior href="/projects/movement">
                     <a>Movement App</a>
                   </Link>
                 </h5>
@@ -400,7 +400,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
                     A civil rights storytelling app featuring immersive walks, historic landmarks, & AR experiences with a powerful, engaging design.
                   </p>
                 </div>
-                <Link legacyBehavior href="/movement">
+                <Link legacyBehavior href="/projects/movement">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -414,7 +414,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/shoe-pos">
+                  <Link legacyBehavior href="/projects/shoe-pos">
                     <a>
                       <img
                         decoding="async"
@@ -429,7 +429,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category">Prototype Design, SwiftUI Projects</span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/shoe-pos">
+                  <Link legacyBehavior href="/projects/shoe-pos">
                     <a>Shoe POS App</a>
                   </Link>
                 </h5>
@@ -438,7 +438,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
                     A sneaker POS system offering product management, real-time inventory by size, brand catalogs, sales tracking, and checkout with a clean, intuitive design.
                   </p>
                 </div>
-                <Link legacyBehavior href="/shoe-pos">
+                <Link legacyBehavior href="/projects/shoe-pos">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -452,7 +452,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/designair">
+                  <Link legacyBehavior href="/projects/designair">
                     <a>
                       <img
                         decoding="async"
@@ -467,7 +467,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category">Prototype Design</span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/designair">
+                  <Link legacyBehavior href="/projects/designair">
                     <a>Design Air App</a>
                   </Link>
                 </h5>
@@ -476,7 +476,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
                     The DesignAir prototype app is a booking solution with one-way, roundtrip, and multi-city flights, ticket seletion, baggage add-ons, seat selection, and a clean, responsive design.
                   </p>
                 </div>
-                <Link legacyBehavior href="/designair">
+                <Link legacyBehavior href="/projects/designair">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -490,7 +490,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/financial">
+                  <Link legacyBehavior href="/projects/financial">
                     <a>
                       <img
                         decoding="async"
@@ -505,7 +505,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category">Prototype Design</span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/financial">
+                  <Link legacyBehavior href="/projects/financial">
                     <a>Financial App</a>
                   </Link>
                 </h5>
@@ -514,7 +514,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
                     A financial management app with account creation, credit tracking, multi-card support, detailed transactions, spending analysis, budgeting tools, and user-friendly design.
                   </p>
                 </div>
-                <Link legacyBehavior href="/financial">
+                <Link legacyBehavior href="/projects/financial">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -528,7 +528,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/raiders">
+                  <Link legacyBehavior href="/projects/raiders">
                     <a>
                       <img
                         decoding="async"
@@ -543,7 +543,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category">Prototype Design</span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/raiders">
+                  <Link legacyBehavior href="/projects/raiders">
                     <a>Raiders App</a>
                   </Link>
                 </h5>
@@ -552,7 +552,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
                     The Raiders app is your ultimate game-day and season companion, featuring live scores, detailed schedules, team rosters, depth charts, ticket management, highlights, and stadium information in one place.
                   </p>
                 </div>
-                <Link legacyBehavior href="/raiders">
+                <Link legacyBehavior href="/projects/raiders">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -566,7 +566,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/tesla">
+                  <Link legacyBehavior href="/projects/tesla">
                     <a>
                       <img
                         decoding="async"
@@ -581,7 +581,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category">Prototype Design</span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/tesla">
+                  <Link legacyBehavior href="/projects/tesla">
                     <a>Tesla App</a>
                   </Link>
                 </h5>
@@ -590,7 +590,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
                     The Tesla rental app prototype offers a streamlined way to book luxury cars with flexible rental periods, real-time tracking, clear pricing, interior previews, and quick order management, all within a, responsive design.
                   </p>
                 </div>
-                <Link legacyBehavior href="/tesla">
+                <Link legacyBehavior href="/projects/tesla">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -604,7 +604,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/hornets">
+                  <Link legacyBehavior href="/projects/hornets">
                     <a>
                       <img
                         decoding="async"
@@ -619,7 +619,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category">Prototype Design</span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/hornets">
+                  <Link legacyBehavior href="/projects/hornets">
                     <a>Hornets App</a>
                   </Link>
                 </h5>
@@ -628,7 +628,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
                     The Hornets app delivers live game updates, detailed stats, team schedules, and player insights in real time. Fans can track matchups, view box scores, follow leaders in points, rebounds, and assists.
                   </p>
                 </div>
-                <Link legacyBehavior href="/tesla">
+                <Link legacyBehavior href="/projects/hornets">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
@@ -642,7 +642,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
             >
               <div className="image">
                 <div className="img">
-                  <Link legacyBehavior href="/edfarmkiosk">
+                  <Link legacyBehavior href="/projects/edfarmkiosk">
                     <a>
                       <img
                         decoding="async"
@@ -657,7 +657,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
               <div className="desc">
                 <span className="category">Prototype Design</span>
                 <h5 className="name">
-                  <Link legacyBehavior href="/edfarmkiosk">
+                  <Link legacyBehavior href="/projects/edfarmkiosk">
                     <a>EdFarm Kiosk App</a>
                   </Link>
                 </h5>
@@ -666,7 +666,7 @@ const PortfolioIsotopeList = ({ noViewMore }) => {
                     The EdFarm kiosk app highlights learning, history, and innovation with interactive stories, educator programs, and youth voices, guiding visitors through civil rights history and modern education.
                   </p>
                 </div>
-                <Link legacyBehavior href="/edfarmkiosk">
+                <Link legacyBehavior href="/projects/edfarmkiosk">
                   <a className="lnk">See project</a>
                 </Link>
               </div>

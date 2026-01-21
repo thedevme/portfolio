@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Resume from "../src/components/Resume";
 import ContactForm from "../src/components/ContactForm";
 import Layout from "../src/layouts/Layout";
+import SEO from "../src/components/SEO";
 import {
   servicesSliderProps,
   testimonialsSliderProps,
@@ -17,6 +18,10 @@ const PortfolioIsotope = dynamic(
 const Index = () => {
   return (
     <Layout pageClassName={"home"}>
+      <SEO
+        title="Home"
+        description="Craig Clayton is a Sr. iOS Developer with 10+ years of experience specializing in Swift, SwiftUI, and creating intuitive, visually appealing mobile apps."
+      />
       {/* Section - Hero Started */}
       <section
         className="lui-section lui-section-hero lui-gradient-top"
