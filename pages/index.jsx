@@ -363,6 +363,23 @@ const Index = () => {
                     <div className="dot" style={{ width: "85%" }}></div>
                   </div>
                 </div>
+                <div className="skills-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                  <h6 className="name">
+                    <span> React Native </span>
+                  </h6>
+                  <div className="text">
+                    <div>
+                      <p>
+                      I build cross-platform mobile applications with React Native,
+                      leveraging my native iOS expertise to deliver performant,
+                      polished apps for both iOS and Android from a single codebase.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="dots">
+                    <div className="dot" style={{ width: "80%" }}></div>
+                  </div>
+                </div>
             </div>
             <div className="lui-bgtitle">
               <span> Skills </span>
