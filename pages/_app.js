@@ -103,6 +103,12 @@ const App = ({ Component, pageProps }) => {
         />
         <link
           rel="stylesheet"
+          href="/assets/css/device-mockups.css"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
           href="/assets/css/dark.css"
           type="text/css"
           media="all"
