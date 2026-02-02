@@ -179,33 +179,30 @@ export const projects = {
     categories: "Mobile Game, Entertainment",
     appStoreUrl: "https://apps.apple.com/us/app/new-england-patriots/id550269821",
     headerImage: "/assets/images/patriots-header.png",
+    headerDevices: [
+      { screenshot: "/assets/images/raw/patriots1.PNG", device: "iphone" },
+      { screenshot: "/assets/images/raw/patriots2.PNG", device: "iphone" },
+      { screenshot: "/assets/images/raw/patriots3.PNG", device: "iphone" },
+      { screenshot: "/assets/images/raw/patriots4.PNG", device: "iphone" },
+      { screenshot: "/assets/images/raw/patriots5.PNG", device: "iphone" }
+    ],
+    headerText: "PATRIOTS",
+    headerLayout: "showcase",
     description: [
       "This project reimagines the traditional sports app by introducing a visually engaging, multi-team menu system designed for quick navigation and a connected fan experience. The app consolidates multiple team and venue experiences into a single interface through its innovative app switcher, allowing users to seamlessly move between their favorite teams, live game updates, and stadium information. From live scores and player stats to depth charts and roster filters, each screen was designed with clarity and speed in mind, ensuring fans can access the information they want in just a few taps.",
       "The menu-first design was the focal point of the project, breaking away from the standard tab bar and side navigation commonly found in sports apps. By using large, touch-friendly icons and a visually distinct app switcher, the interface encourages exploration while keeping important features—like tickets, schedules, and team news—always within reach. This approach proved so effective it was later adopted by other sports organizations, including CHL teams, demonstrating the versatility and scalability of the design. The result is a fan-focused experience that blends live content, team branding, and modern navigation into a cohesive, easy-to-use platform."
     ],
     layout: "phone",
-    imageWidth: 211,
+    imageWidth: 425,
     sections: [
       {
-        type: "two-column",
-        cards: [
-          { image: "/assets/images/patriots1.png", title: "Dynamic Home Hub", description: "The home screen serves as the central hub for fans, showcasing the latest scores, upcoming matchups, and highlighted content. Featured sections like \"Articles,\" \"Videos,\" and \"Audio\" keep users engaged, while spotlight cards draw attention to key events and breaking news.", imagePosition: "top" },
-          { image: "/assets/images/patriots2.png", title: "Full Season Schedule", description: "The schedule screen provides a clean, organized view of the Patriots' preseason and regular season games. Fans can see matchups, dates, and kickoff times at a glance, with clear indicators for home and away games. Each game card is visually separated, making it easy to scan and plan ahead.", imagePosition: "bottom" }
-        ]
-      },
-      {
-        type: "full-width",
-        image: "/assets/images/patriots4.png",
-        title: "Simplified Navigation Drawer",
-        description: "The slide-out navigation menu gives quick access to essential app sections like schedule, news, live radio, tickets, and the team shop. A Ticketmaster login option sits at the top for seamless ticket management. Clean iconography and team branding make the menu easy to use on the go.",
-        imagePosition: "right",
-        background: "custom"
-      },
-      {
-        type: "two-column",
-        cards: [
-          { image: "/assets/images/patriots3.png", title: "Team Overview & Stats", description: "This screen highlights the Patriots' season record, breaking down performance by division, home, road, and streaks. A bold, team-branded background keeps the focus on key stats, while additional sections like \"Team Starters\" give fans deeper insights into the lineup.", imagePosition: "top" },
-          { image: "/assets/images/patriots5.png", title: "Interactive Roster List", description: "The roster screen displays players in a sortable table with jersey numbers, names, positions, and physical details like height and weight. Each row includes a headshot for instant recognition, ensuring fans can quickly browse and get to know the entire team.", imagePosition: "bottom" }
+        type: "feature-gallery",
+        features: [
+          { image: "/assets/images/raw/patriots1.PNG", device: "iphone", title: "Dynamic Home Hub", description: "Central hub showcasing latest scores, upcoming matchups, and highlighted content with featured sections." },
+          { image: "/assets/images/raw/patriots2.PNG", device: "iphone", title: "Season Schedule", description: "Clean view of preseason and regular season games with matchups, dates, and kickoff times." },
+          { image: "/assets/images/raw/patriots3.PNG", device: "iphone", title: "Team Stats", description: "Season record breakdown by division, home, road, and streaks with team starter insights." },
+          { image: "/assets/images/raw/patriots4.PNG", device: "iphone", title: "Navigation Menu", description: "Quick access to schedule, news, live radio, tickets, and team shop with Ticketmaster integration." },
+          { image: "/assets/images/raw/patriots5.PNG", device: "iphone", title: "Team Roster", description: "Sortable roster with jersey numbers, positions, and player headshots for instant recognition." }
         ]
       }
     ],
@@ -276,6 +273,12 @@ export const projects = {
     categories: "Mobile Game, Entertainment",
     appStoreUrl: "https://apps.apple.com/us/app/san-jose-sharks-sap-center/id711570954",
     headerImage: "/assets/images/sharks-header.png",
+    headerDevices: [
+      { screenshot: "/assets/images/raw/sharks1.png", device: "iphone" },
+      { screenshot: "/assets/images/raw/sharks2.png", device: "iphone" }
+    ],
+    headerText: "SHARKS",
+    headerLayout: "split",
     description: [
       "This project brought the San Jose Sharks' digital presence to life with a modern mobile app that connects fans to the team, players, and game-day experience in one powerful platform. Designed with bold team branding and streamlined navigation, the app gives fans direct access to live scores, stats, rosters, and standings, all organized in a clean and intuitive interface. Supporters can explore detailed player profiles, check schedules at a glance, and dive into real-time updates that keep the Sharks front and center. With visually rich layouts and quick navigation between home, schedule, roster, and standings, the experience is built to give fans everything they need in just a few taps.",
       "Beyond scores and stats, the app integrates key fan services such as ticket management, food and beverage ordering, merchandise, digital wallet, and transportation, making it a true game-day companion. Push notifications ensure fans never miss a major update, while the Sharks365 and premium member hubs provide exclusive perks and access. From news stories and offseason updates to upcoming events at SAP Center, the platform centralizes all aspects of the fan journey. This unified digital experience not only strengthens the Sharks' brand identity but also delivers an engaging, dynamic, and interactive way for fans to stay connected — whether they're following live action, planning their arena visit, or celebrating the team together."
@@ -284,25 +287,14 @@ export const projects = {
     imageWidth: 425,
     sections: [
       {
-        type: "two-column",
-        cards: [
-          { image: "/assets/images/sharks2.png", title: "Home Hub", description: "The main landing screen, highlighting Sharks' top stories, upcoming games, and opening night promotions. Fans can quickly catch the latest news, watch videos, and explore featured content in a visually dynamic feed.", imagePosition: "top" },
-          { image: "/assets/images/sharks3.png", title: "Game Schedule", description: "A dedicated schedule view, making it easy for fans to track upcoming matchups. Features tabs by month, details for home and away games, and quick ticket access for seamless game-day planning.", imagePosition: "bottom" }
-        ]
-      },
-      {
-        type: "full-width",
-        image: "/assets/images/sharks4.png",
-        title: "Team App Main Menu",
-        description: "The primary navigation hub for the San Jose Sharks app. Quick actions surface ticket management, inbox, and buying tickets, while the main list links to Sharks365 hubs, food & drink ordering, merchandise, digital wallet, parking/transport, gift cards, orders, and tickets. A left rail lets fans switch between Sharks, Cuda, and Sharks Ice.",
-        imagePosition: "right",
-        background: "custom"
-      },
-      {
-        type: "two-column",
-        cards: [
-          { image: "/assets/images/sharks5.png", title: "Standings Overview", description: "A stats-driven screen showing current records, standings in the Pacific Division, and overall team performance. Gives fans league context alongside Sharks-specific stats like wins, goals, and points.", imagePosition: "top" },
-          { image: "/assets/images/sharks6.png", title: "Team Roster", description: "A sortable roster view with player headshots, numbers, positions, and height/weight, organized by forwards, defense, and goalies. Top tabs (Overview, Roster, Standings, Stats) and the bottom nav make it easy to jump between team info, schedule, and arena features.", imagePosition: "bottom" }
+        type: "feature-scroll",
+        features: [
+          { image: "/assets/images/raw/sharks1.png", device: "iphone", title: "Team News Feed", description: "Latest Sharks news and content featuring game previews, player interviews, and team updates." },
+          { image: "/assets/images/raw/sharks2.png", device: "iphone", title: "Home Hub", description: "The main landing screen highlighting top stories, upcoming games, and opening night promotions." },
+          { image: "/assets/images/raw/sharks3.png", device: "iphone", title: "Game Schedule", description: "A dedicated schedule view with monthly tabs, home/away details, and quick ticket access." },
+          { image: "/assets/images/raw/sharks4.png", device: "iphone", title: "Team App Main Menu", description: "Navigation hub with ticket management, Sharks365, food ordering, merchandise, and arena features." },
+          { image: "/assets/images/raw/sharks5.png", device: "iphone", title: "Standings Overview", description: "Stats-driven screen showing Pacific Division standings with wins, goals, and points." },
+          { image: "/assets/images/raw/sharks6.png", device: "iphone", title: "Team Roster", description: "Sortable roster with player headshots, numbers, positions, organized by forwards, defense, and goalies." }
         ]
       }
     ],
@@ -366,6 +358,13 @@ export const projects = {
     categories: "Mobile Game, Entertainment",
     appStoreUrl: "https://apps.apple.com/us/app/chl-official-app/id1479076116",
     headerImage: "/assets/images/chl-header.png",
+    headerDevices: [
+      { screenshot: "/assets/images/raw/chl1.png", device: "iphone" },
+      { screenshot: "/assets/images/raw/chl2.png", device: "iphone" },
+      { screenshot: "/assets/images/raw/chl3.png", device: "iphone" }
+    ],
+    headerText: "01",
+    headerLayout: "cinema",
     description: [
       "This project brought the Canadian Hockey League's digital presence to life by designing a mobile app that unites the CHL, WHL, OHL, and LHJMQ under a single, cohesive experience. Inspired by the Hornets app I previously designed, the CHL app carries forward the same focus on bold branding, intuitive navigation, and team-first presentation. Fans can personalize the app by selecting their favorite team, unlocking a tailored feed of news, schedules, standings, and roster details. The design emphasizes quick navigation through a clean menu system, league-level shortcuts, and visually rich team branding. From live scores and standings to full rosters and player profiles, every feature was crafted to give fans an engaging, on-the-go connection to their team.",
       "The app also integrates game-day essentials, including ticket purchasing, interactive content, and push notifications to keep fans updated in real time. The balance of league-wide accessibility and team-specific customization ensures that users can seamlessly switch between exploring the broader CHL landscape and focusing on their chosen club. This unified design approach, built on principles proven in the Hornets app, strengthened the CHL's brand identity while delivering a smooth, intuitive experience for hockey fans across Canada and beyond."
@@ -374,49 +373,19 @@ export const projects = {
     imageWidth: 425,
     sections: [
       {
-        type: "two-column",
-        cards: [
-          { image: "/assets/images/chl1.png", title: "Notifications", description: "Get instant updates for your favorite team with personalized notifications. From game-day alerts to breaking news, this feature ensures you never miss a key moment.", imagePosition: "top" },
-          { image: "/assets/images/chl2.png", title: "Team Selection – WHL", description: "Easily choose your league and team during setup. The experience is streamlined so fans can jump right into following their preferred team without extra steps.", imagePosition: "bottom" }
+        type: "feature-journey",
+        features: [
+          { image: "/assets/images/raw/chl1.png", device: "iphone", title: "Notifications", description: "Get instant updates for your favorite team with personalized notifications for game-day alerts and breaking news." },
+          { image: "/assets/images/raw/chl2.png", device: "iphone", title: "Team Selection – WHL", description: "Easily choose your league and team during setup to personalize your experience." },
+          { image: "/assets/images/raw/chl3.png", device: "iphone", title: "Team Selection – OHL", description: "Choose your Ontario Hockey League team from every OHL franchise available." },
+          { image: "/assets/images/raw/chl4.png", device: "iphone", title: "Team Selection – QMJHL", description: "Set your preferred QMJHL team to customize schedules, standings, and alerts." },
+          { image: "/assets/images/raw/chl5.png", device: "iphone", title: "Wheat Kings Home", description: "See team rankings in the East Division with games played, wins, losses, and points." },
+          { image: "/assets/images/raw/chl6.png", device: "iphone", title: "Menu System", description: "Quick access to scores, schedules, standings, rosters, and team store with league shortcuts." },
+          { image: "/assets/images/raw/chl7.png", device: "iphone", title: "Schedule View", description: "Browse the full schedule month-by-month with matchup details and home/away markers." },
+          { image: "/assets/images/raw/chl8.png", device: "iphone", title: "Standings", description: "Detailed division standings with team performance stats at a glance." },
+          { image: "/assets/images/raw/chl9.png", device: "iphone", title: "Team Roster", description: "Full roster with player headshots, jersey numbers, positions, height, and weight." },
+          { image: "/assets/images/raw/chl10.png", device: "iphone", title: "Player Profile", description: "Detailed player information and statistics for each roster member." }
         ]
-      },
-      {
-        type: "full-width",
-        image: "/assets/images/chl3.png",
-        title: "Team Selection – OHL",
-        description: "Choose your Ontario Hockey League team with ease. The screen highlights every OHL franchise, letting fans personalize the app experience around their chosen team.",
-        imagePosition: "right",
-        background: "custom"
-      },
-      {
-        type: "two-column",
-        cards: [
-          { image: "/assets/images/chl4.png", title: "Team Selection – QMJHL", description: "Dedicated team selection for the Québec Major Junior Hockey League (QMJHL). Fans can instantly set their preferred LMJMQ team to customize schedules, standings, and alerts.", imagePosition: "top" },
-          { image: "/assets/images/chl5.png", title: "Wheat Kings - Home", description: "See where the Brandon Wheat Kings rank in the East Division standings. Detailed stats include games played, wins, losses, and points, giving fans a clear snapshot of team performance.", imagePosition: "bottom" }
-        ]
-      },
-      {
-        type: "full-width",
-        image: "/assets/images/chl6.png",
-        title: "Menu System",
-        description: "The main navigation menu provides quick access to essential sections, including scores, schedules, standings, rosters, and the team store. League shortcuts (CHL, WHL, OHL, QMJHL) are included for seamless switching.",
-        imagePosition: "left",
-        background: "custom"
-      },
-      {
-        type: "two-column",
-        cards: [
-          { image: "/assets/images/chl7.png", title: "Wheat Kings – Schedule", description: "Browse the full Wheat Kings schedule in a month-by-month view. Each matchup shows date, time, and opponent logo, with easy markers for home and away games.", imagePosition: "top" },
-          { image: "/assets/images/chl8.png", title: "Wheat Kings – Schedule", description: "See where the Brandon Wheat Kings rank in the East Division standings. Detailed stats include games played, wins, losses, and points, giving fans a clear snapshot of team performance.", imagePosition: "bottom" }
-        ]
-      },
-      {
-        type: "full-width",
-        image: "/assets/images/chl9.png",
-        title: "Team Roster",
-        description: "The full team roster presents players with headshots, jersey numbers, names, positions, height, and weight. Organized by category, it gives fans a clean and detailed look at the Wheat Kings' lineup.",
-        imagePosition: "right",
-        background: "custom"
       }
     ],
     nextProject: { slug: "nba-draft", title: "NBA Watch Draft App" }
@@ -701,6 +670,12 @@ export const projects = {
     categories: "Swift, SwiftUI, Design & Development",
     appStoreUrl: "https://apps.apple.com/us/app/american-handy-consumer-app/id6749178677",
     headerImage: "/assets/images/american-header.png",
+    headerDevices: [
+      { screenshot: "/assets/images/raw/american1.png", device: "iphone" },
+      { screenshot: "/assets/images/raw/american2.png", device: "iphone" }
+    ],
+    headerText: "AMERICAN HANDY",
+    headerLayout: "split",
     description: [
       "This project delivered a modern mobile solution for American Handy, designed to streamline how homeowners request and manage professional repair and maintenance services. The app provides a clear, step-by-step order flow where users can select from services such as drywall repair, flooring, painting, plumbing, and more. With a clean interface and service-specific options (like finish levels or patch selections), customers can easily create detailed requests that ensure accuracy for every job. Orders include appointment scheduling, service address details, and real-time status tracking, giving users complete visibility from pending requests through project completion.",
       "Beyond service booking, the app centralizes the customer experience by offering photo uploads for context, appointment summaries, and quick access to customer support. Users can review service confirmations, track multiple orders simultaneously, and receive timely updates on scheduling. By combining intuitive navigation with professional service options, the American Handy app creates a dependable, all-in-one platform that simplifies home repair management while improving transparency between customers and service providers."
@@ -709,55 +684,19 @@ export const projects = {
     imageWidth: 425,
     sections: [
       {
-        type: "two-column",
-        cards: [
-          { image: "/assets/images/american1.png", title: "Login Screen", description: "This is the app's authentication screen for user login. The interface features company branding at the top with login fields, sign up option, and password recovery functionality.", imagePosition: "top" },
-          { image: "/assets/images/american2.png", title: "Home Dashboard", description: "The home dashboard offers a personalized and action-driven experience, greeting users by name and immediately surfacing available services. With bold visuals and clear calls-to-action, users can quickly initiate a Service Request—in this case, for drywall repair. The top card visually distinguishes service categories like \"Handyman Service,\" while the lower banner drives engagement with a promo-style message encouraging users to \"Get Repairs Started.\" The bottom navigation provides direct access to Home and Orders, keeping the interface clean and easy to navigate. This screen is designed to move users from browsing to booking in just a few taps.", imagePosition: "bottom" }
-        ]
-      },
-      {
-        type: "full-width",
-        image: "/assets/images/american3.png",
-        title: "Service Categories & Membership",
-        description: "This screen presents a categorized view of available handyman services, allowing users to quickly find what they need with intuitive icons and labels—ranging from Appliance Repair and Carpentry to Basic Plumbing and Electrical. A persistent Service Request banner encourages quick action, while the \"Upgrade Membership\" section introduces a clear monthly pricing model for premium users. The plan is promoted with large, eye-catching typography and transparent pricing details: $69.99/month with discounted hourly rates for service visits. This layout combines usability with upsell potential, streamlining both service selection and subscription conversion.",
-        imagePosition: "right",
-        background: "custom"
-      },
-      {
-        type: "two-column",
-        cards: [
-          { image: "/assets/images/american4.png", title: "Service Selection – New Order", description: "This screen allows users to begin a new service request by selecting one or more service categories. A progress bar at the top provides clear visual feedback on the multi-step flow, reinforcing user confidence. The message at the top encourages flexibility: \"You can select more services or continue with your current selection.\" Options like Appliance Repair, Flooring, and General Repairs are presented in a clean list format with a checkmark confirming the selected service (in this case, Drywall Repair). A prominent Next button enables users to proceed smoothly once they've made their choices, supporting fast and intuitive order creation.", imagePosition: "top" },
-          { image: "/assets/images/american5.png", title: "Date & Time Selection", description: "This step in the service request flow allows users to select a preferred date and time for their appointment. The calendar interface, set to August 2025, makes it easy to choose a specific day—here, Thursday the 14th is selected. Below the calendar, available time slots such as 9AM and 1PM are presented as tappable buttons, giving users quick scheduling control. The clean layout, combined with a visible progress indicator and Next and Previous navigation buttons, keeps the experience streamlined and user-friendly as customers move through the order process.", imagePosition: "bottom" }
-        ]
-      },
-      {
-        type: "full-width",
-        image: "/assets/images/american6.png",
-        title: "Drywall Repair Details",
-        description: "This screen collects specific details about a Drywall Repair service as part of the new order request flow. Users are prompted to select relevant options such as Finishing levels (1–4) or whether a Patch is needed. The clean checkbox layout makes it easy to specify job requirements, ensuring technicians receive the necessary context ahead of time. A progress bar indicates the user is midway through the request process, while the Previous and Next buttons support smooth, guided navigation. This level of customization helps tailor the service to match the exact scope of work.",
-        imagePosition: "left",
-        background: "custom"
-      },
-      {
-        type: "two-column",
-        cards: [
-          { image: "/assets/images/american7.png", title: "Photo Upload (Optional)", description: "This screen gives users the option to upload photos as part of the new order request. It encourages adding images with the message: \"Photos help us understand your project better,\" helping technicians assess the job more accurately before arrival. Users can choose between Take Photo or Add Photo, using built-in camera or gallery access. The light, icon-driven layout keeps things simple, while the Previous and Next buttons maintain a consistent flow through the multi-step request process. This step adds valuable context without slowing down users who prefer to skip it.", imagePosition: "top" },
-          { image: "/assets/images/american8.png", title: "Order Confirmation", description: "This final step confirms the full details of the user's service order before submission. It displays the service address, selected plan (Pay-As-You-Go), number of requests, and the scheduled date and time — in this case, August 29, 2025 at 1PM. Below that, the app summarizes the Requested Service Items, including specific notes like Finishing, Level 1, and Patch for Drywall Repair. With a bold Submit button and a clear, structured layout, this screen gives users confidence and clarity before officially placing their order.", imagePosition: "bottom" }
-        ]
-      },
-      {
-        type: "full-width",
-        image: "/assets/images/american9.png",
-        title: "Active Orders Overview",
-        description: "The Orders screen gives users a clear, step-by-step view of their active service requests. Each order displays its unique ID, scheduled date and time, and current status within a four-step progress tracker. Orders #117 through #119 are all in the Pending state, visually indicated by a checkmark on step one. The tab-based layout allows users to switch easily between Active and History views, while icons next to each order provide quick visual cues for the type of service requested. This design keeps users informed and reassured throughout the lifecycle of their service orders.",
-        imagePosition: "right",
-        background: "custom"
-      },
-      {
-        type: "two-column",
-        cards: [
-          { image: "/assets/images/american10.png", title: "Order Details View", description: "This screen provides a detailed summary of a specific service order—in this case, Order #119. Users can view the current status via a four-step progress bar, which shows the order is still Pending. Below, important details such as the service address, appointment time (September 12, 2025, at 6:34 PM), and shift are clearly listed. Under Service Work, the task is labeled as Drywall Repair, with specifications like Finishing and Level 4, along with a user-uploaded photo that adds visual context. This detailed breakdown keeps customers informed and reassured at every stage.", imagePosition: "top" },
-          { image: "/assets/images/american11.png", title: "Multi-Service Order Summary", description: "This screen shows a breakdown of all services included in Order #119, offering a visual and descriptive summary for each. The listed services include Drywall Repair (Finishing, Level 4), Flooring (Wood), and Painting (Baseboards, Walls), each accompanied by user-uploaded photos that provide valuable context for the assigned technician. The layout keeps each service card clean and organized, making it easy to review details at a glance. A prominent Call Office button at the bottom ensures users can quickly get support or make last-minute changes to their request.", imagePosition: "bottom" }
+        type: "feature-scroll",
+        features: [
+          { image: "/assets/images/raw/american1.png", device: "iphone", title: "Login Screen", description: "The app's authentication screen for user login with company branding, login fields, sign up option, and password recovery." },
+          { image: "/assets/images/raw/american2.png", device: "iphone", title: "Home Dashboard", description: "A personalized dashboard greeting users by name, surfacing available services with bold visuals and clear calls-to-action." },
+          { image: "/assets/images/raw/american3.png", device: "iphone", title: "Service Categories", description: "Categorized view of handyman services with intuitive icons—from Appliance Repair and Carpentry to Plumbing and Electrical." },
+          { image: "/assets/images/raw/american4.png", device: "iphone", title: "Service Selection", description: "Begin a new service request by selecting categories with a progress bar and checkmark confirmation for selected services." },
+          { image: "/assets/images/raw/american5.png", device: "iphone", title: "Date & Time Selection", description: "Calendar interface for selecting preferred appointment date and time with available slots as tappable buttons." },
+          { image: "/assets/images/raw/american6.png", device: "iphone", title: "Drywall Repair Details", description: "Collect specific details like finishing levels and patch options with clean checkbox layout for job requirements." },
+          { image: "/assets/images/raw/american7.png", device: "iphone", title: "Photo Upload", description: "Optional photo upload to help technicians assess the job with Take Photo or Add Photo options." },
+          { image: "/assets/images/raw/american8.png", device: "iphone", title: "Order Confirmation", description: "Final confirmation showing service address, plan, date/time, and requested service items before submission." },
+          { image: "/assets/images/raw/american9.png", device: "iphone", title: "Active Orders", description: "Clear view of active service requests with order IDs, scheduled times, and four-step progress tracker." },
+          { image: "/assets/images/raw/american10.png", device: "iphone", title: "Order Details", description: "Detailed summary of a specific order showing status, service address, appointment time, and service specifications." },
+          { image: "/assets/images/raw/american11.png", device: "iphone", title: "Multi-Service Summary", description: "Breakdown of all services in an order with user-uploaded photos and a Call Office button for support." }
         ]
       }
     ],
@@ -802,6 +741,342 @@ export const projects = {
     nextProject: { slug: "designair", title: "Design Air App" }
   },
 
+  "future-plan": {
+    title: "Future Plan",
+    subtitle: "Design + iOS + Android",
+    year: 2026,
+    technology: "React Native",
+    categories: "Productivity, Finance",
+    appStoreUrl: null,
+    headerImage: "/assets/images/raw/01_ios_futureplan_home.png",
+    headerDevices: [
+      { screenshot: "/assets/images/raw/01_ios_futureplan_home.png", device: "iphone" },
+      { screenshot: "/assets/images/raw/01_android_futureplan_home.png", device: "android" }
+    ],
+    headerText: "FUTURE PLAN",
+    headerLayout: "crossplatform",
+    description: [
+      "Future Plan is a cross-platform retirement planning concept that guides users through a short assessment, visualizes long-term growth, and recommends an investment approach based on goals and risk tolerance."
+    ],
+    layout: "phone",
+    imageWidth: 425,
+    sections: [
+      {
+        type: "platform-comparison",
+        features: [
+          {
+            image: "/assets/images/raw/01_ios_futureplan_home.png",
+            androidImage: "/assets/images/raw/01_android_futureplan_home.png",
+            title: "Home",
+            description: "Entry point introducing the assessment with a single primary CTA.",
+            iosNote: "Entry point introducing the assessment with a single primary CTA.",
+            androidNote: "Identical flow with platform-native spacing and controls."
+          },
+          {
+            image: "/assets/images/raw/02_ios_futureplan_tools.png",
+            androidImage: "/assets/images/raw/02_android_futureplan_tools.png",
+            title: "Tools & Analysis",
+            description: "Quick access to compound interest and planning tools.",
+            iosNote: "Quick access to compound interest and planning tools.",
+            androidNote: "Same tools presented with Material-aligned components."
+          },
+          {
+            image: "/assets/images/raw/03_ios_futureplan_growth.png",
+            androidImage: "/assets/images/raw/03_android_futureplan_growth.png",
+            title: "Growth / Projection",
+            description: "Long-term growth forecast with selectable timelines.",
+            iosNote: "Long-term growth forecast with selectable timelines.",
+            androidNote: "Matching chart behavior and data hierarchy."
+          },
+          {
+            image: "/assets/images/raw/ios_futureplan_step1.png",
+            androidImage: "/assets/images/raw/android_futureplan_step1.png",
+            title: "Assessment Step 1",
+            description: "Age selection used to calculate retirement timeline.",
+            iosNote: "Age selection used to calculate retirement timeline.",
+            androidNote: "Wheel-style selector adapted per platform."
+          },
+          {
+            image: "/assets/images/raw/ios_futureplan_step2.png",
+            androidImage: "/assets/images/raw/android_futureplan_step2.png",
+            title: "Assessment Step 2",
+            description: "Target retirement age selection.",
+            iosNote: "Target retirement age selection.",
+            androidNote: "Same flow with native picker behavior."
+          },
+          {
+            image: "/assets/images/raw/ios_futureplan_step3.png",
+            androidImage: "/assets/images/raw/android_futureplan_step3.png",
+            title: "Assessment Step 3",
+            description: "Total retirement savings input.",
+            iosNote: "Total retirement savings input.",
+            androidNote: "Numeric input with inline helper action."
+          },
+          {
+            image: "/assets/images/raw/ios_futureplan_step4.png",
+            androidImage: "/assets/images/raw/android_futureplan_step4.png",
+            title: "Assessment Step 4",
+            description: "Monthly retirement income goal.",
+            iosNote: "Monthly retirement income goal.",
+            androidNote: "Increment/decrement control with clear feedback."
+          },
+          {
+            image: "/assets/images/raw/ios_futureplan_step5.png",
+            androidImage: "/assets/images/raw/android_futureplan_step5.png",
+            title: "Assessment Step 5",
+            description: "Investment approach selection by risk level.",
+            iosNote: "Investment approach selection by risk level.",
+            androidNote: "Card-based selection with recommended state."
+          },
+          {
+            image: "/assets/images/raw/04_ios_futureplan_profile.png",
+            androidImage: "/assets/images/raw/04_android_futureplan_profile.png",
+            title: "Profile",
+            description: "Account details, preferences, and notifications.",
+            iosNote: "Account details, preferences, and notifications.",
+            androidNote: "Parity with iOS using platform-native settings patterns."
+          }
+        ]
+      }
+    ],
+    nextProject: { slug: "blueprint-math", title: "Blueprint Math" }
+  },
+
+  "blueprint-math": {
+    title: "Blueprint Math",
+    subtitle: "Design + iOS + Android",
+    year: 2026,
+    technology: "React Native",
+    categories: "Education, Productivity",
+    appStoreUrl: null,
+    headerImage: "/assets/images/raw/01_ios_blueprintmath_diagnostic.png",
+    headerDevices: [
+      { screenshot: "/assets/images/raw/01_ios_blueprintmath_diagnostic.png", device: "iphone" },
+      { screenshot: "/assets/images/raw/01_android_blueprintmath_diagnostic.png", device: "android" }
+    ],
+    headerText: "BLUEPRINT",
+    headerLayout: "crossplatform",
+    description: [
+      "Blueprint Math is a cross-platform learning tool that guides students through math problems using structured, step-by-step breakdowns. The experience emphasizes clarity and progression—helping learners build confidence through scaffolded problem-solving and real-time feedback."
+    ],
+    layout: "phone",
+    imageWidth: 425,
+    sections: [
+      {
+        type: "platform-comparison",
+        features: [
+          {
+            image: "/assets/images/raw/01_ios_blueprintmath_diagnostic.png",
+            androidImage: "/assets/images/raw/01_android_blueprintmath_diagnostic.png",
+            title: "Diagnostic Home",
+            description: "Entry screen introducing MathBlueprint with diagnostic start, estimated duration, and assessment modules.",
+            iosNote: "Entry screen introducing MathBlueprint with diagnostic start, estimated duration, and assessment modules.",
+            androidNote: "Mirrors iOS structure with Material spacing and identical module hierarchy."
+          },
+          {
+            image: "/assets/images/raw/02_ios_blueprintmath_prob1.png",
+            androidImage: "/assets/images/raw/02_android_blueprintmath_prob1.png",
+            title: "Problem Context & Progress",
+            description: "Problem screen showing topic, question prompt, and progress within the diagnostic session.",
+            iosNote: "Problem screen showing topic, question prompt, and progress within the diagnostic session.",
+            androidNote: "Same layout and progress framing adapted to Android system UI."
+          },
+          {
+            image: "/assets/images/raw/03_ios_blueprintmath_prob2.png",
+            androidImage: "/assets/images/raw/03_android_blueprintmath_prob2.png",
+            title: "Step-Based Input",
+            description: "Active step guides users through the first breakdown with focused input and visual state cues.",
+            iosNote: "Active step guides users through the first breakdown with focused input and visual state cues.",
+            androidNote: "Step activation and input behavior match iOS using Material components."
+          },
+          {
+            image: "/assets/images/raw/04_ios_blueprintmath_prob3.png",
+            androidImage: "/assets/images/raw/04_android_blueprintmath_prob3.png",
+            title: "Progressive Step Completion",
+            description: "Completed steps collapse into confirmation states while the next step becomes active.",
+            iosNote: "Completed steps collapse into confirmation states while the next step becomes active.",
+            androidNote: "Identical step progression and completion feedback."
+          },
+          {
+            image: "/assets/images/raw/05_ios_blueprintmath_feedback.png",
+            androidImage: "/assets/images/raw/05_android_blueprintmath_feedback.png",
+            title: "Final Answer & Submission",
+            description: "Final calculation step with clear submission action anchored at the bottom.",
+            iosNote: "Final calculation step with clear submission action anchored at the bottom.",
+            androidNote: "Same submission flow and validation pattern."
+          },
+          {
+            image: "/assets/images/raw/06_ios_blueprintmath_reflection.png",
+            androidImage: "/assets/images/raw/06_android_blueprintmath_reflection.png",
+            title: "Confidence Reflection",
+            description: "Post-problem confidence check allowing users to self-assess understanding.",
+            iosNote: "Post-problem confidence check allowing users to self-assess understanding.",
+            androidNote: "Confidence selection mirrored with native Android controls."
+          },
+          {
+            image: "/assets/images/raw/07_ios_blueprintmath_summary.png",
+            androidImage: "/assets/images/raw/07_android_blueprintmath_summary.png",
+            title: "Diagnostic Summary & Skill Map",
+            description: "Summary view showing mastery levels, progress percentage, and recommended next focus.",
+            iosNote: "Summary view showing mastery levels, progress percentage, and recommended next focus.",
+            androidNote: "Skill Map and summary presented with equivalent structure and status indicators."
+          }
+        ]
+      }
+    ],
+    nextProject: { slug: "uber-shift-planner", title: "Uber Shift Planner" }
+  },
+
+  "uber-shift-planner": {
+    title: "Uber Shift Planner",
+    subtitle: "Design + iOS + Android",
+    year: 2026,
+    technology: "React Native",
+    categories: "Productivity, Finance",
+    appStoreUrl: null,
+    headerImage: "/assets/images/raw/shiftplannerhome_ios.png",
+    headerDevices: [
+      { screenshot: "/assets/images/raw/shiftplannerhome_ios.png", device: "iphone" },
+      { screenshot: "/assets/images/raw/shiftplannerhome_android.png", device: "android" }
+    ],
+    headerText: "SHIFT PLANNER",
+    headerLayout: "crossplatform",
+    description: [
+      "Uber Shift Planner is a cross-platform planning concept that helps rideshare drivers turn weekly earning goals into clear, actionable schedules. The experience focuses on clarity and predictability—showing drivers when to work, for how long, and what they can expect to earn."
+    ],
+    layout: "phone",
+    imageWidth: 425,
+    sections: [
+      {
+        type: "platform-comparison",
+        features: [
+          {
+            image: "/assets/images/raw/shiftplannerhome_ios.png",
+            androidImage: "/assets/images/raw/shiftplannerhome_android.png",
+            title: "Weekly Goal & Forecast",
+            description: "Weekly progress and next-day forecasts presented in a single, glanceable dashboard. Drivers can see how close they are to their goal and which time windows are most effective for reaching it.",
+            iosNote: "Uses system typography and haptic feedback for quick status checks.",
+            androidNote: "Leverages Material You theming and emphasis on forecast cards."
+          },
+          {
+            image: "/assets/images/raw/shiftplannernotifications_ios.png",
+            androidImage: "/assets/images/raw/shiftplannernotifications_android.png",
+            title: "Notifications",
+            description: "Plan summaries delivered through clear, non-intrusive notifications. Daily and weekly reminders reinforce schedules, goals, and projected earnings without requiring constant app usage.",
+            iosNote: "Compact notification layouts optimized for quick reads.",
+            androidNote: "Persistent summaries with expandable detail."
+          },
+          {
+            image: "/assets/images/raw/shiftplannerplan_ios.png",
+            androidImage: "/assets/images/raw/shiftplannerplan_android.png",
+            title: "Weekly Plan",
+            description: "A structured breakdown of the full week, showing planned drive windows, estimated hours, and projected earnings per day. Totals update automatically to reflect progress toward the weekly goal.",
+            iosNote: "Focuses on hierarchy and visual rhythm.",
+            androidNote: "Emphasizes scannability and day-by-day grouping."
+          },
+          {
+            image: "/assets/images/raw/shiftplannersettings_ios.png",
+            androidImage: "/assets/images/raw/shiftplannersettings_android.png",
+            title: "Settings",
+            description: "A minimal preferences screen for controlling how plans and timelines are displayed. Options are intentionally limited to avoid disrupting the core planning flow.",
+            iosNote: "Native toggle controls with system spacing.",
+            androidNote: "Material switches with consistent grouping."
+          }
+        ]
+      }
+    ],
+    nextProject: { slug: "blueprint-math", title: "Blueprint Math" }
+  },
+
+  "crossplatform-demo": {
+    title: "Cross Platform Demo",
+    subtitle: "React Native Development",
+    year: 2024,
+    technology: "React Native, TypeScript, Expo",
+    categories: "Cross Platform, Mobile Development",
+    appStoreUrl: null,
+    headerImage: "/assets/images/hornets-header.png",
+    // Crossplatform layout - iPhone + Android side by side
+    headerDevices: [
+      { screenshot: "/assets/images/raw/hornets01.png", device: "iphone" },
+      { screenshot: "/assets/images/raw/hornets02.png", device: "android" }
+    ],
+    headerText: "CROSS PLATFORM",
+    headerLayout: "crossplatform",
+    description: [
+      "A demonstration of the crossplatform header layout, designed specifically for React Native apps that run on both iOS and Android. This layout showcases both devices side by side with a unified glow effect representing the shared codebase.",
+      "The devices are angled toward each other with subtle platform-colored shadows (blue for iOS, green for Android), and automatic platform badges appear above. Perfect for showcasing cross-platform mobile development work."
+    ],
+    layout: "phone",
+    imageWidth: 425,
+    sections: [
+      {
+        type: "platform-comparison",
+        features: [
+          {
+            image: "/assets/images/raw/hornets01.png",
+            title: "Game Overview",
+            description: "Live scores and matchup details optimized for each platform.",
+            iosNote: "Uses SF Symbols and haptic feedback",
+            androidNote: "Material You dynamic theming"
+          },
+          {
+            image: "/assets/images/raw/hornets02.png",
+            title: "Team Stats",
+            description: "Comprehensive statistics with platform-native charts.",
+            iosNote: "SwiftUI-style animations",
+            androidNote: "Jetpack Compose charts"
+          },
+          {
+            image: "/assets/images/raw/hornets03.png",
+            title: "Player Cards",
+            description: "Interactive player profiles with smooth transitions.",
+            iosNote: "Face ID for favorites",
+            androidNote: "Fingerprint authentication"
+          }
+        ]
+      }
+    ],
+    nextProject: { slug: "cascade-demo", title: "Cascade Demo" }
+  },
+
+  "cascade-demo": {
+    title: "Cinema Demo",
+    subtitle: "Dramatic Letterbox Layout",
+    year: 2024,
+    technology: "Swift, SwiftUI, Sketch/Figma",
+    categories: "iOS Development, Design",
+    appStoreUrl: null,
+    headerImage: "/assets/images/hornets-header.png",
+    // Cinema layout - dramatic letterbox with centered devices
+    headerDevices: [
+      { screenshot: "/assets/images/raw/hornets01.png", device: "iphone" },
+      { screenshot: "/assets/images/raw/hornets02.png", device: "iphone" },
+      { screenshot: "/assets/images/raw/hornets03.png", device: "iphone" }
+    ],
+    headerText: "01",
+    headerLayout: "cinema",
+    description: [
+      "A demonstration of the cascade header layout, featuring multiple devices stacked diagonally with 3D perspective depth. Each device is slightly offset and tilted, creating a dramatic card-deck effect.",
+      "The cascade layout works best with 3-4 devices and includes hover effects that bring individual devices forward. Great for showing multiple screens of an app's flow or journey."
+    ],
+    layout: "phone",
+    imageWidth: 425,
+    sections: [
+      {
+        type: "feature-journey",
+        title: "User Flow",
+        features: [
+          { image: "/assets/images/raw/hornets01.png", device: "iphone", title: "Launch & Matchup", description: "User opens app and sees current game matchup with live score updates." },
+          { image: "/assets/images/raw/hornets02.png", device: "iphone", title: "Explore Stats", description: "Swipe to view detailed team and player statistics." },
+          { image: "/assets/images/raw/hornets03.png", device: "iphone", title: "Track Leaders", description: "Check scoring leaders and standout performers." },
+          { image: "/assets/images/raw/hornets04.png", device: "iphone", title: "Watch Highlights", description: "View video highlights and key plays from the game." }
+        ]
+      }
+    ],
+    nextProject: { slug: "hornets", title: "Hornets App" }
+  },
+
   "nba-draft": {
     title: "NBA Draft Watch App",
     subtitle: "Design, SwiftUI Projects",
@@ -837,6 +1112,42 @@ export const projects = {
         cards: [
           { image: "/assets/images/nba-draft4.png", title: "Player Profile & Scouting Analysis", description: "This screen dives deeper into the player's bio and scouting breakdown. It includes hometown, height/weight, and a written analysis summarizing the player's potential. The format highlights a mix of raw data and qualitative insight, helping fans and scouts alike evaluate what makes this athlete a standout draft prospect. Designed for clarity and quick consumption, the layout brings player stories to life on your wrist.", imagePosition: "top" },
           { image: "/assets/images/nba-draft5.png", title: "Draft Order Spotlight", description: "This bold visual layout highlights Zion Williamson as the number one overall pick, placing him above the next draft slot in a clean, card-stacked format. His name, position, and team branding are front and center, with vibrant colors distinguishing each pick. The modern, swipeable card interface is optimized for the small screen, making draft rankings feel interactive and alive on Apple Watch.", imagePosition: "bottom" }
+        ]
+      }
+    ],
+    nextProject: { slug: "hornets", title: "Hornets App" }
+  },
+
+  "countdown2binge": {
+    title: "Countdown2Binge App",
+    subtitle: "Swift, SwiftUI, Design & Development",
+    year: 2026,
+    technology: "Swift, SwiftUI, Sketch/Figma",
+    categories: "Swift, SwiftUI, Design & Development",
+    appStoreUrl: null,
+    headerImage: "/assets/images/raw/c2b1.png",
+    headerDevices: [
+      { screenshot: "/assets/images/raw/c2b1.png", device: "iphone" },
+      { screenshot: "/assets/images/raw/c2b2.png", device: "iphone" }
+    ],
+    headerText: "C2B",
+    headerLayout: "split",
+    description: [
+      "Countdown2Binge is a mobile app designed for TV and movie enthusiasts who want to track upcoming releases and manage their watchlists. The app provides a clean, intuitive interface for discovering new content, setting reminders for premiere dates, and organizing shows and movies into personalized collections.",
+      "With a focus on countdown timers and release tracking, users can stay ahead of their favorite content drops and never miss a premiere. The app combines entertainment discovery with practical scheduling features to create a seamless experience for binge-watchers and casual viewers alike."
+    ],
+    layout: "phone",
+    imageWidth: 425,
+    sections: [
+      {
+        type: "feature-scroll",
+        features: [
+          { image: "/assets/images/raw/c2b1.png", device: "iphone", title: "Currently Airing Countdown", description: "Live countdown timer for shows currently airing with options to view by days or episodes." },
+          { image: "/assets/images/raw/c2b2.png", device: "iphone", title: "Expanded Timeline", description: "Full timeline view with detailed release dates and show information at a glance." },
+          { image: "/assets/images/raw/c2b3.png", device: "iphone", title: "Condensed Timeline", description: "A compact timeline view showing upcoming releases in chronological order for quick scanning." },
+          { image: "/assets/images/raw/c2b4.png", device: "iphone", title: "Binge Ready", description: "View your shows organized by season to easily track progress and plan your next binge session." },
+          { image: "/assets/images/raw/c2b5.png", device: "iphone", title: "Settings", description: "Customize notifications, preferences, and app behavior to your liking." },
+          { image: "/assets/images/raw/c2b6.png", device: "iphone", title: "Search", description: "Find shows and movies quickly with powerful search and filtering options." }
         ]
       }
     ],

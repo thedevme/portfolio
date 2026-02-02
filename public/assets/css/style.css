@@ -3075,6 +3075,8 @@ hr {
 
 .works-items.works-masonry-items .works-item .image img {
 	height: 240px;
+	width: 100%;
+	object-fit: cover;
 	border-radius: 18px;
 }
 
@@ -3116,7 +3118,7 @@ hr {
 
 .works-items.works-masonry-items .works-item .desc .text {
 	margin: 15px 0 0 0;
-	min-height: 125px;
+	min-height: 150px;
 }
 
 .works-item:hover .image:before,
