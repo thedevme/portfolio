@@ -30,10 +30,10 @@ const educationData = [
 const experienceData = [
   {
     id: 1,
-    title: "FREELANCE iOS DESIGNER & DEVELOPER | REMOTE",
-    company: "AMERICAN HANDY CO.",
-    dec: "I spearheaded the design and launch of a mobile-first handyman booking app that allowed users to request services across multiple home repair categories. To streamline the onboarding process, I developed a dynamic SwiftUI-based form system that adapted in real time to user input, customizing flows for each request. I also architected reusable, API-driven components that ensured data consistency and reduced development time across the service request experience. Working closely with backend engineers, I aligned form logic with service tiers, real-time validations, and flexible navigation to deliver a seamless booking experience. NOTABLE IMPACT: Reduced onboarding time by 40% and accelerated feature rollout through a scalable form architecture that improved service request accuracy.",
-    startYear: "Oct 2024",
+    title: "Senior Mobile Engineer — iOS · React Native · Android · Design",
+    company: "Independent Contractor",
+    dec: "I specialize in native and cross-platform mobile development across iOS, React Native, and Android. I work across the full lifecycle — from architecture and design through App Store delivery. I leverage AI-powered engineering tools to accelerate development without sacrificing code quality, using automated type checking, linting hooks, and pre-commit workflows that catch issues before they ship. I preload rich architectural context into every project through diagrams and documentation, so every task starts with a clear understanding of how the pieces connect rather than blind exploration. Whether it's Swift and SwiftUI, React Native with TypeScript, or Kotlin, I write clean, production-ready code and ship on time.",
+    startYear: "July 2024",
     endYear: false,
   },
   {
