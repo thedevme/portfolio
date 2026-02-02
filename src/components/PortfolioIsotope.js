@@ -12,6 +12,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
       percentPosition: true,
       masonry: {
         columnWidth: ".works-col",
+        horizontalOrder: true,
       },
       animationOptions: {
         duration: 750,
@@ -71,9 +72,16 @@ const PortfolioIsotope = ({ noViewMore }) => {
           >
             React Native
           </a>
+          <a
+            className={`c-pointer lui-subtitle ${activeBtn("sorting-kotlin")}`}
+            onClick={handleFilterKeyChange("sorting-kotlin")}
+            data-href=".sorting-kotlin"
+          >
+            Android (Kotlin)
+          </a>
         </div>
         <div className="works-items works-masonry-items row">
-            <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-design ">
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-design ">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
@@ -449,6 +457,92 @@ const PortfolioIsotope = ({ noViewMore }) => {
                   </p>
                 </div>
                 <Link legacyBehavior href="/projects/future-plan">
+                  <a className="lnk">See project</a>
+                </Link>
+              </div>
+              <div
+                className="bg-img"
+                style={{
+                  backgroundImage: "url(/assets/images/pat-2.png)",
+                }}
+              />
+            </div>
+          </div>
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-kotlin ">
+            <div
+              className="works-item scrolla-element-anim-1 scroll-animate"
+              data-animate="active"
+            >
+              <div className="image">
+                <div className="img">
+                  <Link legacyBehavior href="/projects/countdown2binge">
+                    <a>
+                      <img
+                        decoding="async"
+                        src="/assets/images/raw/01_countdown2binge_home.png"
+                        alt="Countdown2Binge"
+                      />
+                      <span className="overlay" />
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="desc">
+                <span className="category"> Android, Kotlin, Entertainment</span>
+                <h5 className="name">
+                  <Link legacyBehavior href="/projects/countdown2binge">
+                    <a>Countdown2Binge</a>
+                  </Link>
+                </h5>
+                <div className="text">
+                  <p>
+                  Track TV shows from anticipation to finale with timelines, countdowns, and binge-ready states.
+                  </p>
+                </div>
+                <Link legacyBehavior href="/projects/countdown2binge">
+                  <a className="lnk">See project</a>
+                </Link>
+              </div>
+              <div
+                className="bg-img"
+                style={{
+                  backgroundImage: "url(/assets/images/pat-2.png)",
+                }}
+              />
+            </div>
+          </div>
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-kotlin ">
+            <div
+              className="works-item scrolla-element-anim-1 scroll-animate"
+              data-animate="active"
+            >
+              <div className="image">
+                <div className="img">
+                  <Link legacyBehavior href="/projects/cookmode">
+                    <a>
+                      <img
+                        decoding="async"
+                        src="/assets/images/raw/01_cookmode_home.png"
+                        alt="CookMode"
+                      />
+                      <span className="overlay" />
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="desc">
+                <span className="category"> Android, Kotlin, Cooking</span>
+                <h5 className="name">
+                  <Link legacyBehavior href="/projects/cookmode">
+                    <a>CookMode</a>
+                  </Link>
+                </h5>
+                <div className="text">
+                  <p>
+                  A focused cooking companion with hands-free recipes, timers, and step-by-step guidance.
+                  </p>
+                </div>
+                <Link legacyBehavior href="/projects/cookmode">
                   <a className="lnk">See project</a>
                 </Link>
               </div>

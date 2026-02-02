@@ -1146,23 +1146,23 @@ export const projects = {
     nextProject: { slug: "hornets", title: "Hornets App" }
   },
 
-  "countdown2binge": {
-    title: "Countdown2Binge App",
-    subtitle: "Swift, SwiftUI, Design & Development",
+  "cookmode": {
+    title: "CookMode",
+    subtitle: "Design + Android",
     year: 2026,
-    technology: "Swift, SwiftUI, Sketch/Figma",
-    categories: "Swift, SwiftUI, Design & Development",
+    technology: "Kotlin",
+    categories: "Cooking",
     appStoreUrl: null,
-    headerImage: "/assets/images/raw/c2b1.png",
+    androidUrl: null,
+    headerImage: "/assets/images/raw/01_cookmode_home.png",
     headerDevices: [
-      { screenshot: "/assets/images/raw/c2b1.png", device: "iphone" },
-      { screenshot: "/assets/images/raw/c2b2.png", device: "iphone" }
+      { screenshot: "/assets/images/raw/01_cookmode_home.png", device: "android" },
+      { screenshot: "/assets/images/raw/02_cookmode_recipe.png", device: "android" }
     ],
-    headerText: "C2B",
+    headerText: "COOKMODE",
     headerLayout: "split",
     description: [
-      "Countdown2Binge is a mobile app designed for TV and movie enthusiasts who want to track upcoming releases and manage their watchlists. The app provides a clean, intuitive interface for discovering new content, setting reminders for premiere dates, and organizing shows and movies into personalized collections.",
-      "With a focus on countdown timers and release tracking, users can stay ahead of their favorite content drops and never miss a premiere. The app combines entertainment discovery with practical scheduling features to create a seamless experience for binge-watchers and casual viewers alike."
+      "CookMode is a focused cooking companion designed to keep users hands-free, distraction-free, and moving confidently through recipes. The experience centers on clarity: clean recipe lists, large visual steps, built-in timers, and simple editing tools that make cooking feel calm instead of chaotic."
     ],
     layout: "phone",
     imageWidth: 425,
@@ -1170,16 +1170,53 @@ export const projects = {
       {
         type: "feature-scroll",
         features: [
-          { image: "/assets/images/raw/c2b1.png", device: "iphone", title: "Currently Airing Countdown", description: "Live countdown timer for shows currently airing with options to view by days or episodes." },
-          { image: "/assets/images/raw/c2b2.png", device: "iphone", title: "Expanded Timeline", description: "Full timeline view with detailed release dates and show information at a glance." },
-          { image: "/assets/images/raw/c2b3.png", device: "iphone", title: "Condensed Timeline", description: "A compact timeline view showing upcoming releases in chronological order for quick scanning." },
-          { image: "/assets/images/raw/c2b4.png", device: "iphone", title: "Binge Ready", description: "View your shows organized by season to easily track progress and plan your next binge session." },
-          { image: "/assets/images/raw/c2b5.png", device: "iphone", title: "Settings", description: "Customize notifications, preferences, and app behavior to your liking." },
-          { image: "/assets/images/raw/c2b6.png", device: "iphone", title: "Search", description: "Find shows and movies quickly with powerful search and filtering options." }
+          { image: "/assets/images/raw/01_cookmode_home.png", device: "android", title: "Recipe Library", description: "A clean, dark-mode recipe list that prioritizes speed and readability. Recent recipes surface first, with clear cook times and visual icons so users can jump straight into cooking without friction." },
+          { image: "/assets/images/raw/02_cookmode_recipe.png", device: "android", title: "Recipe Detail", description: "A visual recipe overview with ingredients, servings, and prep time presented up front. Scaling controls make it easy to adjust quantities, while a single primary action moves the user into Cook Mode." },
+          { image: "/assets/images/raw/03_cookmode_instructions_step1.png", device: "android", title: "Cook Mode", description: "Full-screen, distraction-free instructions designed for real kitchens. Large typography, progress tracking, and minimal controls keep attention on the current step instead of the phone." },
+          { image: "/assets/images/raw/04_cookmode_instructions_step2.png", device: "android", title: "Timed Steps", description: "Integrated timers appear directly within steps when precision matters. Users can start, reset, and continue without leaving the flow of cooking." },
+          { image: "/assets/images/raw/05_cookmode_instructions_edit.png", device: "android", title: "Recipe Editing", description: "A lightweight editing experience for updating photos, ingredients, and metadata. Designed for quick changes without breaking the mental model of the recipe." }
         ]
       }
     ],
-    nextProject: { slug: "hornets", title: "Hornets App" }
+    nextProject: { slug: "countdown2binge", title: "Countdown2Binge" }
+  },
+
+  "countdown2binge": {
+    title: "Countdown2Binge",
+    subtitle: "Design + Android",
+    year: 2026,
+    technology: "Kotlin",
+    categories: "Entertainment",
+    appStoreUrl: null,
+    androidUrl: null,
+    headerImage: "/assets/images/raw/01_countdown2binge_home.png",
+    headerDevices: [
+      { screenshot: "/assets/images/raw/01_countdown2binge_home.png", device: "android" },
+      { screenshot: "/assets/images/raw/03_countdown2binge_bingeready.png", device: "android" },
+      { screenshot: "/assets/images/raw/04_countdown2binge_search.png", device: "android" }
+    ],
+    headerText: "C2B",
+    headerLayout: "cinema",
+    description: [
+      "Countdown2Binge helps users track TV shows across their entire lifecycle — from anticipation to finale — so they know exactly when a season is ready to binge. The app removes guesswork by combining timelines, countdowns, and binge-ready states into a single, focused experience.",
+      "The product is designed to stay out of the way while keeping users informed, emphasizing clarity, visual hierarchy, and fast scanning across all core screens."
+    ],
+    layout: "phone",
+    imageWidth: 425,
+    sections: [
+      {
+        type: "feature-journey",
+        features: [
+          { image: "/assets/images/raw/01_countdown2binge_home.png", device: "android", title: "Timeline", description: "A vertical timeline showing currently airing and anticipated shows, anchored by countdowns to key moments like premieres and finales. The design prioritizes time awareness without overwhelming the user." },
+          { image: "/assets/images/raw/02_countdown2binge_home2.png", device: "android", title: "Anticipated Shows", description: "Upcoming and TBD seasons appear earlier in the timeline, keeping users aware of shows that haven't announced dates yet while preserving their place in the lifecycle." },
+          { image: "/assets/images/raw/03_countdown2binge_bingeready.png", device: "android", title: "Binge Ready", description: "Shows that have fully aired are grouped into a dedicated binge-ready view, clearly signaling when an entire season can be watched start to finish." },
+          { image: "/assets/images/raw/04_countdown2binge_search.png", device: "android", title: "Search & Discovery", description: "A lightweight search experience with category filters and trending shows, optimized for fast discovery and one-tap following." },
+          { image: "/assets/images/raw/05_countdown2binge_searchdetail.png", device: "android", title: "Show Detail", description: "A focused detail screen displaying season status, episode count, and metadata, designed to support quick decisions without deep navigation." },
+          { image: "/assets/images/raw/06_countdown2binge_settings.png", device: "android", title: "Settings & Sync", description: "Account and preference management with synced saved shows, ensuring consistency across sessions while keeping controls simple and unobtrusive." }
+        ]
+      }
+    ],
+    nextProject: { slug: "cookmode", title: "CookMode" }
   }
 };
 
