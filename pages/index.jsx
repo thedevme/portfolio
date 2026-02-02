@@ -59,7 +59,7 @@ const Index = () => {
                 <div className="description">
                   <div>
                     <p>
-                    Shipped apps for the NFL, New England Patriots, NHL, and MLS. With 10+ years in mobile design and development, I build high-performance iOS and cross-platform apps that fans and users love.
+                    Versatile mobile developer with 10+ years of experience spanning iOS, React Native, Android, and Design. I've shipped apps for the NFL, New England Patriots, NHL, and MLS — and I bring that same production-level standard to every project I take on.
                     </p>
                   </div>
                   <div className="social-links">

@@ -23,3 +23,18 @@ p {
   font-family: 'WF Visual Sans Text', sans-serif;
   font-style: italic;
 }
+
+/* Hero description full width */
+.section.hero-started .description {
+  max-width: 100%;
+  padding-top: 20px;
+}
+
+/* Reduce space above What I Do section */
+.lui-section-hero {
+  padding-bottom: 0;
+}
+
+#services-section {
+  margin-top: -130px;
+}
