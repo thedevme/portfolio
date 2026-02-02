@@ -20,7 +20,7 @@ const Index = () => {
     <Layout pageClassName={"home"}>
       <SEO
         title="Home"
-        description="Craig Clayton is a Sr. iOS Developer with 10+ years of experience specializing in Swift, SwiftUI, and creating intuitive, visually appealing mobile apps."
+        description="Craig Clayton is a Sr. iOS Developer with 20+ years of experience specializing in Swift, SwiftUI, and creating intuitive, visually appealing mobile apps."
       />
       {/* Section - Hero Started */}
       <section
@@ -59,7 +59,7 @@ const Index = () => {
                 <div className="description">
                   <div>
                     <p>
-                    With 10+ years in iOS design and development, I specialize in creating intuitive,
+                    With 20+ years in iOS design and development, I specialize in creating intuitive,
                     visually appealing apps. I love designing experiences that delight and connect with users.
                     </p>
                   </div>
