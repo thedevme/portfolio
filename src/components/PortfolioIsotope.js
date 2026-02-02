@@ -64,6 +64,13 @@ const PortfolioIsotope = ({ noViewMore }) => {
           >
             Design
           </a>
+          <a
+            className={`c-pointer lui-subtitle ${activeBtn("sorting-reactnative")}`}
+            onClick={handleFilterKeyChange("sorting-reactnative")}
+            data-href=".sorting-reactnative"
+          >
+            React Native
+          </a>
         </div>
         <div className="works-items works-masonry-items row">
             <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-design ">
@@ -313,6 +320,135 @@ const PortfolioIsotope = ({ noViewMore }) => {
                   </p>
                 </div>
                 <Link legacyBehavior href="/projects/sharks">
+                  <a className="lnk">See project</a>
+                </Link>
+              </div>
+              <div
+                className="bg-img"
+                style={{
+                  backgroundImage: "url(/assets/images/pat-2.png)",
+                }}
+              />
+            </div>
+          </div>
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-reactnative ">
+            <div
+              className="works-item scrolla-element-anim-1 scroll-animate"
+              data-animate="active"
+            >
+              <div className="image">
+                <div className="img">
+                  <Link legacyBehavior href="/projects/uber-shift-planner">
+                    <a>
+                      <img
+                        decoding="async"
+                        src="/assets/images/raw/shiftplannerhome_ios.png"
+                        alt="Uber Shift Planner"
+                      />
+                      <span className="overlay" />
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="desc">
+                <span className="category"> React Native, Design</span>
+                <h5 className="name">
+                  <Link legacyBehavior href="/projects/uber-shift-planner">
+                    <a>Uber Shift Planner</a>
+                  </Link>
+                </h5>
+                <div className="text">
+                  <p>
+                  A cross-platform planning concept helping rideshare drivers turn weekly earning goals into clear, actionable schedules.
+                  </p>
+                </div>
+                <Link legacyBehavior href="/projects/uber-shift-planner">
+                  <a className="lnk">See project</a>
+                </Link>
+              </div>
+              <div
+                className="bg-img"
+                style={{
+                  backgroundImage: "url(/assets/images/pat-2.png)",
+                }}
+              />
+            </div>
+          </div>
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-reactnative ">
+            <div
+              className="works-item scrolla-element-anim-1 scroll-animate"
+              data-animate="active"
+            >
+              <div className="image">
+                <div className="img">
+                  <Link legacyBehavior href="/projects/blueprint-math">
+                    <a>
+                      <img
+                        decoding="async"
+                        src="/assets/images/raw/01_ios_blueprintmath_diagnostic.png"
+                        alt="Blueprint Math"
+                      />
+                      <span className="overlay" />
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="desc">
+                <span className="category"> React Native, Education</span>
+                <h5 className="name">
+                  <Link legacyBehavior href="/projects/blueprint-math">
+                    <a>Blueprint Math</a>
+                  </Link>
+                </h5>
+                <div className="text">
+                  <p>
+                  A learning tool guiding students through math with step-by-step breakdowns.
+                  </p>
+                </div>
+                <Link legacyBehavior href="/projects/blueprint-math">
+                  <a className="lnk">See project</a>
+                </Link>
+              </div>
+              <div
+                className="bg-img"
+                style={{
+                  backgroundImage: "url(/assets/images/pat-2.png)",
+                }}
+              />
+            </div>
+          </div>
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-reactnative ">
+            <div
+              className="works-item scrolla-element-anim-1 scroll-animate"
+              data-animate="active"
+            >
+              <div className="image">
+                <div className="img">
+                  <Link legacyBehavior href="/projects/future-plan">
+                    <a>
+                      <img
+                        decoding="async"
+                        src="/assets/images/raw/02_ios_futureplan_tools.png"
+                        alt="Future Plan"
+                      />
+                      <span className="overlay" />
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="desc">
+                <span className="category"> React Native, Finance</span>
+                <h5 className="name">
+                  <Link legacyBehavior href="/projects/future-plan">
+                    <a>Future Plan</a>
+                  </Link>
+                </h5>
+                <div className="text">
+                  <p>
+                  A retirement planning concept with assessments and growth visualization.
+                  </p>
+                </div>
+                <Link legacyBehavior href="/projects/future-plan">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
