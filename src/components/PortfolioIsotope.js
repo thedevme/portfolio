@@ -339,7 +339,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
               />
             </div>
           </div>
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-reactnative ">
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-reactnative sorting-design ">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
@@ -382,7 +382,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
               />
             </div>
           </div>
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-reactnative ">
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-reactnative sorting-design ">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
@@ -425,7 +425,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
               />
             </div>
           </div>
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-reactnative ">
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-reactnative sorting-design ">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
@@ -468,7 +468,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
               />
             </div>
           </div>
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-kotlin ">
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-kotlin sorting-design ">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
@@ -511,7 +511,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
               />
             </div>
           </div>
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-kotlin ">
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-kotlin sorting-design ">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
