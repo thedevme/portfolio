@@ -309,6 +309,16 @@ export const projects = {
     categories: "Mobile Game, Entertainment",
     appStoreUrl: "https://apps.apple.com",
     headerImage: "/assets/images/hornets-header.png",
+    // IMPORTANT: Showcase layout requires ODD number of devices (3 or 5) for symmetry
+    headerDevices: [
+      { screenshot: "/assets/images/raw/hornets01.png", device: "iphone" },
+      { screenshot: "/assets/images/raw/hornets02.png", device: "iphone" },
+      { screenshot: "/assets/images/raw/hornets03.png", device: "iphone" },
+      { screenshot: "/assets/images/raw/hornets04.png", device: "iphone" },
+      { screenshot: "/assets/images/raw/hornets05.png", device: "iphone" }
+    ],
+    headerText: "HORNETS",
+    headerLayout: "showcase",
     description: [
       "The Charlotte Hornets mobile app delivers a complete game-day companion for fans, blending live action with an immersive digital experience. With real-time scoring, play-by-play updates, and in-depth team and player stats, supporters can follow every possession from tipoff to the final buzzer. Interactive features like shot charts, leaderboards, and box scores make it easy to dive deeper into performance while season series breakdowns and highlight reels keep fans engaged beyond the live game.",
       "Beyond the court, the app acts as a central hub for everything Hornets. Fans can browse team rosters, track upcoming matchups, and stay current with standings and stats, all within a streamlined interface that highlights bold Hornets branding. Whether checking scores, reviewing highlights, or preparing for the next matchup, the app provides a seamless, engaging way to stay connected to the team throughout the season."
@@ -317,34 +327,52 @@ export const projects = {
     imageWidth: 425,
     sections: [
       {
-        type: "two-column",
-        cards: [
-          { image: "/assets/images/hornets1.png", title: "Matchup Overview", description: "A game-day view showing the Hornets' matchup against the Lakers, with records, conference standings, broadcast details, and radio coverage.", imagePosition: "top" },
-          { image: "/assets/images/hornets2.png", title: "Team Stats Breakdown", description: "Detailed statistical breakdown for the game, including categories like points, rebounds, assists, and efficiency to compare both teams.", imagePosition: "bottom" }
+        type: "feature-gallery",
+        features: [
+          { image: "/assets/images/raw/hornets01.png", device: "iphone", title: "Matchup Overview", description: "Game-day view with records, standings, and broadcast details." },
+          { image: "/assets/images/raw/hornets02.png", device: "iphone", title: "Team Stats", description: "Full statistical breakdown comparing both teams." },
+          { image: "/assets/images/raw/hornets03.png", device: "iphone", title: "Player Performance", description: "Top performers tracking points, rebounds, and assists." },
+          { image: "/assets/images/raw/hornets04.png", device: "iphone", title: "Game Highlights", description: "Live highlights and key plays as they unfold." },
+          { image: "/assets/images/raw/hornets05.png", device: "iphone", title: "Team Leaders", description: "Scoring leaders showcasing standout players." },
+          { image: "/assets/images/raw/hornets06.png", device: "iphone", title: "Playmakers", description: "Assist leaders creating scoring opportunities." }
         ]
-      },
+      }
+    ],
+    nextProject: { slug: "hornets2", title: "Hornets App V2" }
+  },
+
+  hornets2: {
+    title: "Hornets App",
+    subtitle: "Mobile Gaming, Unity Development",
+    year: 2019,
+    technology: "Swift, SwiftUI, Sketch/Figma",
+    categories: "Mobile Game, Entertainment",
+    appStoreUrl: "https://apps.apple.com",
+    headerImage: "/assets/images/hornets-header.png",
+    // Split layout - 1-2 devices
+    headerDevices: [
+      { screenshot: "/assets/images/raw/hornets01.png", device: "iphone" },
+      { screenshot: "/assets/images/raw/hornets02.png", device: "iphone" }
+    ],
+    headerText: "HORNETS",
+    headerLayout: "split",
+    description: [
+      "The Charlotte Hornets mobile app delivers a complete game-day companion for fans, blending live action with an immersive digital experience. With real-time scoring, play-by-play updates, and in-depth team and player stats, supporters can follow every possession from tipoff to the final buzzer. Interactive features like shot charts, leaderboards, and box scores make it easy to dive deeper into performance while season series breakdowns and highlight reels keep fans engaged beyond the live game.",
+      "Beyond the court, the app acts as a central hub for everything Hornets. Fans can browse team rosters, track upcoming matchups, and stay current with standings and stats, all within a streamlined interface that highlights bold Hornets branding. Whether checking scores, reviewing highlights, or preparing for the next matchup, the app provides a seamless, engaging way to stay connected to the team throughout the season."
+    ],
+    layout: "phone",
+    imageWidth: 425,
+    sections: [
       {
-        type: "full-width",
-        image: "/assets/images/hornets3.png",
-        title: "Player Performance",
-        description: "Individual leaderboards highlighting top performers for each team, tracking their points, rebounds, and assists contributions.",
-        imagePosition: "right",
-        background: "custom"
-      },
-      {
-        type: "two-column",
-        cards: [
-          { image: "/assets/images/hornets4.png", title: "Game Highlights Feed", description: "A feed of key plays and moments from the game, delivering live highlights and updates as the matchup unfolds.", imagePosition: "top" },
-          { image: "/assets/images/hornets5.png", title: "Team Leaders Points", description: "Spotlight on the scoring leaders for the game, showcasing standout players who led their teams in total points.", imagePosition: "bottom" }
+        type: "feature-scroll",
+        features: [
+          { image: "/assets/images/raw/hornets01.png", device: "iphone", title: "Matchup Overview", description: "Game-day view with records, standings, and broadcast details." },
+          { image: "/assets/images/raw/hornets02.png", device: "iphone", title: "Team Stats", description: "Full statistical breakdown comparing both teams." },
+          { image: "/assets/images/raw/hornets03.png", device: "iphone", title: "Player Performance", description: "Top performers tracking points, rebounds, and assists." },
+          { image: "/assets/images/raw/hornets04.png", device: "iphone", title: "Game Highlights", description: "Live highlights and key plays as they unfold." },
+          { image: "/assets/images/raw/hornets05.png", device: "iphone", title: "Team Leaders", description: "Scoring leaders showcasing standout players." },
+          { image: "/assets/images/raw/hornets06.png", device: "iphone", title: "Playmakers", description: "Assist leaders creating scoring opportunities." }
         ]
-      },
-      {
-        type: "full-width",
-        image: "/assets/images/hornets6.png",
-        title: "Team Leaders Assists",
-        description: "Focused view on playmaking leaders, showing players who distributed the ball and created scoring opportunities.",
-        imagePosition: "right",
-        background: "custom"
       }
     ],
     nextProject: { slug: "chl", title: "CHL App" }
