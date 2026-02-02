@@ -81,7 +81,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
           </a>
         </div>
         <div className="works-items works-masonry-items row">
-          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-design ">
+            <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-design ">
             <div
               className="works-item scrolla-element-anim-1 scroll-animate"
               data-animate="active"
