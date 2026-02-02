@@ -241,7 +241,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
                   A CHL app concept featuring real-time scores, smart game schedules, player insights, and a streamlined design with intuitive controls.
                   </p>
                 </div>
-                <Link legacyBehavior href="/projects/tesla">
+                <Link legacyBehavior href="/projects/chl">
                   <a className="lnk">See project</a>
                 </Link>
               </div>
