@@ -888,9 +888,9 @@
 }
 
 .hero-mockup--split .hero-mockup__title {
-  font-size: clamp(3.5rem, 10vw, 8rem);
-  line-height: 0.9;
-  letter-spacing: -0.04em;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
   margin-bottom: 20px;
   background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.7) 100%);
   -webkit-background-clip: text;
@@ -1245,7 +1245,7 @@
 .feature-gallery__number {
   display: block;
   font-family: "Jost", sans-serif;
-  font-size: 100px;
+  font-size: 120px;
   line-height: 1;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.1);
@@ -1254,7 +1254,7 @@
 }
 
 .feature-gallery__title {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
@@ -1264,7 +1264,7 @@
 }
 
 .feature-gallery__description {
-  font-size: 0.95rem;
+  font-size: 24px;
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.7;
   margin: 0;
@@ -1542,7 +1542,7 @@
 
 .feature-scroll__title {
   font-family: "Jost", sans-serif;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   color: #fff;
   line-height: 1.1;
@@ -1552,7 +1552,7 @@
 }
 
 .feature-scroll__description {
-  font-size: 18px;
+  font-size: 24px;
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.7;
   margin: 0;
@@ -1644,6 +1644,747 @@
 }
 
 /* ==========================================================================
+   Crossplatform Layout - iPhone + Android side by side for React Native apps
+   ========================================================================== */
+.hero-mockup--crossplatform {
+  padding: 80px 0 0;
+  background: linear-gradient(180deg, #0d1117 0%, #1d222a 50%, #0d1117 100%);
+  min-height: 700px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Central unified glow - represents shared codebase */
+.hero-mockup--crossplatform::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(41, 165, 135, 0.25) 0%, rgba(41, 165, 135, 0.1) 30%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  animation: crossplatformPulse 4s ease-in-out infinite;
+}
+
+@keyframes crossplatformPulse {
+  0%, 100% { transform: translate(-50%, -40%) scale(1); opacity: 1; }
+  50% { transform: translate(-50%, -40%) scale(1.1); opacity: 0.8; }
+}
+
+/* Connecting bridge line between devices */
+.hero-mockup--crossplatform::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(41, 165, 135, 0) 0%, rgba(41, 165, 135, 0.5) 50%, rgba(41, 165, 135, 0) 100%);
+  z-index: 0;
+}
+
+.hero-mockup--crossplatform .hero-mockup__header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-mockup--crossplatform .hero-mockup__title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  letter-spacing: -0.03em;
+  margin-bottom: 15px;
+}
+
+.hero-mockup--crossplatform .hero-mockup__subtitle {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Platform badge style subtitle */
+.hero-mockup--crossplatform .hero-mockup__subtitle::before {
+  content: 'iOS';
+  display: inline-block;
+  margin-right: 20px;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.hero-mockup--crossplatform .hero-mockup__subtitle::after {
+  content: 'Android';
+  display: inline-block;
+  margin-left: 20px;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.hero-mockup--crossplatform .hero-mockup__devices {
+  justify-content: center;
+  gap: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Reset default animations */
+.hero-mockup--crossplatform .hero-mockup__device-wrapper {
+  animation: none;
+  opacity: 1;
+}
+
+/* iPhone - left side, angled toward center */
+.hero-mockup--crossplatform .hero-mockup__device-wrapper:nth-child(1) {
+  animation: crossplatformEnterLeft 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.hero-mockup--crossplatform .hero-mockup__device-wrapper:nth-child(1) .device-mockup {
+  transform: perspective(1000px) rotateY(8deg);
+  animation: crossplatformFloatLeft 6s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Android - right side, angled toward center */
+.hero-mockup--crossplatform .hero-mockup__device-wrapper:nth-child(2) {
+  animation: crossplatformEnterRight 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.hero-mockup--crossplatform .hero-mockup__device-wrapper:nth-child(2) .device-mockup {
+  transform: perspective(1000px) rotateY(-8deg);
+  animation: crossplatformFloatRight 6s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+/* Device shadows with colored accents */
+.hero-mockup--crossplatform .hero-mockup__device-wrapper:nth-child(1) .device-mockup__frame {
+  box-shadow:
+    0 40px 80px -20px rgba(0, 0, 0, 0.5),
+    -20px 0 60px -20px rgba(0, 122, 255, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.hero-mockup--crossplatform .hero-mockup__device-wrapper:nth-child(2) .device-mockup__frame {
+  box-shadow:
+    0 40px 80px -20px rgba(0, 0, 0, 0.5),
+    20px 0 60px -20px rgba(61, 220, 132, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+@keyframes crossplatformEnterLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) rotateY(20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotateY(0deg);
+  }
+}
+
+@keyframes crossplatformEnterRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px) rotateY(-20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotateY(0deg);
+  }
+}
+
+@keyframes crossplatformFloatLeft {
+  0%, 100% { transform: perspective(1000px) rotateY(8deg) translateY(0); }
+  50% { transform: perspective(1000px) rotateY(8deg) translateY(-12px); }
+}
+
+@keyframes crossplatformFloatRight {
+  0%, 100% { transform: perspective(1000px) rotateY(-8deg) translateY(0); }
+  50% { transform: perspective(1000px) rotateY(-8deg) translateY(-12px); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-mockup--crossplatform {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .hero-mockup--crossplatform .hero-mockup__devices {
+    gap: 40px;
+  }
+
+  .hero-mockup--crossplatform .hero-mockup__device-wrapper:nth-child(1) .device-mockup,
+  .hero-mockup--crossplatform .hero-mockup__device-wrapper:nth-child(2) .device-mockup {
+    transform: perspective(1000px) rotateY(0deg) scale(0.85);
+  }
+
+  .hero-mockup--crossplatform::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-mockup--crossplatform::after {
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-mockup--crossplatform .hero-mockup__devices {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hero-mockup--crossplatform .hero-mockup__device-wrapper:nth-child(1) .device-mockup,
+  .hero-mockup--crossplatform .hero-mockup__device-wrapper:nth-child(2) .device-mockup {
+    transform: none;
+    animation: none;
+  }
+
+  .hero-mockup--crossplatform::after {
+    display: none;
+  }
+
+  .hero-mockup--crossplatform .hero-mockup__subtitle::before,
+  .hero-mockup--crossplatform .hero-mockup__subtitle::after {
+    display: block;
+    margin: 5px auto;
+  }
+}
+
+/* ==========================================================================
+   Cinema Layout - Dramatic letterbox/widescreen feel
+   ========================================================================== */
+.hero-mockup--cinema {
+  padding: 120px 0 50px;
+  background: #000;
+  min-height: auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Letterbox bars - subtle gradient fade */
+.hero-mockup--cinema::before,
+.hero-mockup--cinema::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.hero-mockup--cinema::before {
+  top: 0;
+  background: linear-gradient(180deg, #000 0%, transparent 100%);
+}
+
+.hero-mockup--cinema::after {
+  bottom: 0;
+  background: linear-gradient(0deg, #000 0%, transparent 100%);
+}
+
+.hero-mockup--cinema .hero-mockup__header {
+  position: relative;
+  text-align: center;
+  z-index: 15;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Big subtle number behind title - consistent with feature sections */
+.hero-mockup--cinema .hero-mockup__background-text {
+  display: block;
+  font-family: "Jost", sans-serif;
+  font-size: clamp(80px, 15vw, 140px);
+  line-height: 1;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.08);
+  letter-spacing: -0.02em;
+  margin-bottom: -25px;
+}
+
+.hero-mockup--cinema .hero-mockup__title {
+  font-family: "Jost", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 12px;
+}
+
+.hero-mockup--cinema .hero-mockup__subtitle {
+  font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hero-mockup--cinema .hero-mockup__devices {
+  position: relative;
+  z-index: 5;
+  gap: 40px;
+}
+
+/* Reset animations */
+.hero-mockup--cinema .hero-mockup__device-wrapper {
+  animation: none;
+  opacity: 1;
+}
+
+/* Single device - centered and dramatic */
+.hero-mockup--cinema .hero-mockup__device-wrapper:nth-child(1) {
+  animation: cinemaReveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.hero-mockup--cinema .hero-mockup__device-wrapper:nth-child(1) .device-mockup {
+  filter: drop-shadow(0 0 100px rgba(41, 165, 135, 0.3))
+          drop-shadow(0 50px 100px rgba(0, 0, 0, 0.5));
+}
+
+/* Multiple devices - spread out */
+.hero-mockup--cinema .hero-mockup__device-wrapper:nth-child(2) {
+  animation: cinemaReveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.hero-mockup--cinema .hero-mockup__device-wrapper:nth-child(2) .device-mockup {
+  transform: scale(0.85);
+  filter: drop-shadow(0 0 60px rgba(41, 165, 135, 0.2))
+          drop-shadow(0 40px 80px rgba(0, 0, 0, 0.4))
+          brightness(0.9);
+}
+
+.hero-mockup--cinema .hero-mockup__device-wrapper:nth-child(3) {
+  animation: cinemaReveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+.hero-mockup--cinema .hero-mockup__device-wrapper:nth-child(3) .device-mockup {
+  transform: scale(0.85);
+  filter: drop-shadow(0 0 60px rgba(41, 165, 135, 0.2))
+          drop-shadow(0 40px 80px rgba(0, 0, 0, 0.4))
+          brightness(0.9);
+}
+
+@keyframes cinemaReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(50px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Ambient glow behind devices */
+.hero-mockup--cinema .hero-mockup__devices::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(41, 165, 135, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  animation: cinemaGlow 4s ease-in-out infinite;
+}
+
+@keyframes cinemaGlow {
+  0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-mockup--cinema {
+    padding: 40px 0 60px;
+  }
+
+  .hero-mockup--cinema .hero-mockup__devices {
+    gap: 20px;
+  }
+
+  .hero-mockup--cinema .hero-mockup__device-wrapper .device-mockup {
+    transform: scale(0.7) !important;
+  }
+
+  .hero-mockup--cinema .hero-mockup__background-text {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-mockup--cinema .hero-mockup__title {
+    font-size: 1.8rem;
+  }
+
+  .hero-mockup--cinema .hero-mockup__devices::before {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-mockup--cinema .hero-mockup__background-text {
+    font-size: 60px;
+  }
+}
+
+/* ==========================================================================
+   Layered Layout - Devices stacked like photos with slight rotation
+   ========================================================================== */
+.hero-mockup--layered {
+  padding: 100px 0 60px;
+  background: linear-gradient(180deg, #0d1117 0%, #1d222a 100%);
+  min-height: 700px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-mockup--layered .hero-mockup__header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-mockup--layered .hero-mockup__title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  letter-spacing: -0.03em;
+}
+
+.hero-mockup--layered .hero-mockup__subtitle {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  margin-top: 10px;
+}
+
+.hero-mockup--layered .hero-mockup__devices {
+  position: relative;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Reset animations */
+.hero-mockup--layered .hero-mockup__device-wrapper {
+  position: absolute;
+  animation: none;
+  opacity: 1;
+}
+
+/* Stack devices like scattered photos */
+.hero-mockup--layered .hero-mockup__device-wrapper:nth-child(1) {
+  z-index: 4;
+  animation: layeredEnter 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.hero-mockup--layered .hero-mockup__device-wrapper:nth-child(1) .device-mockup {
+  transform: rotate(-2deg);
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.4));
+}
+
+.hero-mockup--layered .hero-mockup__device-wrapper:nth-child(2) {
+  z-index: 3;
+  animation: layeredEnter 0.6s ease-out forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.hero-mockup--layered .hero-mockup__device-wrapper:nth-child(2) .device-mockup {
+  transform: translate(-180px, 20px) rotate(6deg) scale(0.95);
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.35)) brightness(0.95);
+}
+
+.hero-mockup--layered .hero-mockup__device-wrapper:nth-child(3) {
+  z-index: 2;
+  animation: layeredEnter 0.6s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.hero-mockup--layered .hero-mockup__device-wrapper:nth-child(3) .device-mockup {
+  transform: translate(180px, 30px) rotate(-5deg) scale(0.9);
+  filter: drop-shadow(0 18px 35px rgba(0, 0, 0, 0.3)) brightness(0.9);
+}
+
+.hero-mockup--layered .hero-mockup__device-wrapper:nth-child(4) {
+  z-index: 1;
+  animation: layeredEnter 0.6s ease-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.hero-mockup--layered .hero-mockup__device-wrapper:nth-child(4) .device-mockup {
+  transform: translate(-100px, 50px) rotate(8deg) scale(0.85);
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.25)) brightness(0.85);
+}
+
+@keyframes layeredEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Hover brings device forward */
+.hero-mockup--layered .hero-mockup__device-wrapper {
+  transition: z-index 0s, transform 0.3s ease;
+}
+
+.hero-mockup--layered .hero-mockup__device-wrapper:hover {
+  z-index: 10 !important;
+}
+
+.hero-mockup--layered .hero-mockup__device-wrapper:hover .device-mockup {
+  transform: rotate(0deg) scale(1.05) !important;
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5)) brightness(1) !important;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-mockup--layered {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .hero-mockup--layered .hero-mockup__devices {
+    height: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 40px;
+  }
+
+  .hero-mockup--layered .hero-mockup__device-wrapper {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .hero-mockup--layered .hero-mockup__device-wrapper .device-mockup {
+    transform: scale(0.7) rotate(0deg) !important;
+    filter: none !important;
+  }
+}
+
+/* ==========================================================================
+   Cascade Layout - 3D stacked devices with perspective depth
+   ========================================================================== */
+.hero-mockup--cascade {
+  padding: 100px 0 60px;
+  background: linear-gradient(180deg, #0a0c0f 0%, #1d222a 100%);
+  min-height: 750px;
+  overflow: hidden;
+  position: relative;
+  perspective: 1500px;
+}
+
+.hero-mockup--cascade::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 200px;
+  background: radial-gradient(ellipse at center bottom, rgba(41, 165, 135, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-mockup--cascade .hero-mockup__header {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-mockup--cascade .hero-mockup__title {
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  letter-spacing: -0.03em;
+}
+
+.hero-mockup--cascade .hero-mockup__subtitle {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  margin-top: 10px;
+}
+
+.hero-mockup--cascade .hero-mockup__devices {
+  position: relative;
+  height: 500px;
+  justify-content: center;
+  align-items: flex-end;
+  transform-style: preserve-3d;
+}
+
+/* Reset default animations for cascade */
+.hero-mockup--cascade .hero-mockup__device-wrapper {
+  position: absolute;
+  animation: none;
+  opacity: 1;
+}
+
+/* Stack devices diagonally with depth */
+.hero-mockup--cascade .hero-mockup__device-wrapper:nth-child(1) {
+  z-index: 5;
+  animation: cascadeEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.hero-mockup--cascade .hero-mockup__device-wrapper:nth-child(1) .device-mockup {
+  transform: translateZ(0) rotateX(5deg) rotateY(-5deg);
+  filter: none;
+}
+
+.hero-mockup--cascade .hero-mockup__device-wrapper:nth-child(2) {
+  z-index: 4;
+  animation: cascadeEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.hero-mockup--cascade .hero-mockup__device-wrapper:nth-child(2) .device-mockup {
+  transform: translate(-120px, 30px) translateZ(-100px) rotateX(8deg) rotateY(-8deg) scale(0.92);
+  filter: brightness(0.9);
+}
+
+.hero-mockup--cascade .hero-mockup__device-wrapper:nth-child(3) {
+  z-index: 3;
+  animation: cascadeEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.hero-mockup--cascade .hero-mockup__device-wrapper:nth-child(3) .device-mockup {
+  transform: translate(-240px, 60px) translateZ(-200px) rotateX(11deg) rotateY(-11deg) scale(0.84);
+  filter: brightness(0.8);
+}
+
+.hero-mockup--cascade .hero-mockup__device-wrapper:nth-child(4) {
+  z-index: 2;
+  animation: cascadeEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.hero-mockup--cascade .hero-mockup__device-wrapper:nth-child(4) .device-mockup {
+  transform: translate(-360px, 90px) translateZ(-300px) rotateX(14deg) rotateY(-14deg) scale(0.76);
+  filter: brightness(0.7);
+}
+
+/* Enhanced shadows for depth */
+.hero-mockup--cascade .device-mockup__frame {
+  box-shadow:
+    0 50px 100px -30px rgba(0, 0, 0, 0.6),
+    0 30px 60px -20px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+@keyframes cascadeEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) translateZ(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+  }
+}
+
+/* Hover effect - bring device forward */
+.hero-mockup--cascade .hero-mockup__device-wrapper {
+  transition: transform 0.4s ease, z-index 0s;
+}
+
+.hero-mockup--cascade .hero-mockup__device-wrapper:hover {
+  z-index: 10 !important;
+}
+
+.hero-mockup--cascade .hero-mockup__device-wrapper:hover .device-mockup {
+  transform: translateZ(50px) rotateX(0deg) rotateY(0deg) scale(1) !important;
+  filter: brightness(1) !important;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .hero-mockup--cascade .hero-mockup__device-wrapper:nth-child(2) .device-mockup {
+    transform: translate(-100px, 25px) translateZ(-80px) rotateX(8deg) rotateY(-8deg) scale(0.9);
+  }
+  .hero-mockup--cascade .hero-mockup__device-wrapper:nth-child(3) .device-mockup {
+    transform: translate(-200px, 50px) translateZ(-160px) rotateX(11deg) rotateY(-11deg) scale(0.8);
+  }
+  .hero-mockup--cascade .hero-mockup__device-wrapper:nth-child(4) .device-mockup {
+    transform: translate(-300px, 75px) translateZ(-240px) rotateX(14deg) rotateY(-14deg) scale(0.7);
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-mockup--cascade {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .hero-mockup--cascade .hero-mockup__devices {
+    height: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 40px;
+    justify-content: flex-start;
+  }
+
+  .hero-mockup--cascade .hero-mockup__device-wrapper {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .hero-mockup--cascade .hero-mockup__device-wrapper .device-mockup {
+    transform: scale(0.75) !important;
+    filter: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-mockup--cascade .hero-mockup__devices {
+    padding: 20px;
+  }
+
+  .hero-mockup--cascade .hero-mockup__device-wrapper .device-mockup {
+    transform: scale(0.6) !important;
+  }
+}
+
+/* ==========================================================================
    Animation effects (optional hover)
    ========================================================================== */
 .device-mockup--animated {
@@ -1675,4 +2416,378 @@
   justify-content: center;
   gap: 24px;
   flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Platform Comparison - iOS vs Android side by side
+   ========================================================================== */
+.platform-comparison {
+  padding: 60px 0;
+  background: #0d1117;
+}
+
+.platform-comparison__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 40px;
+  position: relative;
+}
+
+.platform-comparison__row:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.platform-comparison__platform {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.platform-comparison__device {
+  transition: transform 0.4s ease;
+}
+
+.platform-comparison__platform:hover .platform-comparison__device {
+  transform: translateY(-10px);
+}
+
+.platform-comparison__badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.platform-comparison__platform--ios .platform-comparison__badge {
+  background: rgba(0, 122, 255, 0.15);
+  color: #007aff;
+}
+
+.platform-comparison__platform--android .platform-comparison__badge {
+  background: rgba(61, 220, 132, 0.15);
+  color: #3ddc84;
+}
+
+.platform-comparison__content {
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.platform-comparison__number {
+  display: block;
+  font-family: "Jost", sans-serif;
+  font-size: 120px;
+  line-height: 1;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.08);
+  letter-spacing: -0.02em;
+  margin-bottom: -15px;
+}
+
+.platform-comparison__title {
+  font-family: "Jost", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 16px;
+}
+
+.platform-comparison__description {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  margin: 0 0 20px;
+}
+
+.platform-comparison__notes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.platform-comparison__note {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  text-align: center;
+  display: block;
+}
+
+.platform-comparison__note span {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.platform-comparison__note--ios span {
+  color: #007aff;
+}
+
+.platform-comparison__note--android span {
+  color: #3ddc84;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .platform-comparison__content {
+    max-width: 300px;
+  }
+
+  .platform-comparison__number {
+    font-size: 60px;
+  }
+
+  .platform-comparison__title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 992px) {
+  .platform-comparison__row {
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px 20px;
+  }
+
+  .platform-comparison__content {
+    order: -1;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .platform-comparison__platform {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .platform-comparison__device .device-mockup {
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 768px) {
+  .platform-comparison__platform {
+    flex-direction: column;
+  }
+
+  .platform-comparison__number {
+    font-size: 48px;
+  }
+
+  .platform-comparison__title {
+    font-size: 22px;
+  }
+}
+
+/* ==========================================================================
+   Feature Journey - Timeline-based step flow
+   ========================================================================== */
+.feature-journey {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+/* Override section background for feature sections */
+.portfolio-template .section.section-inner {
+  background: #1d222a;
+}
+
+.feature-journey__header {
+  font-family: "Jost", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 60px;
+}
+
+.feature-journey__timeline {
+  position: relative;
+}
+
+.feature-journey__step {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.feature-journey__step--last {
+  margin-bottom: 0;
+}
+
+.feature-journey__connector {
+  flex: 0 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-journey__dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #29a587 0%, #1d7a60 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 0 30px rgba(41, 165, 135, 0.4);
+  position: relative;
+  z-index: 2;
+}
+
+.feature-journey__line {
+  flex: 1;
+  width: 2px;
+  background: linear-gradient(180deg, #29a587 0%, rgba(41, 165, 135, 0.2) 100%);
+  margin-top: 10px;
+}
+
+.feature-journey__content {
+  flex: 1;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.feature-journey__device {
+  flex: 0 0 auto;
+}
+
+.feature-journey__device .device-mockup {
+  transform: scale(0.85);
+  transform-origin: center center;
+}
+
+.feature-journey__image {
+  max-width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.feature-journey__text {
+  flex: 1;
+}
+
+.feature-journey__number {
+  display: block;
+  font-family: "Jost", sans-serif;
+  font-size: 120px;
+  line-height: 1;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.08);
+  letter-spacing: -0.02em;
+  margin-bottom: -15px;
+}
+
+.feature-journey__title {
+  font-family: "Jost", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 12px;
+}
+
+.feature-journey__description {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .feature-journey {
+    padding: 60px 20px;
+  }
+
+  .feature-journey__header {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .feature-journey__step {
+    gap: 20px;
+  }
+
+  .feature-journey__connector {
+    flex: 0 0 40px;
+  }
+
+  .feature-journey__dot {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .feature-journey__content {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .feature-journey__device .device-mockup {
+    transform: scale(0.75);
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-journey__header {
+    font-size: 28px;
+  }
+
+  .feature-journey__title {
+    font-size: 20px;
+  }
+
+  .feature-journey__connector {
+    display: none;
+  }
+
+  .feature-journey__step {
+    margin-bottom: 30px;
+  }
+
+  .feature-journey__content {
+    position: relative;
+    padding-left: 60px;
+  }
+
+  .feature-journey__content::before {
+    content: attr(data-step);
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #29a587;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #fff;
+    font-size: 14px;
+  }
 }

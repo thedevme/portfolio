@@ -10,6 +10,8 @@ import {
   FeatureGallery,
   BentoGrid,
   FeatureScroll,
+  PlatformComparison,
+  FeatureJourney,
   NextProject,
 } from "../../src/components/sections";
 import { projects, getProjectSlugs, getProjectBySlug } from "../../src/data/projects";
@@ -88,6 +90,21 @@ const ProjectPage = ({ project }) => {
           <FeatureScroll
             key={index}
             features={section.features}
+          />
+        );
+      case "platform-comparison":
+        return (
+          <PlatformComparison
+            key={index}
+            features={section.features}
+          />
+        );
+      case "feature-journey":
+        return (
+          <FeatureJourney
+            key={index}
+            features={section.features}
+            title={section.title}
           />
         );
       default:
