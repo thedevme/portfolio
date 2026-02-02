@@ -53,7 +53,7 @@ const Index = () => {
                   </h1>
                   <div className="label lui-subtitle">
                     {" "}
-                    I am <strong>Sr. iOS Developer</strong>
+                    I am a <strong>Senior Mobile Engineer</strong>
                   </div>
                 </div>
                 <div className="description">
@@ -169,13 +169,9 @@ const Index = () => {
         {/* Services */}
         <div className="v-line v-line-right">
           <div className="container">
-            <Swiper
-              {...servicesSliderProps}
-              className="swiper-container js-services scrolla-element-anim-1 scroll-animate"
-              data-animate="active"
-            >
-              <SwiperSlide className="swiper-slide">
-              <div className="services-item">
+            <div className="services-grid row">
+              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div className="services-item scrolla-element-anim-1 scroll-animate" data-animate="active">
                   <div className="lui-subtitle">
                     <span>Mobile Excellence</span>
                   </div>
@@ -191,9 +187,61 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <div className="services-item">
+              </div>
+              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div className="services-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                  <div className="lui-subtitle">
+                    <span>Native Android</span>
+                  </div>
+                  <h5 className="lui-title">
+                    <span> Android Development </span>
+                  </h5>
+                  <div className="lui-text">
+                    <div>
+                      <p>
+                        I develop Android applications using Kotlin and Jetpack Compose, applying modern architecture patterns and Material Design to deliver polished, production-ready apps that feel right at home on the platform.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div className="services-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                  <div className="lui-subtitle">
+                    <span>Cross-Platform</span>
+                  </div>
+                  <h5 className="lui-title">
+                    <span> React Native Development </span>
+                  </h5>
+                  <div className="lui-text">
+                    <div>
+                      <p>
+                        I build cross-platform mobile apps with React Native and TypeScript, leveraging deep native iOS knowledge to deliver performance and UX that feels native on both platforms.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div className="services-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                  <div className="lui-subtitle">
+                    <span>Interface Craft</span>
+                  </div>
+                  <h5 className="lui-title">
+                    <span> Mobile Design </span>
+                  </h5>
+                  <div className="lui-text">
+                    <div>
+                      <p>
+                        My approach to mobile design blends creativity, usability, and attention to detail.
+                        The result: interfaces that look great, perform flawlessly, and keep users engaged.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div className="services-item scrolla-element-anim-1 scroll-animate" data-animate="active">
                   <div className="lui-subtitle">
                     <span>Desktop Precision</span>
                   </div>
@@ -203,33 +251,14 @@ const Index = () => {
                   <div className="lui-text">
                     <div>
                       <p>
-                      I bring ideas to life on macOS through thoughtful design and precise engineering.
-                      My goal is to deliver high-quality, engaging apps that feel at home in the Apple ecosystem.
+                        I bring ideas to life on macOS through thoughtful design and precise engineering.
+                        My goal is to deliver high-quality, engaging apps that feel at home in the Apple ecosystem.
                       </p>
                     </div>
                   </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <div className="services-item">
-                  <div className="lui-subtitle">
-                    <span>Interface Craft</span>
-                  </div>
-                  <h5 className="lui-title">
-                    <span> iOS Design</span>
-                  </h5>
-                  <div className="lui-text">
-                    <div>
-                      <p>
-                      My approach to iOS design blends creativity, usability, and attention to detail.
-                      The result: interfaces that look great, perform flawlessly, and keep users engaged.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <div className="swiper-pagination" />
-            </Swiper>
+              </div>
+            </div>
             <div className="lui-bgtitle">
               <span> Services </span>
             </div>
