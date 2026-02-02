@@ -286,6 +286,40 @@ const Index = () => {
                 </div>
                 <div className="skills-item scrolla-element-anim-1 scroll-animate" data-animate="active">
                   <h6 className="name">
+                    <span> iOS Development </span>
+                  </h6>
+                  <div className="text">
+                    <div>
+                      <p>
+                      I craft high-quality iOS apps from concept
+                      to App Store release, combining design expertise
+                      with deep technical knowledge of Apple's frameworks.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="dots">
+                    <div className="dot" style={{ width: "95%" }}></div>
+                  </div>
+                </div>
+                <div className="skills-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                  <h6 className="name">
+                    <span> React Native </span>
+                  </h6>
+                  <div className="text">
+                    <div>
+                      <p>
+                      I build cross-platform mobile applications with React Native,
+                      leveraging my native iOS expertise to deliver performant,
+                      polished apps for both iOS and Android from a single codebase.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="dots">
+                    <div className="dot" style={{ width: "80%" }}></div>
+                  </div>
+                </div>
+                <div className="skills-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                  <h6 className="name">
                     <span> SwiftUI </span>
                   </h6>
                   <div className="text">
@@ -302,36 +336,19 @@ const Index = () => {
                 </div>
                 <div className="skills-item scrolla-element-anim-1 scroll-animate" data-animate="active">
                   <h6 className="name">
-                    <span> iOS Development </span>
+                    <span> Android / Kotlin </span>
                   </h6>
                   <div className="text">
                     <div>
                       <p>
-                      I craft high-quality iOS apps from concept
-                      to App Store release, combining design expertise
-                      with deep technical knowledge of Apple’s frameworks.
+                      I develop Android applications using Kotlin and Jetpack Compose,
+                      applying modern architecture patterns to create smooth,
+                      responsive experiences for Android users.
                       </p>
                     </div>
                   </div>
                   <div className="dots">
-                    <div className="dot" style={{ width: "95%" }}></div>
-                  </div>
-                </div>
-                <div className="skills-item scrolla-element-anim-1 scroll-animate" data-animate="active">
-                  <h6 className="name">
-                    <span> macOS Development </span>
-                  </h6>
-                  <div className="text">
-                    <div>
-                      <p>
-                      I develop polished, high-performance macOS
-                      applications that feel native, integrating
-                      desktop-specific workflows and Apple ecosystem features.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="dots">
-                    <div className="dot" style={{ width: "85%" }}></div>
+                    <div className="dot" style={{ width: "75%" }}></div>
                   </div>
                 </div>
                 <div className="skills-item scrolla-element-anim-1 scroll-animate" data-animate="active">
@@ -370,19 +387,19 @@ const Index = () => {
                 </div>
                 <div className="skills-item scrolla-element-anim-1 scroll-animate" data-animate="active">
                   <h6 className="name">
-                    <span> React Native </span>
+                    <span> macOS Development </span>
                   </h6>
                   <div className="text">
                     <div>
                       <p>
-                      I build cross-platform mobile applications with React Native,
-                      leveraging my native iOS expertise to deliver performant,
-                      polished apps for both iOS and Android from a single codebase.
+                      I develop polished, high-performance macOS
+                      applications that feel native, integrating
+                      desktop-specific workflows and Apple ecosystem features.
                       </p>
                     </div>
                   </div>
                   <div className="dots">
-                    <div className="dot" style={{ width: "80%" }}></div>
+                    <div className="dot" style={{ width: "85%" }}></div>
                   </div>
                 </div>
             </div>
