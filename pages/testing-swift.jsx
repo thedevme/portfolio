@@ -9,7 +9,7 @@ const TestingSwift = () => {
   const [subscriberCount, setSubscriberCount] = useState(0);
 
   useEffect(() => {
-    fetch("/api/subscribe")
+    fetch("/email/subscribe")
       .then((res) => res.json())
       .then((data) => setSubscriberCount(data.count || 0))
       .catch(() => setSubscriberCount(0));
@@ -21,7 +21,7 @@ const TestingSwift = () => {
     setStatus({ type: "", message: "" });
 
     try {
-      const res = await fetch("/api/subscribe", {
+      const res = await fetch("/email/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
