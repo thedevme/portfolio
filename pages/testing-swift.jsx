@@ -8,11 +8,9 @@ const TestingSwift = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [subscriberCount, setSubscriberCount] = useState(0);
 
+  // Subscriber count - will need external service to persist
   useEffect(() => {
-    fetch("/email/subscribe")
-      .then((res) => res.json())
-      .then((data) => setSubscriberCount(data.count || 0))
-      .catch(() => setSubscriberCount(0));
+    setSubscriberCount(0);
   }, []);
 
   const handleSubmit = async (e) => {
@@ -21,20 +19,18 @@ const TestingSwift = () => {
     setStatus({ type: "", message: "" });
 
     try {
-      const res = await fetch("/email/subscribe", {
+      const res = await fetch("https://formspree.io/f/mqegojge", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
 
-      const data = await res.json();
-
       if (res.ok) {
-        setStatus({ type: "success", message: data.message });
+        setStatus({ type: "success", message: "Thanks for your interest!" });
         setEmail("");
-        setSubscriberCount(data.count);
+        setSubscriberCount(prev => prev + 1);
       } else {
-        setStatus({ type: "error", message: data.error });
+        setStatus({ type: "error", message: "Something went wrong" });
       }
     } catch (error) {
       setStatus({ type: "error", message: "Something went wrong" });
