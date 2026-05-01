@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swift Testing by Design</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&family=Oswald:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="landingpage.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nav">
+    <nav class="nav__inner">
+      <div class="nav__brand">Swift Testing by Design</div>
+      <div class="nav__links">
+        <a href="#tracks" class="nav__link">Two Tracks</a>
+        <a href="#toc" class="nav__link">ToC</a>
+        <a href="#companion" class="nav__link">Companion</a>
+        <button class="nav__cta">Buy Now</button>
+      </div>
+      <button class="nav__mobile-toggle">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero section">
+      <div class="hero__grid container">
+        <div class="hero__content">
+          <span class="hero__badge">Latest Edition · Swift 6 Ready</span>
+          <h1 class="hero__title">
+            Swift Testing <br><span>by Design</span>
+          </h1>
+          <p class="hero__subtitle">Designing Tests from Different Perspectives</p>
+          <p class="hero__description">
+            Master the transition from BDD to TDD in Swift and SwiftUI. Build resilient, architecturally sound apps through two distinct testing tracks.
+          </p>
+          <div class="hero__ctas">
+            <button class="btn btn--primary">Buy Now</button>
+            <button class="btn btn--secondary">Read a Sample</button>
+          </div>
+        </div>
+        <div class="hero__book-wrapper">
+          <div class="hero__book-glow"></div>
+          <div class="hero__book">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFWNRvnEYKUvzvyAqI9BSveHzig3bUL-0FXI-1cvTHa0lhVvtC6R0EILjruaiGBmsNcmk06Opjn1xofZdcpaUH_syM4UwOgzwLgS39qWdSajR1bv8e9LOv1GxM1mJ3MZZcmI5kryFKT-Z_FEDeCkFJf32CXgg5VowkcNLL-fx2MSt5gn5Q02wE8nUTJ2I0yFwqENkoSDgFMuEjODv7m9EJ0nFaBmM34d66lxU-dZnFleIn0sj-9jfZ3TE9UgcNJYCVxbV9zk-Hg2qV"
+              alt="Swift Testing by Design Book Cover"
+              class="hero__book-image"
+            >
+            <div class="hero__book-overlay">
+              <div class="hero__book-label">
+                <span class="material-symbols-outlined hero__book-label-icon">book_4</span>
+                <p class="hero__book-label-title">Swift Testing<br>by Design</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Validation / Signup Section -->
+    <section class="validation">
+      <div class="validation__grid container">
+        <div>
+          <h2 class="validation__title">Help me decide if this <span>book should exist.</span></h2>
+          <p class="validation__description">
+            I believe in building things people actually want. To ensure this book is a valuable resource worth the hundreds of hours of writing, I won't finish the manuscript unless at least 100 developers show interest. This is a collaborative effort to validate the demand for modern Swift testing architecture.
+          </p>
+
+          <!-- Progress Card -->
+          <div class="progress-card">
+            <div class="progress-card__header">
+              <span class="progress-card__label">Validation Progress</span>
+              <span class="progress-card__count">84 <span>/ 100</span></span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-bar__fill" style="width: 84%;"></div>
+            </div>
+            <p class="progress-card__note">Almost there! We need 16 more people to commit to making this a reality.</p>
+          </div>
+
+          <!-- Countdown -->
+          <div class="countdown">
+            <div class="countdown__item">
+              <div class="countdown__box">
+                <span class="countdown__number">12</span>
+              </div>
+              <span class="countdown__label">Days</span>
+            </div>
+            <div class="countdown__item">
+              <div class="countdown__box">
+                <span class="countdown__number">08</span>
+              </div>
+              <span class="countdown__label">Hours</span>
+            </div>
+            <div class="countdown__item">
+              <div class="countdown__box">
+                <span class="countdown__number">45</span>
+              </div>
+              <span class="countdown__label">Mins</span>
+            </div>
+            <div class="countdown__item">
+              <div class="countdown__box">
+                <span class="countdown__number">30</span>
+              </div>
+              <span class="countdown__label">Secs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="signup-card">
+          <div class="signup-card__header">
+            <div class="signup-card__icon">
+              <span class="material-symbols-outlined">rocket_launch</span>
+            </div>
+            <h3 class="signup-card__title">Cast Your Vote: Make it Happen</h3>
+          </div>
+          <form class="signup-card__form" onsubmit="return false;">
+            <input
+              type="email"
+              class="signup-card__input"
+              placeholder="Enter your email address"
+            >
+            <button type="submit" class="signup-card__submit">I want this book</button>
+          </form>
+          <p class="signup-card__note">Transparency first: Your interest directly determines if I write the final chapters.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+      <div class="stats__grid">
+        <div>
+          <div class="stats__number">26</div>
+          <div class="stats__label">Chapters</div>
+        </div>
+        <div>
+          <div class="stats__number">4</div>
+          <div class="stats__label">Bonus AI Docs</div>
+        </div>
+        <div>
+          <div class="stats__number">2</div>
+          <div class="stats__label">Real-World Apps</div>
+        </div>
+        <div>
+          <div class="stats__number">1</div>
+          <div class="stats__label">Live API</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tracks Section -->
+    <section class="tracks" id="tracks">
+      <div class="tracks__container">
+        <div class="tracks__header">
+          <h2 class="tracks__title">Master Testing Through Two Distinct Perspectives.</h2>
+          <p class="tracks__description">This book covers both sides of testing TDD and BDD from both perspectives of starting from a new app as well as integrating it into an existing app. The main focus of this book is to cover BDD from the design perspective. SwiftUI Testing is built on TDD so this is the common way it is used this book will show it from the design perspective.</p>
+        </div>
+
+        <div class="tracks__grid">
+          <!-- Track 1 -->
+          <div class="track-card">
+            <div class="track-card__icon">
+              <span class="material-symbols-outlined">terminal</span>
+            </div>
+            <h3 class="track-card__title">Track 1: Swift Testing</h3>
+            <p class="track-card__description">Focus on the official Swift Testing framework. Learn modern, macro-driven testing that integrates deeply with Swift's concurrency model and standard library.</p>
+            <ul class="track-card__features">
+              <li class="track-card__feature">
+                <span class="material-symbols-outlined">check_circle</span>
+                Modern Swift Macros
+              </li>
+              <li class="track-card__feature">
+                <span class="material-symbols-outlined">check_circle</span>
+                Async/Await Testing
+              </li>
+              <li class="track-card__feature">
+                <span class="material-symbols-outlined">check_circle</span>
+                Native Integration
+              </li>
+            </ul>
+          </div>
+
+          <!-- Track 2 -->
+          <div class="track-card">
+            <div class="track-card__icon">
+              <span class="material-symbols-outlined">type_specimen</span>
+            </div>
+            <h3 class="track-card__title">Track 2: UserSpec</h3>
+            <p class="track-card__description">Dive into Behavior Driven Development (BDD). Use UserSpec to write tests that read like requirements, bridging the gap between business logic and executable code.</p>
+            <ul class="track-card__features">
+              <li class="track-card__feature">
+                <span class="material-symbols-outlined">check_circle</span>
+                BDD Methodology
+              </li>
+              <li class="track-card__feature">
+                <span class="material-symbols-outlined">check_circle</span>
+                Human-Readable Specs
+              </li>
+              <li class="track-card__feature">
+                <span class="material-symbols-outlined">check_circle</span>
+                Domain-Centric Testing
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- App Cards -->
+        <div class="apps-grid">
+          <div class="app-card">
+            <h4 class="app-card__title">SkyTrack (New App)</h4>
+            <p class="app-card__description">Architect for testability from the very first line of code in a greenfield SwiftUI project.</p>
+          </div>
+          <div class="app-card">
+            <h4 class="app-card__title">SkyBook (Existing App)</h4>
+            <p class="app-card__description">Learn how to introduce testing to an existing, complex codebase without breaking production features.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Companion Section -->
+    <section class="companion" id="companion">
+      <div class="companion__container">
+        <div class="companion__grid">
+          <div>
+            <span class="companion__badge">Premium Add-on</span>
+            <h2 class="companion__title">The Challenge <span>Companion</span></h2>
+            <p class="companion__description">Every chapter ends with a challenge. The companion provides the solutions, split for your level of expertise.</p>
+
+            <div class="companion__features">
+              <div class="companion__feature">
+                <div class="companion__feature-icon">
+                  <span class="material-symbols-outlined">code</span>
+                </div>
+                <div>
+                  <h4 class="companion__feature-title">Section 1 — Code Only</h4>
+                  <p class="companion__feature-description">Just the solution code. Designed for experienced developers who want to check their work quickly without the fluff.</p>
+                </div>
+              </div>
+              <div class="companion__feature">
+                <div class="companion__feature-icon">
+                  <span class="material-symbols-outlined">list_alt</span>
+                </div>
+                <div>
+                  <h4 class="companion__feature-title">Section 2 — Step by Step</h4>
+                  <p class="companion__feature-description">A full architectural walkthrough of how to think through the solution from scratch.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="companion__rationale">
+              <p><span>Rationale:</span> Keeps the main book clean. Covers the 20% of edge cases and deep-dives that advanced readers want to explore further.</p>
+            </div>
+          </div>
+
+          <!-- Companion Card -->
+          <div class="companion-card">
+            <div class="companion-card__glow"></div>
+            <h3 class="companion-card__title">What's Inside</h3>
+            <ul class="companion-card__list">
+              <li class="companion-card__item">
+                <span class="companion-card__check">
+                  <span class="material-symbols-outlined">check</span>
+                </span>
+                26 Challenge Solutions
+              </li>
+              <li class="companion-card__item">
+                <span class="companion-card__check">
+                  <span class="material-symbols-outlined">check</span>
+                </span>
+                Harder Edge Cases &amp; Variants
+              </li>
+              <li class="companion-card__item">
+                <span class="companion-card__check">
+                  <span class="material-symbols-outlined">check</span>
+                </span>
+                Inside-Out Testing Patterns
+              </li>
+              <li class="companion-card__item">
+                <span class="companion-card__check">
+                  <span class="material-symbols-outlined">check</span>
+                </span>
+                'Review &amp; Pay' Bonus Screen Challenge
+              </li>
+            </ul>
+            <div class="companion-card__footer">
+              <div class="companion-card__price-label">Standalone Price</div>
+              <div class="companion-card__price">$10</div>
+              <button class="companion-card__btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="toc" id="toc">
+      <div class="toc__container">
+        <div class="toc__header">
+          <div>
+            <h2 class="toc__title">Table of Contents</h2>
+            <p class="toc__subtitle">A journey through 26 comprehensive chapters and AI-enhanced bonuses.</p>
+          </div>
+          <div class="toc__badges">
+            <span class="toc__badge toc__badge--swift">Swift 6.0</span>
+            <span class="toc__badge toc__badge--ai">AI Ready</span>
+          </div>
+        </div>
+
+        <div class="toc__grid">
+          <!-- Part 1A -->
+          <div class="part-card">
+            <div class="part-card__label">Part 1A</div>
+            <h3 class="part-card__title">Swift Testing · New App SkyTrack</h3>
+            <ul class="part-card__chapters">
+              <li class="chapter-item">
+                <span>Chapter 2: Fundamentals of Swift Testing</span>
+                <span class="chapter-status chapter-status--completed">Completed</span>
+              </li>
+              <li class="chapter-item">
+                <span>Chapter 3: Mocking with Macros</span>
+                <span class="chapter-status chapter-status--completed">Completed</span>
+              </li>
+              <li class="chapter-item">
+                <span>Chapter 4: SwiftUI View Validation</span>
+                <div class="chapter-progress">
+                  <span class="chapter-progress__label">In Progress</span>
+                  <div class="chapter-progress__bar">
+                    <div class="chapter-progress__fill" style="width: 65%;"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="chapter-item">
+                <span>Chapter 5-7: Advanced Integration</span>
+                <span class="chapter-status chapter-status--not-started">Not Started</span>
+              </li>
+              <li class="ai-bonus">
+                <span class="material-symbols-outlined">auto_awesome</span>
+                Bonus: AI-Assisted Test Generation for SkyTrack
+              </li>
+            </ul>
+          </div>
+
+          <!-- Part 1B -->
+          <div class="part-card">
+            <div class="part-card__label">Part 1B</div>
+            <h3 class="part-card__title">Swift Testing · Existing App SkyBook</h3>
+            <ul class="part-card__chapters">
+              <li class="chapter-item">
+                <span>Chapter 8: Refactoring for Testability</span>
+                <span class="chapter-status chapter-status--completed">Completed</span>
+              </li>
+              <li class="chapter-item">
+                <span>Chapter 9: The Dependency Inversion Pivot</span>
+                <div class="chapter-progress">
+                  <span class="chapter-progress__label">In Progress</span>
+                  <div class="chapter-progress__bar">
+                    <div class="chapter-progress__fill" style="width: 30%;"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="chapter-item">
+                <span>Chapter 10-13: Testing Legacy Logic</span>
+                <span class="chapter-status chapter-status--not-started">Not Started</span>
+              </li>
+              <li class="ai-bonus">
+                <span class="material-symbols-outlined">auto_awesome</span>
+                Bonus: AI Strategies for Legacy Code Discovery
+              </li>
+            </ul>
+          </div>
+
+          <!-- Part 2A -->
+          <div class="part-card">
+            <div class="part-card__label">Part 2A</div>
+            <h3 class="part-card__title">UserSpec · New App SkyTrack</h3>
+            <ul class="part-card__chapters">
+              <li class="chapter-item">
+                <span>Chapter 14: Specification First Design</span>
+                <span class="chapter-status chapter-status--not-started">Not Started</span>
+              </li>
+              <li class="chapter-item">
+                <span>Chapter 15: Writing Given/When/Then Specs</span>
+                <span class="chapter-status chapter-status--not-started">Not Started</span>
+              </li>
+              <li class="chapter-item">
+                <span>Chapter 16-20: Behavioral Architecture</span>
+                <span class="chapter-status chapter-status--not-started">Not Started</span>
+              </li>
+              <li class="ai-bonus">
+                <span class="material-symbols-outlined">auto_awesome</span>
+                Bonus: Prompting AI to write BDD Specifications
+              </li>
+            </ul>
+          </div>
+
+          <!-- Part 2B -->
+          <div class="part-card">
+            <div class="part-card__label">Part 2B</div>
+            <h3 class="part-card__title">UserSpec · Existing App SkyBook</h3>
+            <ul class="part-card__chapters">
+              <li class="chapter-item">
+                <span>Chapter 21: Wrapping Legacy in Behavior</span>
+                <span class="chapter-status chapter-status--not-started">Not Started</span>
+              </li>
+              <li class="chapter-item">
+                <span>Chapter 22: Spec-Driven Feature Parity</span>
+                <span class="chapter-status chapter-status--not-started">Not Started</span>
+              </li>
+              <li class="chapter-item">
+                <span>Chapter 23-26: Scaling the Spec Suite</span>
+                <span class="chapter-status chapter-status--not-started">Not Started</span>
+              </li>
+              <li class="ai-bonus">
+                <span class="material-symbols-outlined">auto_awesome</span>
+                Bonus: AI Code Migration with Spec Safety
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+      <div class="pricing__container">
+        <h2 class="pricing__title">Choose Your Edition</h2>
+        <p class="pricing__subtitle">Invest in your career as a professional Swift architect.</p>
+
+        <div class="pricing__grid">
+          <!-- Early Access -->
+          <div class="pricing-card">
+            <div class="pricing-card__content">
+              <h3 class="pricing-card__name">Early Access</h3>
+              <p class="pricing-card__tagline">Chapters releasing live</p>
+              <div class="pricing-card__price">$29</div>
+              <ul class="pricing-card__features">
+                <li class="pricing-card__feature">
+                  <span class="material-symbols-outlined">check</span>
+                  Read chapters as written
+                </li>
+                <li class="pricing-card__feature">
+                  <span class="material-symbols-outlined">check</span>
+                  Beta source code access
+                </li>
+                <li class="pricing-card__feature">
+                  <span class="material-symbols-outlined">check</span>
+                  Feedback channel
+                </li>
+              </ul>
+            </div>
+            <button class="pricing-card__btn pricing-card__btn--default">Start Reading</button>
+          </div>
+
+          <!-- Full Book -->
+          <div class="pricing-card">
+            <div class="pricing-card__content">
+              <h3 class="pricing-card__name">Full Book</h3>
+              <p class="pricing-card__tagline">PDF + ePub + Mobi</p>
+              <div class="pricing-card__price">$39</div>
+              <ul class="pricing-card__features">
+                <li class="pricing-card__feature">
+                  <span class="material-symbols-outlined">check</span>
+                  All 26 Chapters
+                </li>
+                <li class="pricing-card__feature">
+                  <span class="material-symbols-outlined">check</span>
+                  Full source code for 2 apps
+                </li>
+                <li class="pricing-card__feature">
+                  <span class="material-symbols-outlined">check</span>
+                  4 AI Bonus Chapters
+                </li>
+              </ul>
+            </div>
+            <button class="pricing-card__btn pricing-card__btn--default">Buy E-Book</button>
+          </div>
+
+          <!-- Mastery Bundle -->
+          <div class="pricing-card pricing-card--featured">
+            <div class="pricing-card__ribbon">Best Value</div>
+            <div class="pricing-card__content">
+              <h3 class="pricing-card__name">Mastery Bundle</h3>
+              <p class="pricing-card__tagline">Book + Companion</p>
+              <div class="pricing-card__price">$45</div>
+              <ul class="pricing-card__features">
+                <li class="pricing-card__feature">
+                  <span class="material-symbols-outlined">check</span>
+                  Complete 500+ page book
+                </li>
+                <li class="pricing-card__feature">
+                  <span class="material-symbols-outlined">check</span>
+                  Challenge Companion PDF
+                </li>
+                <li class="pricing-card__feature">
+                  <span class="material-symbols-outlined">check</span>
+                  Discord Community Access
+                </li>
+                <li class="pricing-card__feature">
+                  <span class="material-symbols-outlined">check</span>
+                  Live API Access Key
+                </li>
+              </ul>
+            </div>
+            <button class="pricing-card__btn pricing-card__btn--primary">Get the Bundle</button>
+          </div>
+        </div>
+
+        <p class="pricing__note">
+          Need just the companion? <a href="#companion">Get the Companion alone for $10</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <span class="footer__brand">Architectural Ledger</span>
+        <p class="footer__description">Advancing the craft of Swift software engineering through intentional design and rigorous testing.</p>
+      </div>
+      <div>
+        <h4 class="footer__section-title">Resources</h4>
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link">Newsletter</a></li>
+          <li><a href="#" class="footer__link">Sample Chapters</a></li>
+          <li><a href="#" class="footer__link">API Docs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__section-title">Connect</h4>
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link">Twitter / X</a></li>
+          <li><a href="#" class="footer__link">GitHub Repo</a></li>
+          <li><a href="#" class="footer__link">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__section-title">Support</h4>
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link">Privacy Policy</a></li>
+          <li><a href="#" class="footer__link">Terms of Sale</a></li>
+          <li><a href="#" class="footer__link">Help Center</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__bottom-inner">
+        <p class="footer__copyright">&copy; 2024 Architectural Ledger Press. All rights reserved.</p>
+        <div class="footer__icons">
+          <span class="material-symbols-outlined">terminal</span>
+          <span class="material-symbols-outlined">shield</span>
+          <span class="material-symbols-outlined">verified_user</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
