@@ -143,6 +143,7 @@ const ProjectPage = ({ project }) => {
         technology={project.technology}
         categories={project.categories}
         appStoreUrl={project.appStoreUrl}
+        testFlightUrl={project.testFlightUrl}
         androidUrl={project.androidUrl}
         hideTitle={hasDeviceHeader}
       />

@@ -776,6 +776,8 @@ export const projects = {
     technology: "React Native",
     categories: "Productivity, Finance",
     appStoreUrl: null,
+    testFlightUrl: "https://testflight.apple.com/join/futureplan",
+    androidUrl: "https://github.com/thedevme/futureplan/releases/download/v1.0.0/futureplan.apk",
     headerImage: "/assets/images/raw/01_ios_futureplan_home.png",
     headerDevices: [
       { screenshot: "/assets/images/raw/01_ios_futureplan_home.png", device: "iphone" },
@@ -877,6 +879,8 @@ export const projects = {
     technology: "React Native",
     categories: "Education, Productivity",
     appStoreUrl: null,
+    testFlightUrl: "https://testflight.apple.com/join/blueprintmath",
+    androidUrl: "https://github.com/thedevme/blueprintmath/releases/download/v1.0.0/blueprintmath.apk",
     headerImage: "/assets/images/raw/01_ios_blueprintmath_diagnostic.png",
     headerDevices: [
       { screenshot: "/assets/images/raw/01_ios_blueprintmath_diagnostic.png", device: "iphone" },

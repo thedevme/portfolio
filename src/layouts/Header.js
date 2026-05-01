@@ -105,6 +105,16 @@ const Header = () => {
                                 Books
                               </a>
                             </li>
+                            <li className="menu-item">
+                              <Link legacyBehavior href="/testing-swift">
+                                <a
+                                  className="splitting-text-anim-2"
+                                  data-splitting="chars"
+                                >
+                                  Testing Swift
+                                </a>
+                              </Link>
+                            </li>
                           </ul>
                         </div>
                         {/* social */}

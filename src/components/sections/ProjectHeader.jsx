@@ -1,4 +1,7 @@
-const ProjectHeader = ({ title, subtitle, year, technology, categories, appStoreUrl, androidUrl, hideTitle = false }) => {
+const ProjectHeader = ({ title, subtitle, year, technology, categories, appStoreUrl, testFlightUrl, androidUrl, hideTitle = false }) => {
+  const hasButtons = appStoreUrl || testFlightUrl || androidUrl;
+  const buttonCount = [appStoreUrl, testFlightUrl, androidUrl].filter(Boolean).length;
+
   return (
     <section className={`section section-inner started-heading ${hideTitle ? 'started-heading--compact' : ''}`}>
       {!hideTitle && (
@@ -46,7 +49,7 @@ const ProjectHeader = ({ title, subtitle, year, technology, categories, appStore
                 </div>
               </div>
             </div>
-            {(appStoreUrl || androidUrl) && (
+            {hasButtons && (
               <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 align-right">
                 {appStoreUrl && (
                   <a
@@ -55,9 +58,21 @@ const ProjectHeader = ({ title, subtitle, year, technology, categories, appStore
                     href={appStoreUrl}
                     className="btn scrolla-element-anim-1 scroll-animate"
                     data-animate="active"
-                    style={{ marginRight: androidUrl ? '10px' : '0' }}
+                    style={{ marginRight: '10px', marginBottom: '10px' }}
                   >
                     <span>App Store</span>
+                  </a>
+                )}
+                {testFlightUrl && (
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={testFlightUrl}
+                    className="btn scrolla-element-anim-1 scroll-animate"
+                    data-animate="active"
+                    style={{ marginRight: '10px', marginBottom: '10px' }}
+                  >
+                    <span>TestFlight</span>
                   </a>
                 )}
                 {androidUrl && (
@@ -67,6 +82,7 @@ const ProjectHeader = ({ title, subtitle, year, technology, categories, appStore
                     href={androidUrl}
                     className="btn scrolla-element-anim-1 scroll-animate"
                     data-animate="active"
+                    style={{ marginBottom: '10px' }}
                   >
                     <span>Android APK</span>
                   </a>

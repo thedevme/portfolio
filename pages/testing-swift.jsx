@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import SEO from "../src/components/SEO";
+import HeroMockup from "../src/components/HeroMockup";
 
 const TestingSwift = () => {
   const [email, setEmail] = useState("");
@@ -369,215 +370,225 @@ const TestingSwift = () => {
               </div>
             </div>
 
-            <div className="toc__grid">
-              {/* Part 1A */}
-              <div className="part-card">
-                <div className="part-card__label">Part 1A</div>
-                <h3 className="part-card__title">Swift Testing · New App</h3>
-                <ul className="part-card__chapters">
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Introduction: Why I Avoided Testing</span>
-                    </div>
-                    <p className="chapter-item__desc">The honest story of how testing never clicked until it did. Jon Reid, the NBA All-Star Voting app, Deep Dish Swift, and the journey that led to UserSpec.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 1: The Testing Mindset</span>
-                    </div>
-                    <p className="chapter-item__desc">No code. Just thinking. The two schools of testing, red green refactor, and the vocabulary you need before you write your first test.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 2: Search</span>
-                    </div>
-                    <p className="chapter-item__desc">Your first tests against the SkyTrack search screen. Build the FlightSearch model and write your first tests using @Test, #expect, and #require.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 3: Flight Results</span>
-                    </div>
-                    <p className="chapter-item__desc">Results from a real API means async code. Write async tests with await and introduce test doubles — replacing the real API with a fake.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 4: Fare Selection</span>
-                    </div>
-                    <p className="chapter-item__desc">Pricing rules that depend on cabin class, route, and passenger count. Learn what it means to test code that depends on other code.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 5: Passenger Details</span>
-                    </div>
-                    <p className="chapter-item__desc">State-based tests and parameterized tests that cover all validation rules without repeating yourself.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 6: Seat Selection</span>
-                    </div>
-                    <p className="chapter-item__desc">The most complex screen. Seat maps change based on aircraft type. Tests for layout rules, section assignments, and capacity.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 7: Confirmation</span>
-                    </div>
-                    <p className="chapter-item__desc">Introduce SwiftData, write tests that confirm data is saved and loaded correctly, and learn the difference between a passing test and a meaningful one.</p>
-                  </li>
-                  <li className="ai-bonus">
-                    <span className="material-symbols-outlined">auto_awesome</span>
-                    Bonus: AI as a Testing Partner
-                  </li>
-                </ul>
+            {/* Introduction & Chapter 1 */}
+            <div className="chapter-list" style={{ marginBottom: '3rem' }}>
+              <div className="chapter-row">
+                <span className="chapter-row__title">Introduction — Why I Avoided Testing and Why I Wrote This Book</span>
+                <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+              </div>
+              <div className="chapter-row">
+                <span className="chapter-row__title">Chapter 1: The Testing Mindset</span>
+                <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+              </div>
+            </div>
+
+            {/* PART 1 - SkyTrack (New App) */}
+            <div className="part-section">
+              {/* Device showcase - SkyTrack screens */}
+              <HeroMockup
+                layout="showcase"
+                devices={[
+                  { screenshot: "/assets/images/flight_app/fare_selection_screen.png", device: "iphone", frameColor: "space-gray" },
+                  { screenshot: "/assets/images/flight_app/flight_results_screen.png", device: "iphone", frameColor: "space-gray" },
+                  { screenshot: "/assets/images/flight_app/book_flight_screen.png", device: "iphone", frameColor: "space-gray" },
+                  { screenshot: "/assets/images/flight_app/seat_selection_screen.png", device: "iphone", frameColor: "space-gray" },
+                  { screenshot: "/assets/images/flight_app/confirmation_screen.png", device: "iphone", frameColor: "space-gray" },
+                ]}
+              />
+
+              <div className="part-section__header">
+                <div className="part-card__label">Part 1</div>
+                <h3 className="part-section__title">SkyTrack — New App</h3>
+                <p className="part-section__desc">Built from scratch. Tests from day one.</p>
               </div>
 
-              {/* Part 1B */}
-              <div className="part-card">
-                <div className="part-card__label">Part 1B</div>
-                <h3 className="part-card__title">Swift Testing · Existing App</h3>
-                <ul className="part-card__chapters">
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 8: Live Flight Map</span>
-                    </div>
-                    <p className="chapter-item__desc">The app is already built. No tests. Develop a strategy for approaching an untested codebase and find the seams where code can be pulled apart.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 9: Flight List</span>
-                    </div>
-                    <p className="chapter-item__desc">Write tests against the existing flight list and find things you never knew were broken. Filtering logic and edge cases hiding in fast code.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 10: Flight Detail</span>
-                    </div>
-                    <p className="chapter-item__desc">Computed properties never designed for testing. Refactor just enough to make the code testable without breaking what already works.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 11: Airport Detail</span>
-                    </div>
-                    <p className="chapter-item__desc">Dependencies baked in that make it hard to test. Introduce protocol boundaries into existing code to replace real dependencies with fakes.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 12: Route Browser</span>
-                    </div>
-                    <p className="chapter-item__desc">28 routes, 20 cities, 6 aircraft types. Parameterized tests that discover edge cases the original implementation never handled.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 13: Stats</span>
-                    </div>
-                    <p className="chapter-item__desc">Live data that changes every day. Behavior-focused tests that confirm what the screen does rather than what it returns.</p>
-                  </li>
-                  <li className="ai-bonus">
-                    <span className="material-symbols-outlined">auto_awesome</span>
-                    Bonus: AI and Existing Codebases
-                  </li>
-                </ul>
+              {/* Part 1A - Swift Testing */}
+              <div className="part-subsection">
+                <div className="part-subsection__header">
+                  <span className="part-subsection__label">Part 1A</span>
+                  <span className="part-subsection__title">Swift Testing</span>
+                </div>
+                <div className="chapter-list">
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 2: Search</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 3: Flight Results</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 4: Fare Selection</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 5: Passenger Details</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 6: Seat Selection</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 7: Confirmation</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row chapter-row--bonus">
+                    <span className="chapter-row__title">
+                      <span className="material-symbols-outlined">auto_awesome</span>
+                      Bonus: AI as a Testing Partner
+                    </span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                </div>
               </div>
 
-              {/* Part 2A */}
-              <div className="part-card">
-                <div className="part-card__label">Part 2A</div>
-                <h3 className="part-card__title">UserSpec · New App</h3>
-                <ul className="part-card__chapters">
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 14: Design-Driven Development</span>
-                    </div>
-                    <p className="chapter-item__desc">Step back from code and look at the design. Write your first user stories in Given, When, Then — and watch them become executable tests.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 15: Search</span>
-                    </div>
-                    <p className="chapter-item__desc">Write step definitions that map plain English to real Swift Testing code, and make those steps reusable across scenarios.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 16: Flight Results</span>
-                    </div>
-                    <p className="chapter-item__desc">One story, many examples. Scenario outlines let you run the same story with multiple data sets without writing separate scenarios.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 17: Fare Selection</span>
-                    </div>
-                    <p className="chapter-item__desc">Background steps set shared context once so every scenario starts clean without repeating setup code.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 18: Passenger Details</span>
-                    </div>
-                    <p className="chapter-item__desc">Tags let you group validation rules separately, run only what you need, and keep your suite organized as it grows.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 19: Seat Selection</span>
-                    </div>
-                    <p className="chapter-item__desc">Multi-step flows for single and multi-passenger bookings — including A380 upper deck scenarios a product manager could read.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 20: Confirmation</span>
-                    </div>
-                    <p className="chapter-item__desc">One spec from search to confirmed booking. The full user journey in plain English. Hooks set up state and clean up after.</p>
-                  </li>
-                  <li className="ai-bonus">
-                    <span className="material-symbols-outlined">auto_awesome</span>
-                    Bonus: AI and Design-Driven Development
-                  </li>
-                </ul>
+              {/* Part 1B - UserSpec */}
+              <div className="part-subsection">
+                <div className="part-subsection__header">
+                  <span className="part-subsection__label">Part 1B</span>
+                  <span className="part-subsection__title">UserSpec</span>
+                </div>
+                <div className="chapter-list">
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 8: Design-Driven Development</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 9: Search</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 10: Flight Results</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 11: Fare Selection</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 12: Passenger Details</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 13: Seat Selection</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 14: Confirmation</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row chapter-row--bonus">
+                    <span className="chapter-row__title">
+                      <span className="material-symbols-outlined">auto_awesome</span>
+                      Bonus: AI and Design-Driven Development
+                    </span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* PART 2 - SkyBook (Existing App) */}
+            <div className="part-section">
+              {/* Device showcase - SkyBook screens (placeholder) */}
+              <HeroMockup
+                layout="showcase"
+                devices={[
+                  { screenshot: "/assets/images/flight_app/fare_selection_screen.png", device: "iphone", frameColor: "space-gray" },
+                  { screenshot: "/assets/images/flight_app/flight_results_screen.png", device: "iphone", frameColor: "space-gray" },
+                  { screenshot: "/assets/images/flight_app/book_flight_screen.png", device: "iphone", frameColor: "space-gray" },
+                  { screenshot: "/assets/images/flight_app/seat_selection_screen.png", device: "iphone", frameColor: "space-gray" },
+                  { screenshot: "/assets/images/flight_app/confirmation_screen.png", device: "iphone", frameColor: "space-gray" },
+                ]}
+              />
+
+              <div className="part-section__header">
+                <div className="part-card__label">Part 2</div>
+                <h3 className="part-section__title">SkyBook — Existing App</h3>
+                <p className="part-section__desc">Already built. Zero tests. More broken than you think.</p>
               </div>
 
-              {/* Part 2B */}
-              <div className="part-card">
-                <div className="part-card__label">Part 2B</div>
-                <h3 className="part-card__title">UserSpec · Existing App</h3>
-                <ul className="part-card__chapters">
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 21: Live Flight Map</span>
-                    </div>
-                    <p className="chapter-item__desc">Write user stories for a screen you didn't design. What does the user expect? When do those expectations break?</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 22: Flight List</span>
-                    </div>
-                    <p className="chapter-item__desc">Behavior-focused scenarios that confirm what the list does — how it filters, how it sorts — without hardcoding flight numbers.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 23: Flight Detail</span>
-                    </div>
-                    <p className="chapter-item__desc">Hooks let you set up specific live flight state before each scenario — control over a screen never designed with testing in mind.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 24: Airport Detail</span>
-                    </div>
-                    <p className="chapter-item__desc">Writing stories forces you to articulate behavior that was assumed, not documented. Find what the screen should do but doesn't.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 25: Route Browser</span>
-                    </div>
-                    <p className="chapter-item__desc">Scenario outlines against 28 routes. Edge cases become visible when you describe expected behavior for every combination.</p>
-                  </li>
-                  <li className="chapter-item-full">
-                    <div className="chapter-item__header">
-                      <span className="chapter-item__title">Chapter 26: Stats</span>
-                    </div>
-                    <p className="chapter-item__desc">A UserSpec suite that describes everything in plain English anyone can read. Living documentation that keeps specs in sync.</p>
-                  </li>
-                  <li className="ai-bonus">
-                    <span className="material-symbols-outlined">auto_awesome</span>
-                    Bonus: AI and UserSpec at Scale
-                  </li>
-                </ul>
+              {/* Part 2A - Swift Testing */}
+              <div className="part-subsection">
+                <div className="part-subsection__header">
+                  <span className="part-subsection__label">Part 2A</span>
+                  <span className="part-subsection__title">Swift Testing</span>
+                </div>
+                <div className="chapter-list">
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 15: Live Flight Map</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 16: Flight List</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 17: Flight Detail</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 18: Airport Detail</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 19: Route Browser</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 20: Stats</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row chapter-row--bonus">
+                    <span className="chapter-row__title">
+                      <span className="material-symbols-outlined">auto_awesome</span>
+                      Bonus: AI and Existing Codebases
+                    </span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Part 2B - UserSpec */}
+              <div className="part-subsection">
+                <div className="part-subsection__header">
+                  <span className="part-subsection__label">Part 2B</span>
+                  <span className="part-subsection__title">UserSpec</span>
+                </div>
+                <div className="chapter-list">
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 21: Live Flight Map</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 22: Flight List</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 23: Flight Detail</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 24: Airport Detail</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 25: Route Browser</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row">
+                    <span className="chapter-row__title">Chapter 26: Stats</span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                  <div className="chapter-row chapter-row--bonus">
+                    <span className="chapter-row__title">
+                      <span className="material-symbols-outlined">auto_awesome</span>
+                      Bonus: AI and UserSpec at Scale
+                    </span>
+                    <span className="chapter-row__status chapter-row__status--not-started">Not Started</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -776,6 +787,55 @@ const TestingSwift = () => {
           display: none !important;
           background: transparent !important;
           content: none !important;
+        }
+
+        /* Device showcase overrides - Apple style fan */
+        .landing-page .hero-mockup--showcase {
+          background: transparent !important;
+          padding: 0 !important;
+          max-height: none !important;
+          overflow: visible !important;
+          margin-bottom: -90px !important;
+        }
+
+        .landing-page .hero-mockup--showcase .hero-mockup__devices {
+          gap: 0 !important;
+        }
+
+        .landing-page .hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(1) {
+          margin-right: -230px !important;
+        }
+        .landing-page .hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(1) .device-mockup {
+          transform: scale(0.5) translateY(30px) !important;
+          filter: none !important;
+        }
+
+        .landing-page .hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(2) {
+          margin-right: -190px !important;
+        }
+        .landing-page .hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(2) .device-mockup {
+          transform: scale(0.6) translateY(15px) !important;
+          filter: none !important;
+        }
+
+        .landing-page .hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(3) .device-mockup {
+          transform: scale(0.7) !important;
+        }
+
+        .landing-page .hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(4) {
+          margin-left: -190px !important;
+        }
+        .landing-page .hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(4) .device-mockup {
+          transform: scale(0.6) translateY(15px) !important;
+          filter: none !important;
+        }
+
+        .landing-page .hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(5) {
+          margin-left: -230px !important;
+        }
+        .landing-page .hero-mockup--showcase .hero-mockup__device-wrapper:nth-child(5) .device-mockup {
+          transform: scale(0.5) translateY(30px) !important;
+          filter: none !important;
         }
 
         /* Override main site paragraph styles */
@@ -1825,6 +1885,140 @@ const TestingSwift = () => {
           gap: 2.5rem;
         }
 
+        /* Part Section - Apple style layout */
+        .part-section {
+          margin-bottom: 4rem;
+        }
+
+        .part-section__header {
+          text-align: center;
+          margin-bottom: 3rem;
+        }
+
+        .part-section__title {
+          font-family: var(--font-headline);
+          font-size: 2.5rem;
+          font-weight: 800;
+          color: var(--on-surface);
+          margin: 0.5rem 0;
+        }
+
+        .part-section__desc {
+          font-size: 1.125rem !important;
+          color: var(--on-surface-variant) !important;
+          max-width: 600px;
+          margin: 0 auto !important;
+        }
+
+        .part-card--wide {
+          max-width: 800px;
+          margin: 2rem auto 0;
+        }
+
+        /* Part subsection with chapter rows */
+        .part-subsection {
+          margin-bottom: 2.5rem;
+        }
+
+        .part-subsection__header {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        .part-subsection__label {
+          background: var(--primary);
+          color: white;
+          padding: 0.25rem 0.75rem;
+          border-radius: 0.5rem;
+          font-size: 0.75rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+
+        .part-subsection__title {
+          font-family: var(--font-headline);
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: var(--on-surface);
+        }
+
+        /* Chapter list */
+        .chapter-list {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+
+        .chapter-row {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background: #EDF2F7;
+          padding: 1rem 1.5rem;
+          border-radius: 0.75rem;
+        }
+
+        .chapter-row__title {
+          font-family: var(--font-headline);
+          font-size: 1rem;
+          font-weight: 600;
+          color: var(--on-surface);
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .chapter-row--bonus .chapter-row__title {
+          color: var(--primary);
+        }
+
+        .chapter-row--bonus .material-symbols-outlined {
+          font-size: 1.25rem;
+        }
+
+        .chapter-row__status {
+          padding: 0.375rem 1rem;
+          border-radius: 2rem;
+          font-size: 0.875rem;
+          font-weight: 500;
+        }
+
+        .chapter-row__status--not-started {
+          background: #C3DAFE;
+          color: #2B4C7E;
+        }
+
+        .chapter-row__status--completed {
+          background: #C6F6D5;
+          color: #22543D;
+        }
+
+        .chapter-row__status--progress {
+          background: #FED7AA;
+          color: #7B341E;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .chapter-row__progress-bar {
+          width: 60px;
+          height: 6px;
+          background: rgba(255,255,255,0.5);
+          border-radius: 3px;
+          overflow: hidden;
+        }
+
+        .chapter-row__progress-fill {
+          height: 100%;
+          background: #7B341E;
+          border-radius: 3px;
+        }
+
+
         /* Part Card */
         .part-card {
           padding: 2.5rem;
@@ -2312,6 +2506,11 @@ const TestingSwift = () => {
             flex-direction: column;
           }
 
+          .part-section__title {
+            font-size: 2rem;
+          }
+
+
           .validation__title,
           .tracks__title,
           .companion__title,
@@ -2348,6 +2547,7 @@ const TestingSwift = () => {
             gap: 2.5rem;
           }
         }
+
       `}</style>
     </div>
   );
