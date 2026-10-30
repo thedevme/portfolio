@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>For Montana Tucker · Craig Clayton Studio</title>
+<meta name="description" content="A Beat It side-by-side video and a website concept, made by Craig Clayton.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://studio.craigclayton.dev/montanatucker/">
+<meta property="og:site_name" content="Craig Clayton Studio">
+<meta property="og:title" content="A video and a website for Montana Tucker">
+<meta property="og:description" content="A Beat It side-by-side video and a website concept, made by Craig Clayton.">
+<meta property="og:image" content="https://studio.craigclayton.dev/studio/montana-tucker/beat-it-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#17181a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #17181a;
+    --bg-2: #202125;
+    --line: #2e3035;
+    --text: #f4f2ec;
+    --muted: #9b9aa3;
+    --accent: #b3001b;
+    --accent-ink: #ef3b55;
+    --radius: 22px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--text); font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 22px 0; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+  header b { color: var(--text); font-weight: 600; }
+  section.first { border-top: 0; padding-top: 8px; }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--accent-ink); }
+  h2 { font-family: "Barlow Condensed", Inter, sans-serif; font-weight: 900; text-transform: uppercase; line-height: .95; letter-spacing: .005em; }
+  section { padding: 34px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: clamp(30px, 5.6vw, 52px); margin: 10px 0 18px; }
+  .player { border-radius: var(--radius); overflow: hidden; background: #000; aspect-ratio: 16 / 9; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+  .player video { width: 100%; height: 100%; display: block; }
+  .meta { color: var(--muted); font-size: 15px; line-height: 1.6; margin-top: 14px; max-width: 640px; }
+  .site-card { display: block; text-decoration: none; border-radius: var(--radius); overflow: hidden; background: var(--bg-2); border: 1px solid var(--line); }
+  .site-card img { width: 100%; display: block; aspect-ratio: 16 / 10; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+  .site-card:hover img { transform: scale(1.03); }
+  .site-card .bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 20px; }
+  .site-card .bar span { font-weight: 600; font-size: 16px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #fff; font-weight: 600; font-size: 15px; padding: 12px 18px; border-radius: 999px; white-space: nowrap; }
+  footer { padding: 34px 0 calc(40px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; line-height: 1.7; }
+  footer a { color: var(--text); }
+  @media (max-width: 560px) {
+    .player, .site-card { border-radius: 16px; }
+    .site-card .bar { flex-direction: column; align-items: stretch; }
+    .btn { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header><b>Craig Clayton</b> Studio</header>
+
+    <section id="video" class="first">
+      <p class="eyebrow">For Montana Tucker &middot; Side by side</p>
+      <h2>Beat It: Montana &amp; Michael</h2>
+      <div class="player">
+        <video src="/studio/montana-tucker/beat-it.mp4" poster="/studio/montana-tucker/beat-it-poster.jpg" controls playsinline preload="metadata"></video>
+      </div>
+      <p class="meta">Montana's Beat It recreation next to Michael Jackson's 1983 original, cut so every move lines up. Tap play, sound on.</p>
+    </section>
+
+    <section id="website">
+      <p class="eyebrow">Website concept</p>
+      <h2>Montana Tucker · Editorial</h2>
+      <a class="site-card" href="/montanatucker/site/">
+        <img src="/studio/montana-tucker/site-preview.jpg" alt="Preview of the Montana Tucker editorial website concept" loading="lazy">
+        <div class="bar"><span>A luxury-magazine look with her photos, videos and the Beat It feature.</span><b class="btn">Open the website &rarr;</b></div>
+      </a>
+      <p class="meta">Opens the full website. Scroll through it, it moves as you go.</p>
+    </section>
+
+    <footer>
+      Made by Craig Clayton &middot; <a href="https://studio.craigclayton.dev/">studio.craigclayton.dev</a>
+    </footer>
+  </div>
+</body>
+</html>

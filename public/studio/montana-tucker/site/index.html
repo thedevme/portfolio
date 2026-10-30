@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Montana Tucker · Editorial</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f3ede4;--ink:#141110;--muted:#7d746a;--rose:#c4566a}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper);color:var(--ink);font-family:Manrope,sans-serif;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+.serif{font-family:"Bodoni Moda",serif;font-weight:400}
+.eyebrow{font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--muted)}
+nav{position:fixed;inset:0 0 auto;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:20px 4vw;transition:background .4s}
+nav.solid{background:rgba(243,237,228,.88);backdrop-filter:blur(10px)}
+nav .l,nav .r{display:flex;gap:26px;font-size:11px;letter-spacing:.3em;text-transform:uppercase}
+nav .r{justify-content:flex-end}
+nav .mid{font-family:"Bodoni Moda";font-size:26px;letter-spacing:.06em}
+nav .mid i{color:var(--rose)}
+.ico{display:inline-block;width:17px;height:17px;background:currentColor;-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat;transition:transform .3s,background .3s}
+a.ico:hover{background:var(--rose);transform:translateY(-2px) scale(1.15)}
+nav .socials{display:flex;gap:16px;align-items:center;padding-left:22px;border-left:1px solid rgba(20,17,16,.25)}
+nav:not(.solid) .r{color:var(--paper);filter:drop-shadow(0 1px 8px rgba(0,0,0,.45))}nav:not(.solid) .socials{border-color:rgba(243,237,228,.5)}
+@media(max-width:760px){nav .l,nav .r{display:none}nav{grid-template-columns:1fr}nav .mid{text-align:center}}
+
+/* COVER: her whole photo, full height */
+.cover{height:100vh;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:0 4vw 7vh}
+.cover .photo{position:absolute;top:0;right:0;height:100%;aspect-ratio:1000/1250;overflow:hidden;clip-path:inset(0 0 100% 0)}
+.cover .photo img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.12)}
+.cover .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--paper) 0,rgba(243,237,228,0) 22%)}
+.cover .issue{position:absolute;top:96px;left:4vw;width:max(40vw,calc(100vw - 80vh - 7vw));display:flex;justify-content:space-between;border-top:1px solid var(--ink);padding-top:12px;z-index:3}
+.cover h1{font-size:clamp(90px,15vw,280px);line-height:.82;letter-spacing:-.03em;position:relative;z-index:3}
+.cover h1 .ln{display:block;overflow:hidden}.cover h1 .ln span{display:block}
+.cover h1 em{font-style:italic;color:var(--rose)}
+.cover .note{position:absolute;left:4vw;top:24vh;max-width:280px;font-size:14px;line-height:1.7;color:var(--muted);z-index:3}
+@media(max-width:860px){.cover .photo{width:100%;height:100%;aspect-ratio:auto}.cover .photo::after{background:linear-gradient(0deg,var(--paper) 8%,rgba(243,237,228,0) 55%)}.cover .note{display:none}}
+
+/* PARALLAX COLUMNS */
+.cols{height:180vh;position:relative;overflow:hidden;display:grid;grid-template-columns:repeat(3,1fr);gap:2vw;padding:0 4vw}
+.col{display:flex;flex-direction:column;gap:2vw}
+.col img,.col video{width:100%;display:block;aspect-ratio:3/4;object-fit:cover}
+.col:nth-child(2){margin-top:-30vh}
+.cols .over{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;z-index:2}
+.cols .over h2{font-size:clamp(70px,12vw,220px);color:var(--paper);mix-blend-mode:difference;font-style:italic}
+
+/* SAGA: her story as five chapter words, then her name with the dance inside it */
+.saga{height:780vh;position:relative}
+.saga .stage{position:sticky;top:0;height:100vh;overflow:hidden}
+.saga .chap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}
+.saga .w{font-family:"Bodoni Moda";font-weight:900;font-variation-settings:"opsz" 6;text-transform:uppercase;line-height:.78;letter-spacing:-.02em;white-space:nowrap;
+  background:var(--img) center 30%/cover;-webkit-background-clip:text;background-clip:text;color:transparent;clip-path:inset(100% 0 0 0)}
+.saga .cut{position:absolute;bottom:0;height:82vh;width:auto;max-width:46vw;object-fit:contain;object-position:bottom;z-index:2;opacity:0;filter:drop-shadow(0 30px 40px rgba(20,17,16,.28));will-change:transform}
+.saga .cut.L{left:5vw;object-position:left bottom}.saga .cut.R{right:5vw;object-position:right bottom}
+.saga .w{position:relative;z-index:1}
+.saga .chap:has(.cut.R) .ln{margin-right:40vw;width:min(520px,36vw);text-align:left}.saga .chap:has(.cut.L) .ln{margin-left:40vw;width:min(520px,36vw);text-align:right}
+@media(max-width:860px){.saga .cut{height:50vh}.saga .chap .ln{margin:4vh 0 0!important;text-align:center!important}}
+.saga .ln{position:relative;z-index:3;margin-top:4vh;font-family:"Bodoni Moda";font-style:italic;font-size:clamp(20px,2vw,32px);text-align:center;max-width:720px;padding:0 4vw;opacity:0}
+.saga .ln small{display:block;font-family:Manrope;font-style:normal;font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--rose);margin-bottom:14px}
+.saga .hud{position:absolute;left:4vw;right:4vw;top:92px;display:flex;justify-content:space-between;align-items:center;z-index:4;border-top:1px solid var(--ink);padding-top:12px}
+.saga .bar{position:absolute;left:4vw;right:4vw;bottom:5vh;height:1px;background:rgba(20,17,16,.15);z-index:4}
+.saga .bar i{position:absolute;inset:0;background:var(--rose);transform-origin:left;transform:scaleX(0)}
+.saga .knock{position:absolute;inset:0;opacity:0;z-index:3;background:#000}
+.saga .knock video{position:absolute;top:0;left:50%;width:100%;height:100%;transform:translateX(-50%);object-fit:cover;object-position:50% 28%}
+.saga .knock video.bg{width:100%;filter:blur(40px) brightness(.55);transform:translateX(-50%) scale(1.15);opacity:0}
+.saga .knock .mask{position:absolute;inset:0;background:#000;mix-blend-mode:multiply;display:grid;place-items:center}
+.saga .knock .mask span{font-family:"Bodoni Moda";font-weight:900;font-variation-settings:"opsz" 6;text-transform:uppercase;color:#fff;line-height:.8;letter-spacing:-.02em;white-space:nowrap;will-change:transform}
+.saga .knock .tag{position:absolute;left:0;right:0;bottom:12vh;text-align:center;z-index:2;opacity:0;color:var(--paper);font-family:"Bodoni Moda";font-style:italic;font-size:clamp(26px,3vw,48px);text-shadow:0 4px 30px rgba(0,0,0,.6)}
+
+/* STORY */
+.story{padding:20vh 4vw;display:grid;grid-template-columns:5fr 7fr;gap:6vw}
+@media(max-width:760px){.story{grid-template-columns:1fr}}
+.story .side{font-family:"Bodoni Moda";font-style:italic;font-size:clamp(40px,5vw,84px);line-height:1}
+.story .side em{color:var(--rose)}
+.story p.lead{font-family:"Bodoni Moda";font-size:clamp(26px,2.6vw,42px);line-height:1.3;margin-bottom:28px}
+.story p.lead .w{opacity:.15}
+.story p.body{color:var(--muted);line-height:1.85;max-width:620px;columns:2;column-gap:40px;font-size:15px}
+@media(max-width:760px){.story p.body{columns:1}}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);margin-top:50px}
+.facts div{padding:22px 16px 0 0}
+.facts b{font-family:"Bodoni Moda";font-size:clamp(30px,3vw,52px);font-weight:400;display:block}
+.facts span{font-size:12px;color:var(--muted)}
+
+/* FEATURE: RECREATION */
+.feature{background:var(--ink);color:var(--paper);padding:18vh 4vw}
+.feature .hd{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:20px;border-bottom:1px solid rgba(243,237,228,.25);padding-bottom:28px;margin-bottom:6vh}
+.feature h2{font-size:clamp(60px,9vw,170px);line-height:.85}
+.feature h2 em{color:var(--rose)}
+.feature .hd p{max-width:340px;line-height:1.7;color:#b8afa4;font-size:14px}
+.duo{display:grid;grid-template-columns:1fr auto 1fr;gap:3vw;align-items:center;max-width:1100px;margin:0 auto}
+.duo figure{position:relative}
+.duo .frame{aspect-ratio:600/1080;overflow:hidden;clip-path:inset(0 0 100% 0)}
+.duo video{width:100%;height:100%;object-fit:cover;transform:scale(1.2)}
+.duo figcaption{display:flex;justify-content:space-between;margin-top:14px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#b8afa4}
+.duo .vs{font-family:"Bodoni Moda";font-style:italic;font-size:clamp(40px,5vw,90px);color:var(--rose)}
+.play{display:block;margin:7vh auto 0;background:none;border:1px solid var(--paper);color:var(--paper);padding:18px 36px;border-radius:99px;font:600 11px Manrope;letter-spacing:.3em;text-transform:uppercase;cursor:pointer;transition:.3s}
+.play:hover{background:var(--paper);color:var(--ink)}
+
+
+/* VIDEOS */
+.reel{padding:18vh 4vw 12vh}
+.reel .hd{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:20px;border-bottom:1px solid var(--ink);padding-bottom:24px;margin-bottom:4vh}
+.reel h2{font-size:clamp(60px,9vw,170px);line-height:.85}
+.reel h2 em{font-style:italic;color:var(--rose)}
+.tabs{display:inline-flex;position:relative;border:1px solid var(--ink);border-radius:99px;padding:5px;margin-bottom:5vh}
+.tabs button{position:relative;z-index:2;background:none;border:0;padding:14px 28px;font:600 11px Manrope;letter-spacing:.3em;text-transform:uppercase;color:var(--ink);cursor:pointer;transition:color .4s}
+.tabs button.on{color:var(--paper)}
+.tabs .pill{position:absolute;z-index:1;top:5px;bottom:5px;border-radius:99px;background:var(--ink)}
+.reel .grid{display:grid;grid-template-columns:2fr 1fr;gap:4vw;align-items:start}
+@media(max-width:860px){.reel .grid{grid-template-columns:1fr}}
+.wrap{height:min(64vh,620px);display:flex;justify-content:center;align-items:center}
+.screen{position:relative;overflow:hidden;background:var(--ink);height:100%;width:100%}
+.screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0;transform:scale(1.2);pointer-events:none}
+.screen.native iframe{transform:none}
+.screen.tall iframe{transform:scale(1.14)}
+.screen .wipe{position:absolute;inset:0;background:var(--rose);clip-path:inset(0 100% 0 0);z-index:2}
+.screen .cap{position:absolute;left:0;bottom:0;z-index:3;background:var(--paper);padding:14px 20px 10px;display:flex;gap:18px;align-items:baseline;max-width:100%}
+.screen .cap b{font-family:"Bodoni Moda";font-style:italic;font-weight:400;font-size:clamp(20px,2vw,34px);white-space:nowrap}
+.index{list-style:none}
+.index li{display:grid;grid-template-columns:48px 1fr;gap:8px;padding:22px 0;border-bottom:1px solid rgba(20,17,16,.18);cursor:pointer;transition:padding .4s,color .3s}
+.index li:first-child{border-top:1px solid rgba(20,17,16,.18)}
+.index li .no{font-family:"Bodoni Moda";font-size:22px;color:var(--muted)}
+.index li h3{font-family:"Bodoni Moda";font-weight:400;font-size:clamp(28px,2.6vw,44px);line-height:1}
+.index li p{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.5}
+.index li:hover{padding-left:12px}
+.index li.on h3{font-style:italic;color:var(--rose)}
+.index li.on .no{color:var(--rose)}
+.reel .watch{margin-top:28px;background:var(--ink);color:var(--paper);border:0;padding:18px 32px;border-radius:99px;font:600 11px Manrope;letter-spacing:.3em;text-transform:uppercase;cursor:pointer}
+.reel .watch:hover{background:var(--rose)}
+
+/* GALLERY */
+.gallery{padding:16vh 4vw 10vh}
+.gallery .hd{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:20px;border-bottom:1px solid var(--ink);padding-bottom:24px;margin-bottom:5vh}
+.gallery h2{font-size:clamp(60px,9vw,170px);line-height:.85}.gallery h2 em{font-style:italic;color:var(--rose)}
+.masonry{columns:4 240px;column-gap:1.4vw}
+.masonry figure{break-inside:avoid;margin-bottom:1.4vw;overflow:hidden;cursor:zoom-in;position:relative}
+.masonry img{width:100%;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.2,1),filter .6s}
+.masonry figure:hover img{transform:scale(1.05)}
+.masonry figure::after{content:"View";position:absolute;left:14px;bottom:12px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#fff;opacity:0;transform:translateY(8px);transition:.4s}
+.masonry figure:hover::after{opacity:1;transform:none}
+.lb{position:fixed;inset:0;z-index:300;background:rgba(20,17,16,.96);display:none;align-items:center;justify-content:center}
+.lb.open{display:flex}
+.lb img{max-width:86vw;max-height:86vh;display:block}
+.lb button{position:absolute;background:none;border:0;color:var(--paper);font:400 40px "Bodoni Moda";cursor:pointer;padding:20px}
+.lb .x{top:10px;right:20px;font-size:30px}.lb .pv{left:10px}.lb .nx{right:10px}
+.lb .count{position:absolute;bottom:22px;left:50%;translate:-50% 0;color:#b8afa4;font-size:11px;letter-spacing:.3em}
+
+/* MUSIC */
+.music{padding:16vh 4vw 12vh;background:#ebe3d7}
+.music .hd{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:20px;border-bottom:1px solid var(--ink);padding-bottom:24px;margin-bottom:5vh}
+.music h2{font-size:clamp(60px,9vw,170px);line-height:.85}.music h2 em{font-style:italic;color:var(--rose)}
+.music .grid{display:grid;grid-template-columns:5fr 6fr;gap:4vw;align-items:start}
+@media(max-width:860px){.music .grid{grid-template-columns:1fr}}
+.feat{position:relative}
+.feat .sleeve{position:relative;z-index:2;box-shadow:0 30px 70px rgba(20,17,16,.35)}
+.feat .sleeve img{width:100%;display:block;aspect-ratio:1;object-fit:cover}
+.feat .disc{position:absolute;top:3%;left:3%;width:94%;aspect-ratio:1;border-radius:50%;z-index:1;background:radial-gradient(circle,#e9e1d4 0 3%,#141110 3.5% 16%,var(--rose) 16.5% 30%,#141110 30.5%),repeating-radial-gradient(circle,#141110 0 2px,#262120 2px 3px);animation:spin 5s linear infinite}
+@keyframes spin{to{rotate:360deg}}
+.feat .now{margin-top:22px;display:flex;justify-content:space-between;align-items:baseline}
+.feat .now b{font-family:"Bodoni Moda";font-weight:400;font-style:italic;font-size:clamp(34px,3.6vw,60px)}
+.singles{list-style:none}
+.music .grid>div:last-child{position:relative;z-index:3;background:#ebe3d7}
+.single{display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(20,17,16,.18);cursor:pointer;transition:padding .4s}
+.single:first-child{border-top:1px solid rgba(20,17,16,.18)}
+.single img{width:64px;height:64px;object-fit:cover;display:block}
+.single h3{font-family:"Bodoni Moda";font-weight:400;font-size:clamp(24px,2.2vw,36px);line-height:1}
+.single small{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
+.single .go{font-size:11px;letter-spacing:.25em;text-transform:uppercase}
+.single:hover{padding-left:10px}.single.on h3{font-style:italic;color:var(--rose)}
+.spotify{margin-top:30px;border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(20,17,16,.15)}
+.spotify iframe{display:block;width:100%;height:352px;border:0}
+.streams{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.streams a{border:1px solid var(--ink);border-radius:99px;padding:12px 20px;font-size:11px;letter-spacing:.25em;text-transform:uppercase;transition:.3s}
+.streams a:hover{background:var(--ink);color:var(--paper)}
+
+/* FILMSTRIP */
+.strip{padding:6vh 0 14vh;overflow:hidden}
+.strip .row{display:flex;gap:2vw;width:max-content}
+.strip img{height:38vh;width:auto;display:block}
+
+footer{border-top:1px solid var(--ink);margin:0 4vw;padding:10vh 0 6vh;display:grid;grid-template-columns:2fr 1fr 1fr;gap:4vw}
+@media(max-width:760px){footer{grid-template-columns:1fr}}
+footer h4{font-size:clamp(50px,7vw,120px);line-height:.9}
+footer h4 em{font-style:italic;color:var(--rose)}
+footer ul{list-style:none;line-height:2.4;font-size:13px;letter-spacing:.15em;text-transform:uppercase}
+footer ul a{display:inline-flex;align-items:center;gap:12px}
+footer a:hover{color:var(--rose)}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="l"><a href="#story">Story</a><a href="#videos">Videos</a><a href="#gallery">Gallery</a><a href="#music">Music</a></div><div class="mid serif">Montana <i>T.</i></div><div class="r"><a href="#contact">Contact</a><span class="socials"><a class="ico" href="https://www.instagram.com/montanatucker" target="_blank" rel="noopener" aria-label="Instagram" style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@11.0.0/icons/instagram.svg)"></a><a class="ico" href="https://www.tiktok.com/@montanatucker" target="_blank" rel="noopener" aria-label="TikTok" style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@11.0.0/icons/tiktok.svg)"></a><a class="ico" href="https://www.youtube.com/@MontanaTucker" target="_blank" rel="noopener" aria-label="YouTube" style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@11.0.0/icons/youtube.svg)"></a><a class="ico" href="https://www.facebook.com/MontanaTucker" target="_blank" rel="noopener" aria-label="Facebook" style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@11.0.0/icons/facebook.svg)"></a><a class="ico" href="https://x.com/montanatucker" target="_blank" rel="noopener" aria-label="X" style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@11.0.0/icons/x.svg)"></a></span></div></nav>
+
+<section class="cover">
+  <div class="issue eyebrow"><span>Issue Nº 01</span><span>Singer · Songwriter · Dancer · Actress</span><span>Los Angeles</span></div>
+  <h1 class="serif"><span class="ln"><span>Montana</span></span><span class="ln"><span><em>Tucker</em></span></span></h1>
+  <div class="photo"><img src="media/leopard.jpg" alt="Montana Tucker"></div>
+  <p class="note">A South Florida original who started at eight and never stopped moving. Now on Pitbull's Mr.&nbsp;305 Records.</p>
+</section>
+
+<section class="cols">
+  <div class="col"><img src="media/windbw.jpg" alt=""><img src="media/moon.jpg" alt=""><img src="media/fur.jpg" alt=""></div>
+  <div class="col"><img src="media/leopard.jpg" alt=""><video src="media/loop-a.mp4" autoplay muted loop playsinline></video><img src="media/flowers.jpg" alt=""><img src="media/rainbow.jpg" alt=""></div>
+  <div class="col"><img src="media/stripes.jpg" alt=""><img src="media/lockers.jpg" alt=""><img src="media/balloons.jpg" alt=""></div>
+  <div class="over"><h2 class="serif">In Motion</h2></div>
+</section>
+
+<section class="saga" id="story">
+  <div class="stage">
+    <div class="hud eyebrow"><span>The Story</span><span id="sagaNo">01 / 05</span></div>
+    <div class="chap"><img class="cut R" src="media/cut-rainbow.webp" alt=""><div class="w" style="--img:url(media/balloons.jpg)">Eight</div><p class="ln"><small>Chapter I · Where it started</small>Modeling in commercials at eight years old.</p></div><div class="chap"><img class="cut L" src="media/cut-hairflip.webp" alt=""><div class="w" style="--img:url(media/bluelights.jpg)">Dancer</div><p class="ln"><small>Chapter II · The moves</small>Dancing behind Ashanti and Ashlee Simpson.</p></div><div class="chap"><img class="cut R" src="media/cut-stripes.webp" alt=""><div class="w" style="--img:url(media/fire.jpg)">Singer</div><p class="ln"><small>Chapter III · The voice</small>“Ain’t No Stressin’” on the Step Up 2 soundtrack. “Turn It Up” with Flo Rida.</p></div><div class="chap"><img class="cut L" src="media/cut-fur.webp" alt=""><div class="w" style="--img:url(media/leopard.jpg)">Actress</div><p class="ln"><small>Chapter IV · The screen</small>The Emmy-winning series The Bay. Host of the Streamy Purpose Awards.</p></div><div class="chap"><img class="cut R" src="media/cut-lockers.webp" alt=""><div class="w" style="--img:url(media/moon.jpg)">Star</div><p class="ln"><small>Chapter V · Now</small>Signed to Pitbull’s Mr.&nbsp;305 Records. Millions watching every move.</p></div>
+    <div class="knock"><video class="bg" src="media/montana-dance.mp4" muted loop playsinline></video><video class="fg" src="media/montana-dance.mp4" muted loop playsinline></video><div class="mask"><span id="knockWord">Montana</span></div><p class="tag">And she's just getting started.</p></div>
+    <div class="bar"><i></i></div>
+  </div>
+</section>
+
+<section class="story">
+  <div><div class="eyebrow">In Full</div><p class="side" style="margin-top:18px">From every <em>angle.</em></p></div>
+  <div>
+    <p class="lead" id="lead">Enduring artists don't only entertain. They empower. Montana does both, from every angle.</p>
+    <p class="body">She began modeling in commercials at eight, then danced for Ashanti and Ashlee Simpson. Her first release, "Ain't No Stressin'," landed on the Step Up 2: The Streets soundtrack, and "Candy Swirl" followed in Bring It On. She teamed with Flo Rida on "Turn It Up," opened for Ciara and Lil Wayne, acted in the Emmy-winning series The Bay, and hosted the Streamy Purpose Awards. Her videos reach millions, and her debut single "Hola" arrived on Mr.&nbsp;305 Records.</p>
+    <div class="facts"><div><b class="serif">2020</b><span>iHeartRadio "Social Star" nominee</span></div><div><b class="serif">Mr. 305</b><span>Pitbull's record label</span></div><div><b class="serif">Millions</b><span>of streams and views</span></div></div>
+  </div>
+</section>
+
+<section class="feature" id="feature">
+  <div class="hd"><div><div class="eyebrow" style="color:#b8afa4">Feature</div><h2 class="serif">The <em>Recreation</em></h2></div><p>Michael Jackson's "Beat It," 1983, recreated beat for beat. Two performers, forty years apart, moving as one.</p></div>
+  <div class="duo">
+    <figure><div class="frame f1"><video id="a" src="media/montana-dance.mp4" muted loop playsinline></video></div><figcaption><span>Montana</span><span>2026</span></figcaption></figure>
+    <div class="vs">&amp;</div>
+    <figure><div class="frame f2"><video id="b" src="media/michael-dance.mp4" muted loop playsinline></video></div><figcaption><span>Michael</span><span>1983</span></figcaption></figure>
+  </div>
+  <button class="play" id="play">Play the film, with sound</button>
+</section>
+
+<section class="reel" id="videos">
+  <div class="hd"><div><div class="eyebrow">The Videos</div><h2 class="serif">Now <em>Showing</em></h2></div><p class="eyebrow">Choose a film · plays here</p></div>
+  <div class="tabs" id="tabs"><span class="pill"></span><button class="on" data-tab="videos">Music Videos</button><button data-tab="recs">Recreations</button></div>
+  <div class="grid">
+    <div>
+      <div class="wrap" id="wrap"><div class="screen" id="screen"><iframe id="yt" title="Montana Tucker video" allow="autoplay; encrypted-media"></iframe><div class="wipe"></div><div class="cap"><span class="eyebrow" id="capno">Nº 01</span><b id="captitle">Sunday Funday</b></div></div></div>
+      <button class="watch" id="watch">Watch with sound</button>
+    </div>
+    <ol class="index" id="index"></ol>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="hd"><div><div class="eyebrow">The Gallery</div><h2 class="serif">In <em>Frame</em></h2></div><p class="eyebrow">13 photographs · tap to view</p></div>
+  <div class="masonry" id="masonry"><figure><img src="media/hairflip.jpg" alt="Montana Tucker" loading="lazy"></figure><figure><img src="media/fire.jpg" alt="Montana Tucker" loading="lazy"></figure><figure><img src="media/bluelights.jpg" alt="Montana Tucker" loading="lazy"></figure><figure><img src="media/windbw.jpg" alt="Montana Tucker" loading="lazy"></figure><figure><img src="media/moon.jpg" alt="Montana Tucker" loading="lazy"></figure><figure><img src="media/leopard.jpg" alt="Montana Tucker" loading="lazy"></figure><figure><img src="media/stripes.jpg" alt="Montana Tucker" loading="lazy"></figure><figure><img src="media/balloons.jpg" alt="Montana Tucker" loading="lazy"></figure><figure><img src="media/fur.jpg" alt="Montana Tucker" loading="lazy"></figure><figure><img src="media/lockers.jpg" alt="Montana Tucker" loading="lazy"></figure><figure><img src="media/flowers.jpg" alt="Montana Tucker" loading="lazy"></figure><figure><img src="media/rainbow.jpg" alt="Montana Tucker" loading="lazy"></figure><figure><img src="media/camo.jpg" alt="Montana Tucker" loading="lazy"></figure></div>
+</section>
+<div class="lb" id="lb"><button class="x" aria-label="Close">✕</button><button class="pv" aria-label="Previous">‹</button><img alt=""><button class="nx" aria-label="Next">›</button><div class="count"></div></div>
+
+<section class="music" id="music">
+  <div class="hd"><div><div class="eyebrow">The Music</div><h2 class="serif">On <em>Repeat</em></h2></div><p class="eyebrow">Singles · stream everywhere</p></div>
+  <div class="grid">
+    <div class="feat"><div class="disc" id="disc"></div><div class="sleeve"><img id="featimg" src="media/hola-cover.jpg" alt=""></div><div class="now"><b id="feattitle">Hola</b><span class="eyebrow" id="featmeta">2020 · Mr. 305 Records</span></div></div>
+    <div>
+      <ol class="singles" id="singles"><li class="single" data-img="https://i.ytimg.com/vi/n-GNAkpo8Pc/maxresdefault.jpg" data-meta="2021 · feat. Todrick Hall"><img src="https://i.ytimg.com/vi/n-GNAkpo8Pc/maxresdefault.jpg" alt=""><div><h3>Be Myself</h3><small>2021 · feat. Todrick Hall</small></div><a class="go" href="https://open.spotify.com/artist/1JoFybEqNl2AqFWbhSy5gQ" target="_blank" rel="noopener">Listen →</a></li><li class="single" data-img="https://i.ytimg.com/vi/q-l-CTx95DY/maxresdefault.jpg" data-meta="2021"><img src="https://i.ytimg.com/vi/q-l-CTx95DY/maxresdefault.jpg" alt=""><div><h3>Doo Wop</h3><small>2021</small></div><a class="go" href="https://open.spotify.com/artist/1JoFybEqNl2AqFWbhSy5gQ" target="_blank" rel="noopener">Listen →</a></li><li class="single" data-img="https://i.ytimg.com/vi/gHHvRtn6Jw0/maxresdefault.jpg" data-meta="2020 · Mr. 305 Records"><img src="https://i.ytimg.com/vi/gHHvRtn6Jw0/maxresdefault.jpg" alt=""><div><h3>Sunday Funday</h3><small>2020 · Mr. 305 Records</small></div><a class="go" href="https://open.spotify.com/artist/1JoFybEqNl2AqFWbhSy5gQ" target="_blank" rel="noopener">Listen →</a></li><li class="single on" data-img="media/hola-cover.jpg" data-meta="2020 · Mr. 305 Records"><img src="media/hola-cover.jpg" alt=""><div><h3>Hola</h3><small>2020 · Mr. 305 Records</small></div><a class="go" href="https://open.spotify.com/artist/1JoFybEqNl2AqFWbhSy5gQ" target="_blank" rel="noopener">Listen →</a></li><li class="single" data-img="media/rememberus-cover.jpg" data-meta="Single"><img src="media/rememberus-cover.jpg" alt=""><div><h3>Remember Us</h3><small>Single</small></div><a class="go" href="https://open.spotify.com/artist/1JoFybEqNl2AqFWbhSy5gQ" target="_blank" rel="noopener">Listen →</a></li></ol>
+      <div class="spotify"><iframe src="https://open.spotify.com/embed/artist/1JoFybEqNl2AqFWbhSy5gQ?theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Montana Tucker on Spotify"></iframe></div>
+      <div class="streams"><a href="https://open.spotify.com/artist/1JoFybEqNl2AqFWbhSy5gQ" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/search?term=montana%20tucker" target="_blank" rel="noopener">Apple Music</a><a href="https://www.youtube.com/@MontanaTucker" target="_blank" rel="noopener">YouTube</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip"><div class="row">
+  <img src="media/hairflip.jpg" alt=""><img src="media/fire.jpg" alt=""><img src="media/camo.jpg" alt=""><img src="media/bluelights.jpg" alt=""><img src="media/windbw.jpg" alt=""><img src="media/moon.jpg" alt=""><img src="media/hairflip.jpg" alt=""><img src="media/fire.jpg" alt="">
+</div></div>
+
+<footer id="contact">
+  <h4 class="serif">Say <em>hello.</em></h4>
+  <ul><li class="eyebrow">Inquiries</li><li><a href="mailto:michelle@montanatucker.com">Management</a></li><li><a href="mailto:michelle@montanatucker.com">Booking</a></li></ul>
+  <ul><li class="eyebrow">Follow</li><li><a href="https://www.instagram.com/montanatucker" target="_blank" rel="noopener"><span class="ico" style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@11.0.0/icons/instagram.svg)"></span>Instagram</a></li><li><a href="https://www.tiktok.com/@montanatucker" target="_blank" rel="noopener"><span class="ico" style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@11.0.0/icons/tiktok.svg)"></span>TikTok</a></li><li><a href="https://www.youtube.com/@MontanaTucker" target="_blank" rel="noopener"><span class="ico" style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@11.0.0/icons/youtube.svg)"></span>YouTube</a></li><li><a href="https://www.facebook.com/MontanaTucker" target="_blank" rel="noopener"><span class="ico" style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@11.0.0/icons/facebook.svg)"></span>Facebook</a></li><li><a href="https://x.com/montanatucker" target="_blank" rel="noopener"><span class="ico" style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@11.0.0/icons/x.svg)"></span>X</a></li></ul>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+const lenis=new Lenis({lerp:.07});lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
+ScrollTrigger.create({start:80,onToggle:s=>document.getElementById('nav').classList.toggle('solid',s.isActive)});
+
+// cover: title rises line by line, her photo unveils top to bottom
+const c=gsap.timeline({defaults:{ease:'expo.out'}});
+c.from('.cover h1 .ln span',{yPercent:105,duration:1.4,stagger:.12})
+ .to('.cover .photo',{clipPath:'inset(0 0 0% 0)',duration:1.6,ease:'power4.inOut'},.1)
+ .to('.cover .photo img',{scale:1,duration:2.4,ease:'expo.out'},.3)
+ .from('.cover .issue,.cover .note',{opacity:0,y:20,duration:1},.8);
+gsap.to('.cover .photo img',{yPercent:8,ease:'none',scrollTrigger:{trigger:'.cover',start:'top top',end:'bottom top',scrub:true}});
+gsap.to('.cover h1',{yPercent:30,ease:'none',scrollTrigger:{trigger:'.cover',start:'top top',end:'bottom top',scrub:true}});
+
+// columns move against each other
+gsap.to('.col:nth-child(1)',{yPercent:-22,ease:'none',scrollTrigger:{trigger:'.cols',scrub:true}});
+gsap.to('.col:nth-child(2)',{yPercent:14,ease:'none',scrollTrigger:{trigger:'.cols',scrub:true}});
+gsap.to('.col:nth-child(3)',{yPercent:-30,ease:'none',scrollTrigger:{trigger:'.cols',scrub:true}});
+
+// saga: size each chapter word to the screen, then scrub through them
+const fitWord=(el,frac)=>{el.style.fontSize='100px';const k=Math.min(innerWidth*frac/el.offsetWidth,innerHeight*.55/el.offsetHeight);el.style.fontSize=100*k+'px'};
+const chaps=gsap.utils.toArray('.saga .chap'),kw=document.getElementById('knockWord'),kvs=document.querySelectorAll('.saga .knock video');
+const sizeSaga=()=>{chaps.forEach(c=>fitWord(c.querySelector('.w'),.86));fitWord(kw,.9)};
+document.fonts.ready.then(()=>{sizeSaga();ScrollTrigger.refresh()});addEventListener('resize',sizeSaga);
+const st=gsap.timeline({defaults:{ease:'power3.inOut'},scrollTrigger:{trigger:'.saga',start:'top top',end:'bottom bottom',scrub:.6,
+  onUpdate:s=>{const n=Math.min(5,Math.floor(s.progress*7)+1);document.getElementById('sagaNo').textContent=n>5?'':`0${n} / 05`},
+  onToggle:s=>kvs.forEach(v=>{if(s.isActive){v.currentTime=kvs[1].currentTime;v.play()}else v.pause()})}});
+chaps.forEach((c,i)=>{const w=c.querySelector('.w'),ln=c.querySelector('.ln'),cut=c.querySelector('.cut'),t=i*2,dx=cut.classList.contains('L')?-1:1;
+  // she rises in front of her word, drifts, then leaves with it
+  st.fromTo(cut,{opacity:0,yPercent:30,xPercent:dx*8,scale:1.06},{opacity:1,yPercent:0,xPercent:0,scale:1,duration:.9,ease:'power3.out'},t+.15)
+    .to(cut,{yPercent:-4,duration:.6,ease:'none'},t+.95)
+    .to(cut,{opacity:0,yPercent:-18,xPercent:dx*-6,duration:.6,ease:'power3.in'},t+1.5);
+  st.fromTo(w,{clipPath:'inset(100% 0 0 0)',scale:1.15,backgroundPosition:'50% 10%'},{clipPath:'inset(0% 0 0 0)',scale:1,backgroundPosition:'50% 45%',duration:.8},t)
+    .fromTo(ln,{opacity:0,y:30},{opacity:1,y:0,duration:.5},t+.4)
+    .to(w,{clipPath:'inset(0 0 100% 0)',yPercent:-12,duration:.7,ease:'power3.in'},t+1.5)
+    .to(ln,{opacity:0,y:-20,duration:.4},t+1.5)});
+st.to('.saga .bar i',{scaleX:1,ease:'none',duration:14},0);
+// finale: her name with the dance playing inside it, then dive through the letters
+st.to('.saga .knock',{opacity:1,duration:.6},10.1)
+  .fromTo(kw,{scale:.6},{scale:1,duration:.8},10.1)
+  .to(kw,{scale:28,duration:1.6,ease:'power2.in'},11.2)
+  .to('.saga .knock .mask',{opacity:0,duration:.5},12.3)
+  // then pull back to the whole vertical video, head to toe, with a soft blurred copy behind
+  .to('.saga .knock video.fg',{width:()=>innerHeight*600/1080,duration:1,ease:'power3.inOut'},12.7)
+  .to('.saga .knock video.bg',{opacity:1,duration:.8},12.8)
+  .to('.saga .knock .tag',{opacity:1,y:-10,duration:.4},13.5)
+  .to('.saga .hud',{opacity:0,duration:.3},11.2);
+
+// lead sentence inks in word by word
+const lead=document.getElementById('lead');lead.innerHTML=lead.textContent.split(' ').map(w=>`<span class="w">${w}</span>`).join(' ');
+gsap.to('#lead .w',{opacity:1,stagger:.08,ease:'none',scrollTrigger:{trigger:'#lead',start:'top 80%',end:'bottom 45%',scrub:true}});
+
+// feature: frames open like curtains, then the two clips play in step
+const a=document.getElementById('a'),b=document.getElementById('b');
+gsap.timeline({scrollTrigger:{trigger:'.duo',start:'top 75%'}})
+  .to('.duo .frame',{clipPath:'inset(0 0 0% 0)',duration:1.4,stagger:.15,ease:'power4.inOut'})
+  .to('.duo video',{scale:1,duration:1.8,ease:'expo.out'},.2)
+  .from('.duo .vs',{scale:0,rotate:-90,duration:1,ease:'back.out(2)'},.6);
+ScrollTrigger.create({trigger:'.duo',start:'top 80%',end:'bottom 10%',onToggle:s=>{if(s.isActive){a.play();b.play()}else{a.pause();b.pause()}}});
+a.ontimeupdate=()=>{if(a.currentTime<26.9&&Math.abs(a.currentTime-b.currentTime)>.08)b.currentTime=a.currentTime};
+document.getElementById('play').onclick=()=>{const ov=document.createElement('div'),v=document.createElement('video');
+  Object.assign(ov.style,{position:'fixed',inset:0,background:'rgba(20,17,16,.94)',zIndex:200,display:'grid',placeItems:'center'});
+  v.src='media/beatit-sidebyside.mp4';v.controls=v.autoplay=true;v.style.width='min(90vw,1400px)';
+  ov.append(v);ov.onclick=e=>{if(e.target===ov)ov.remove()};v.onended=()=>ov.remove();document.body.append(ov);gsap.from(v,{scale:.9,opacity:0,duration:.8,ease:'expo.out'})};
+
+// videos: two tabs of films; one plays muted in the frame, only while it's on screen
+const FILMS={
+  videos:[
+    {id:'gHHvRtn6Jw0',start:42,title:'Sunday Funday',note:'Official video · Mr.&nbsp;305 Records'},
+    {id:'RuotFJwRwLg',start:120,title:"I'm Not Alone",note:'Official video · "More than a song. A movement."'},
+    {id:'n-GNAkpo8Pc',start:70,title:'Be Myself',note:'Official video · featuring Todrick Hall'}],
+  recs:[
+    {id:'beatit',title:'Beat It',note:'Side by side with Michael Jackson, 1983'},
+    {id:'yH04c-8qw4s',start:0,tall:true,title:'Dirty Dancing',note:'With Garrett Clayton · the lift, recreated'},
+    {id:'KU-YoUrxv6M',start:0,tall:true,title:'Thriller',note:'The 13 Going On 30 scene · with Christa Allen &amp; Johann Vera'},
+    {id:'RpjZKes32fc',start:0,tall:true,title:'Tina Turner',note:'A tribute to the one and only'}]};
+const yt=document.getElementById('yt'),screen=document.getElementById('screen'),wrap=document.getElementById('wrap'),index=document.getElementById('index');
+let tab='videos',cur=FILMS.videos[0],inView=false;
+const ytUrl=(id,start,sound)=>`https://www.youtube.com/embed/${id}?autoplay=1&mute=${sound?0:1}&controls=${sound?1:0}&loop=1&playlist=${id}&start=${start||0}&rel=0&playsinline=1&iv_load_policy=3&modestbranding=1&cc_load_policy=0`;
+const fit=(animate)=>{const r=cur.tall?9/16:16/9,h=wrap.clientHeight,w=Math.min(wrap.clientWidth,h*r);
+  gsap.to(screen,{width:w,height:w/r,duration:animate?.9:0,ease:'power3.inOut'})};
+const load=()=>{screen.classList.toggle('native',cur.id==='beatit');screen.classList.toggle('tall',!!cur.tall);
+  if(!inView){yt.src='about:blank';return}
+  if(cur.id==='beatit'){yt.src='about:blank';yt.srcdoc='<video src="media/beatit-sidebyside.mp4" autoplay muted loop playsinline style="position:fixed;inset:0;width:100%;height:100%;object-fit:cover;background:#000"></video>'}
+  else{yt.removeAttribute('srcdoc');yt.src=ytUrl(cur.id,cur.start,false)}};
+const caption=i=>{document.getElementById('capno').textContent='Nº 0'+(i+1);document.getElementById('captitle').textContent=cur.title};
+// cover the frame, swap the film (and its shape), uncover
+const swap=(film,i)=>{cur=film;gsap.timeline()
+  .to('#screen .wipe',{clipPath:'inset(0 0% 0 0)',duration:.5,ease:'power3.in'})
+  .add(()=>{load();caption(i);fit(true)})
+  .to('#screen .wipe',{clipPath:'inset(0 0 0 100%)',duration:.7,ease:'power3.out',delay:.9})
+  .set('#screen .wipe',{clipPath:'inset(0 100% 0 0)'})};
+const renderList=()=>{index.innerHTML=FILMS[tab].map((f,i)=>`<li class="${f===cur?'on':''}"><span class="no">0${i+1}</span><div><h3>${f.title}</h3><p>${f.note}</p></div></li>`).join('');
+  [...index.children].forEach((li,i)=>li.onclick=()=>{const f=FILMS[tab][i];if(f===cur)return;[...index.children].forEach(x=>x.classList.remove('on'));li.classList.add('on');swap(f,i)});
+  gsap.from(index.children,{x:40,opacity:0,stagger:.07,duration:.8,ease:'expo.out'})};
+const pill=document.querySelector('.tabs .pill'),tabBtns=[...document.querySelectorAll('#tabs button')];
+const movePill=(b,d)=>gsap.to(pill,{left:b.offsetLeft,width:b.offsetWidth,duration:d,ease:'power3.inOut'});
+tabBtns.forEach(b=>b.onclick=()=>{if(b.dataset.tab===tab)return;tab=b.dataset.tab;tabBtns.forEach(x=>x.classList.toggle('on',x===b));movePill(b,.5);
+  swap(FILMS[tab][0],0);setTimeout(renderList,0)});
+renderList();caption(0);fit(false);document.fonts.ready.then(()=>movePill(tabBtns[0],0));
+addEventListener('resize',()=>fit(false));
+ScrollTrigger.create({trigger:'#screen',start:'top 85%',end:'bottom 15%',onToggle:s=>{inView=s.isActive;load()}});
+gsap.from('#wrap',{clipPath:'inset(0 0 100% 0)',duration:1.4,ease:'power4.inOut',scrollTrigger:{trigger:'#wrap',start:'top 80%'}});
+document.getElementById('watch').onclick=()=>{if(cur.id==='beatit'){document.getElementById('play').click();return}
+  const ov=document.createElement('div'),f=document.createElement('iframe');
+  Object.assign(ov.style,{position:'fixed',inset:0,background:'rgba(20,17,16,.94)',zIndex:200,display:'grid',placeItems:'center'});
+  f.src=ytUrl(cur.id,0,true);f.allow='autoplay; encrypted-media; fullscreen';f.allowFullscreen=true;
+  Object.assign(f.style,cur.tall?{height:'90vh',aspectRatio:'9/16',border:0}:{width:'min(90vw,1400px)',aspectRatio:'16/9',border:0});
+  yt.src='about:blank';ov.append(f);ov.onclick=e=>{if(e.target===ov){ov.remove();load()}};document.body.append(ov);gsap.from(f,{scale:.9,opacity:0,duration:.8,ease:'expo.out'})};
+
+// music & strip
+// gallery: photos rise in as they arrive; tap for a full-screen viewer
+gsap.utils.toArray('#masonry figure').forEach(f=>gsap.from(f,{y:80,opacity:0,duration:1.2,ease:'expo.out',scrollTrigger:{trigger:f,start:'top 95%'}}));
+const lb=document.getElementById('lb'),lbImg=lb.querySelector('img'),shots=[...document.querySelectorAll('#masonry img')];let li=0;
+const show=i=>{li=(i+shots.length)%shots.length;lbImg.src=shots[li].src;lb.querySelector('.count').textContent=`${li+1} / ${shots.length}`;gsap.fromTo(lbImg,{opacity:0,scale:.96},{opacity:1,scale:1,duration:.6,ease:'expo.out'})};
+shots.forEach((im,i)=>im.parentElement.onclick=()=>{lb.classList.add('open');lenis.stop();show(i)});
+const closeLb=()=>{lb.classList.remove('open');lenis.start()};
+lb.querySelector('.x').onclick=closeLb;lb.querySelector('.pv').onclick=()=>show(li-1);lb.querySelector('.nx').onclick=()=>show(li+1);
+lb.onclick=e=>{if(e.target===lb)closeLb()};
+addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')show(li-1);if(e.key==='ArrowRight')show(li+1)});
+
+// music: pick a single, its sleeve swaps and the record keeps spinning
+const singles=[...document.querySelectorAll('.single')];
+singles.forEach(sg=>sg.onclick=e=>{if(e.target.closest('.go'))return;singles.forEach(x=>x.classList.remove('on'));sg.classList.add('on');
+  gsap.timeline().to('.feat .sleeve',{xPercent:-8,rotate:-3,opacity:0,duration:.35,ease:'power2.in'})
+    .add(()=>{document.getElementById('featimg').src=sg.dataset.img;document.getElementById('feattitle').textContent=sg.querySelector('h3').textContent;document.getElementById('featmeta').textContent=sg.dataset.meta})
+    .to('.feat .sleeve',{xPercent:0,rotate:0,opacity:1,duration:.6,ease:'expo.out'})});
+gsap.fromTo('#disc',{xPercent:0},{xPercent:14,ease:'power3.out',scrollTrigger:{trigger:'.music',start:'top 70%',end:'top 20%',scrub:true}});
+gsap.from('.single',{x:60,opacity:0,stagger:.08,duration:1,ease:'expo.out',scrollTrigger:{trigger:'#singles',start:'top 80%'}});
+gsap.to('.strip .row',{xPercent:-30,ease:'none',scrollTrigger:{trigger:'.strip',scrub:true,start:'top bottom',end:'bottom top'}});
+gsap.from('footer h4',{y:80,opacity:0,duration:1.4,ease:'expo.out',scrollTrigger:{trigger:'footer',start:'top 85%'}});
+</script>
+</body>
+</html>
