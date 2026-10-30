@@ -163,6 +163,26 @@
   .s3 .tile:nth-child(2) { border-radius: 22px; }
   .s4 { background: var(--accent-2); color: var(--on-accent-2); }
   .s4 .media { grid-template-columns: 1fr 1fr; }
+  .s5 { background: var(--bg-2); color: var(--text); border: 1px solid var(--line); }
+  .s5 .media { grid-template-columns: 1.25fr 1fr; }
+  .seo-panel { border-radius: 22px 22px 0 0; padding: 28px 30px; overflow: hidden; min-height: 0; }
+  .seo-report { background: #f4f2ec; color: #17181a; display: grid; grid-template-columns: auto 1fr; gap: 26px; align-content: start; }
+  .seo-report .label { grid-column: 1 / -1; display: flex; justify-content: space-between; font: 800 14px/1 var(--cond); letter-spacing: .12em; text-transform: uppercase; color: #6a6b72; }
+  .ring { width: 128px; height: 128px; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(var(--accent) 0 62%, #ddd9cf 62% 100%); }
+  .ring b { width: 98px; height: 98px; border-radius: 50%; background: #f4f2ec; display: grid; place-items: center; font: 900 46px/1 var(--cond); }
+  .ring b small { display: block; font: 600 12px/1 Inter; color: #6a6b72; margin-top: -10px; }
+  .checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; align-content: start; font-size: 15px; }
+  .checks li { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid #e2ded3; padding-bottom: 9px; }
+  .checks em { font-style: normal; font-weight: 600; font-size: 12.5px; padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
+  .checks .ok { background: #dff3e6; color: #17703b; }
+  .checks .fix { background: #fde2e5; color: #a3001a; }
+  .checks .warn { background: #fff0cc; color: #8a5a00; }
+  .seo-get { background: var(--accent); color: var(--on-accent); display: grid; align-content: start; gap: 14px; }
+  .seo-get h4 { margin: 0 0 4px; font: 900 32px/.95 var(--cond); text-transform: uppercase; }
+  .seo-get ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; font-size: 15.5px; }
+  .seo-get li { padding-left: 24px; position: relative; }
+  .seo-get li::before { content: "✓"; position: absolute; left: 0; font-weight: 700; }
+  .seo-get a { justify-self: start; margin-top: 6px; background: #17181a; color: #fff; text-decoration: none; font-weight: 600; font-size: 14.5px; padding: 11px 18px; border-radius: 999px; }
 
   /* Horizontal work */
   .work { position: relative; }
@@ -302,6 +322,8 @@
     .s2 .media { grid-template-columns: 1fr 1fr; } .s2 .tile:nth-child(n+3) { display: none; }
     .s3 .media { grid-template-columns: 1fr; grid-template-rows: 1fr; } .s3 .tile:not(:first-child) { display: none; }
     .s1 .media, .s4 .media { grid-template-columns: 1fr; } .s1 .tile:last-child, .s4 .tile:last-child { display: none; }
+    .s5 .media { grid-template-columns: 1fr; } .s5 .seo-report { display: none; }
+    .seo-panel { padding: 22px; }
     .shelf { justify-content: flex-start; overflow-x: auto; padding: 40px 20px 20px; scroll-snap-type: x mandatory; }
     .book { width: 150px; scroll-snap-align: center; }
     .pr-media { display: none; }
@@ -389,7 +411,7 @@
 
   <!-- SERVICES -->
   <section class="services" id="services" data-ghost="Make">
-    <div class="wrap sec-head"><div><p class="kicker">What I make</p><h2 class="cond">Pick your <span class="serif accent">thing.</span></h2></div><p>Four things I do every week. Mix them and your brand looks like one piece.</p></div>
+    <div class="wrap sec-head"><div><p class="kicker">What I make</p><h2 class="cond">Pick your <span class="serif accent">thing.</span></h2></div><p>Five things I do every week. Mix them and your brand looks like one piece.</p></div>
     <div class="stack">
       <i class="marker"></i>
       <div class="svc"><article class="card s1" data-ghost="Explain">
@@ -424,6 +446,34 @@
         <div class="media">
           <a class="tile" data-cursor="View" href="#work"><img src="/studio/assets/img/countdown2binge-app-01.jpg" alt="Countdown2Binge app" loading="lazy"><span class="tag">Countdown2Binge</span></a>
           <a class="tile" data-cursor="View" href="#work"><img src="/studio/assets/img/sharks-app.jpg" alt="San Jose Sharks app" loading="lazy"><span class="tag">San Jose Sharks</span></a>
+        </div>
+      </article></div>
+      <i class="marker"></i>
+      <div class="svc"><article class="card s5" data-ghost="Search">
+        <div class="head"><h3 class="cond"><span class="num serif">No. 05</span>Get found on Google</h3><div class="desc"><p>Your site can look great and still be invisible. I check what's holding it back, fix it, and tell Google and Bing the moment your pages change.</p><div class="chips"><span>Free site check</span><span>Titles &amp; descriptions</span><span>Search Console</span><span>Speed</span></div></div></div>
+        <div class="media">
+          <div class="seo-panel seo-report" aria-label="Example site check report">
+            <div class="label"><span>Example site check</span><span>yourbusiness.com</span></div>
+            <div class="ring"><b>62<small>/100</small></b></div>
+            <ul class="checks">
+              <li>Page titles <em class="fix">Fix</em></li>
+              <li>Google can read your pages <em class="ok">Good</em></li>
+              <li>Works on phones <em class="ok">Good</em></li>
+              <li>Link previews on Facebook <em class="fix">Missing</em></li>
+              <li>Sitemap &amp; Search Console <em class="warn">Not set up</em></li>
+              <li>Page speed <em class="warn">Slow</em></li>
+            </ul>
+          </div>
+          <div class="seo-panel seo-get">
+            <h4>Free site check</h4>
+            <ul>
+              <li>A plain-English list of what's hurting your search ranking</li>
+              <li>The fixes, ranked by what matters most</li>
+              <li>Search Console and Bing set up for you</li>
+              <li>Pages that look right when shared on Facebook</li>
+            </ul>
+            <a href="#start">Get my free check</a>
+          </div>
         </div>
       </article></div>
     </div>
@@ -507,6 +557,7 @@
             <label><input type="checkbox" name="need" value="Website"><span>Website</span></label>
             <label><input type="checkbox" name="need" value="iOS app"><span>iOS app</span></label>
             <label><input type="checkbox" name="need" value="App launch reel"><span>App launch reel</span></label>
+            <label><input type="checkbox" name="need" value="Free SEO check"><span>Free SEO check</span></label>
             <label><input type="checkbox" name="need" value="Not sure yet"><span>Not sure yet</span></label>
           </div>
         </fieldset>
