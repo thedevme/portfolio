@@ -24,7 +24,6 @@ const nextConfig = {
     // Keep the freelance pages off the main portfolio domain
     return [
       { source: '/studio/:path*', has: [{ type: 'host', value: MAIN_HOST }], destination: '/', permanent: false },
-      { source: '/MontanaTucker/:path*', has: [{ type: 'host', value: STUDIO_HOST }], destination: '/montanatucker/:path*', permanent: false },
       { source: '/services/:path*', has: [{ type: 'host', value: MAIN_HOST }], destination: '/', permanent: false },
     ];
   },
