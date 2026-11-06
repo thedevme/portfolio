@@ -111,7 +111,7 @@ button:focus-visible,input:focus-visible{outline:3px solid #BA2A1F;outline-offse
 <div style="border-top: 2px dashed #2F2B36; padding: 10px 0">
 <div style="display: flex; justify-content: space-between; gap: 12px"><span>Profit ({{goalPct}}% of price)</span><span>{{profit}}</span></div>
 <div style="display: flex; justify-content: space-between; gap: 12px; align-items: baseline; font-weight: 800; font-size: 30px; color: #BA2A1F; margin-top: 6px"><span>Price</span><span>{{price}}</span></div>
-<div style="display: flex; justify-content: space-between; gap: 12px"><span>Deposit (70%)</span><span>{{deposit}}</span></div>
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>Deposit (50%)</span><span>{{deposit}}</span></div>
 </div>
 <div style="border-top: 2px dashed #2F2B36; padding: 10px 0">
 <div style="display: flex; justify-content: space-between; gap: 12px"><span>If sold at {{askText}}</span><span>{{askProfit}} ({{askPct}}%)</span></div>
@@ -123,8 +123,8 @@ button:focus-visible,input:focus-visible{outline:3px solid #BA2A1F;outline-offse
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":860}}'>
-const RATES={warranty:.05,shipping:.15,tax:.07,deposit:.7,minimum:.1};
-const OVERHEAD_HOUR=82.36882716049382;
+const RATES={warranty:.04,shipping:.12,tax:.06,deposit:.5,minimum:.08};
+const OVERHEAD_HOUR=65;
 function priceJob(parts,hours,rate,goal){
   const sub=parts.reduce((t,p)=>t+p.cost*p.qty,0),taxed=parts.reduce((t,p)=>t+(p.taxed?p.cost*p.qty:0),0);
   const shipping=sub*RATES.shipping,tax=(taxed+shipping)*RATES.tax,material=sub+shipping+tax,reserve=material*RATES.warranty;
@@ -138,7 +138,7 @@ function verdict(pct,goal){
   return 'You would lose money';
 }
 const money=n=>(n<0?'-$':'$')+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
-const PRODUCTS=[{id:'garage',name:'Garage door',hours:7,parts:[{id:'door',name:'Door',cost:1000,qty:1,taxed:true,example:true},{id:'motor',name:'Motor',cost:203,qty:1,taxed:true},{id:'remote',name:'Remote',cost:27,qty:2,taxed:true},{id:'keyless',name:'Keyless entry',cost:88,qty:1,taxed:true},{id:'screen',name:'HP screen',cost:270,qty:0,taxed:true},{id:'jack',name:'Jackshaft',cost:526,qty:0,taxed:false}]},{id:'hurricane',name:'Hurricane screen',hours:8,parts:[{id:'screen',name:'Screen',cost:1200,qty:1,taxed:true,example:true},{id:'rgs',name:'RGS',cost:4.71,qty:20,taxed:true},{id:'track',name:'HC track',cost:9.55,qty:20,taxed:true},{id:'carriage',name:'Carriage bolt',cost:9.72,qty:4,taxed:false},{id:'eye',name:'Eye bolt',cost:12.31,qty:4,taxed:true},{id:'notch',name:'Notch',cost:18,qty:0,taxed:false}]},{id:'shade',name:'Shade',hours:6,parts:[{id:'panel',name:'Shade panel',cost:900,qty:1,taxed:true,example:true},{id:'hardware',name:'Mounting hardware',cost:150,qty:1,taxed:true,example:true}]}];
+const PRODUCTS=[{id:'garage',name:'Garage door',hours:7,parts:[{id:'door',name:'Door',cost:1200,qty:1,taxed:true,example:true},{id:'motor',name:'Motor',cost:240,qty:1,taxed:true},{id:'remote',name:'Remote',cost:35,qty:2,taxed:true},{id:'keyless',name:'Keyless entry',cost:60,qty:1,taxed:true},{id:'screen',name:'HP screen',cost:200,qty:0,taxed:true},{id:'jack',name:'Jackshaft',cost:450,qty:0,taxed:false}]},{id:'hurricane',name:'Hurricane screen',hours:8,parts:[{id:'screen',name:'Screen',cost:1500,qty:1,taxed:true,example:true},{id:'rgs',name:'RGS',cost:6,qty:20,taxed:true},{id:'track',name:'HC track',cost:12,qty:20,taxed:true},{id:'carriage',name:'Carriage bolt',cost:8,qty:4,taxed:false},{id:'eye',name:'Eye bolt',cost:10,qty:4,taxed:true},{id:'notch',name:'Notch',cost:15,qty:0,taxed:false}]},{id:'shade',name:'Shade',hours:6,parts:[{id:'panel',name:'Shade panel',cost:900,qty:1,taxed:true,example:true},{id:'hardware',name:'Mounting hardware',cost:150,qty:1,taxed:true,example:true}]}];
 const CREW=[{id:'lead',name:'Lead',rate:48},{id:'install',name:'Installer',rate:42},{id:'helper',name:'Helper',rate:30}];
 
 function tipState(c){return {tipOpen:!!c.state.tipOpen,showTip:()=>c.setState({tipOpen:true}),hideTip:()=>c.setState({tipOpen:false})};}
@@ -164,7 +164,7 @@ class Component extends DCLogic {
       crew:labor.map(c=>({name:c.name,rate:c.rate,count:c.count,lessLabel:'One fewer '+c.name,moreLabel:'One more '+c.name,inc:()=>this.setState({crew:{...s.crew,[c.id]:c.count+1}}),dec:()=>this.setState({crew:{...s.crew,[c.id]:Math.max(0,c.count-1)}})})),
       hours:s.hours[s.product],setHours:e=>this.setState({hours:{...s.hours,[s.product]:e.target.value}}),noCrew:people===0,
       lines:parts.filter(p=>p.qty>0).map(p=>({label:p.qty+' x '+p.name,value:money(p.cost*p.qty)})),
-      costs:[{label:'Shipping (15%)',value:money(r.shipping)},{label:'Tax (7%)',value:money(r.tax)},{label:'Warranty cushion (5%)',value:money(r.reserve)},...laborLines,{label:'Overhead, '+manHours+' hr x $'+OVERHEAD_HOUR.toFixed(2),value:money(r.overhead)}],
+      costs:[{label:'Shipping (12%)',value:money(r.shipping)},{label:'Tax (6%)',value:money(r.tax)},{label:'Warranty cushion (4%)',value:money(r.reserve)},...laborLines,{label:'Overhead, '+manHours+' hr x $'+OVERHEAD_HOUR.toFixed(2),value:money(r.overhead)}],
       cost:money(r.cost),profit:money(r.profit),price:money(r.price),priceShort:money(r.price),slices,chartLabel:'Price breakdown: '+slices.map(x=>x.name+' '+x.pct+'%').join(', '),deposit:money(r.deposit),
       goal:s.goal,goalPct,setGoal:e=>this.setState({goal:e.target.value}),ask:s.ask,setAsk:e=>this.setState({ask:e.target.value}),askText:money(ask),verdict:ask>0?verdict(pct,goal):'Type a price to check it',askProfit:money(kept),askPct:(pct*100).toFixed(1)
     };
