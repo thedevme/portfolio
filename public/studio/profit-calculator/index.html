@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OCS quote tool demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<script src="runtime.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap">
+<style>
+body{margin:0}
+button,input{font:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible{outline:3px solid #BA2A1F;outline-offset:2px}
+</style>
+</helmet>
+<div style="background: #F5F4F4; color: #2F2B36; font-family: 'Wix Madefor Display', Helvetica, Arial, sans-serif; min-height: 860px; box-sizing: border-box; padding: 32px 24px">
+<div style="max-width: 1120px; width: 100%; margin: 0 auto 16px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px"><div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px"><div style="font-size: 22px; font-weight: 800; color: #BA2A1F">OCS</div></div><div style="font-size: 14px; color: #5A5560">Quote tool demo. Prices are samples.</div></div>
+<div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start">
+<div style="flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<h1 style="margin: 0; font-size: 26px; font-weight: 600">Build the job. Watch the receipt add up.</h1>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{products}}" as="o" hint-placeholder-count="3">
+<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.on}}" style="min-height: 44px; padding: 0 16px; border-radius: 22px; border: 1px solid #CFCBCD; background: {{o.bg}}; color: {{o.fg}}; font-weight: 500">{{o.name}}</button>
+</sc-for>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr)); gap: 8px">
+<sc-for list="{{parts}}" as="p" hint-placeholder-count="6">
+<div style="background: #FFFFFF; border-radius: 8px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<div style="min-width: 0; font-weight: 500">{{p.name}}</div>
+<div style="display: flex; align-items: center; gap: 2px; flex: none">
+<button type="button" aria-label="Remove one" onClick="{{p.dec}}" style="width: 44px; height: 44px; border: 1px solid #CFCBCD; border-radius: 22px; background: #FFFFFF; color: #2F2B36; font-size: 18px">-</button>
+<div style="width: 32px; text-align: center; font-weight: 600">{{p.qty}}</div>
+<button type="button" aria-label="Add one" onClick="{{p.inc}}" style="width: 44px; height: 44px; border: 1px solid #CFCBCD; border-radius: 22px; background: #FFFFFF; color: #2F2B36; font-size: 18px">+</button>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-weight: 500">Who is doing the job</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); gap: 8px">
+<sc-for list="{{crew}}" as="c" hint-placeholder-count="3">
+<div style="background: #FFFFFF; border-radius: 8px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<div style="min-width: 0; font-weight: 500">{{c.name}}<span style="display: block; font-size: 13px; font-weight: 400; color: #5A5560">${{c.rate}}/hr (example)</span></div>
+<div style="display: flex; align-items: center; gap: 2px; flex: none">
+<button type="button" aria-label="{{c.lessLabel}}" onClick="{{c.dec}}" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #CFCBCD; background: #FFFFFF; color: #2F2B36; font-size: 18px">-</button>
+<div style="width: 26px; text-align: center; font-weight: 600">{{c.count}}</div>
+<button type="button" aria-label="{{c.moreLabel}}" onClick="{{c.inc}}" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #CFCBCD; background: #FFFFFF; color: #2F2B36; font-size: 18px">+</button>
+</div>
+</div>
+</sc-for>
+</div>
+<sc-if value="{{noCrew}}" hint-placeholder-val="{{ false }}"><div style="font-weight: 500; color: #BA2A1F">Add at least one person so labor is counted.</div></sc-if>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="r-hours" style="font-weight: 500">Hours on the job</label>
+<input id="r-hours" type="number" min="0" step="0.5" value="{{hours}}" onChange="{{setHours}}" style="width: 110px; height: 44px; box-sizing: border-box; padding: 0 10px; border: 1px solid #CFCBCD; border-radius: 6px; background: #FFFFFF; color: #2F2B36">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="r-goal" style="font-weight: 500">Profit %</label>
+<input id="r-goal" type="number" min="0" max="90" value="{{goal}}" onChange="{{setGoal}}" style="width: 90px; height: 44px; box-sizing: border-box; padding: 0 10px; border: 1px solid #CFCBCD; border-radius: 6px; background: #FFFFFF; color: #2F2B36">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; align-items: center; gap: 8px"><label for="r-ask" style="font-weight: 500">Can we do?</label><div style="position: relative; display: inline-flex; z-index: 30"><button type="button" aria-label="What does Can we do mean?" onClick="{{showTip}}" onMouseEnter="{{showTip}}" onMouseLeave="{{hideTip}}" onFocus="{{showTip}}" onBlur="{{hideTip}}" style="width: 20px; height: 20px; padding: 0; border: 1.5px solid currentColor; border-radius: 22px; background: transparent; color: inherit; font-size: 12px; font-weight: 700; line-height: 1">i</button><sc-if value="{{tipOpen}}" hint-placeholder-val="{{ false }}"><div role="tooltip" style="position: absolute; bottom: 28px; left: -8px; width: 260px; box-sizing: border-box; background: #2F2B36; color: #FFFFFF; border-radius: 8px; padding: 10px 12px; font-size: 14px; font-weight: 400; line-height: 1.4; text-align: left">The customer counters with a lower price. Type it here to see if the numbers still work.</div></sc-if></div></div>
+<input id="r-ask" type="number" min="0" value="{{ask}}" onChange="{{setAsk}}" style="width: 140px; height: 44px; box-sizing: border-box; padding: 0 10px; border: 1px solid #CFCBCD; border-radius: 6px; background: #FFFFFF; color: #2F2B36">
+</div>
+</div>
+<div style="background: #FFFFFF; border-radius: 8px; padding: 18px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center">
+<div style="position: relative; width: 190px; height: 190px; flex: none">
+<svg width="190" height="190" viewBox="0 0 190 190" role="img" aria-label="{{chartLabel}}" style="display: block; transform: rotate(-90deg)">
+<sc-for list="{{slices}}" as="s" hint-placeholder-count="4"><circle cx="95" cy="95" r="70" style="fill: none; stroke-width: 30; stroke: {{s.color}}; stroke-dasharray: {{s.dash}}; stroke-dashoffset: {{s.offset}}"><title>{{s.tip}}</title></circle></sc-for>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 190px; height: 190px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center">
+<div style="font-size: 13px; color: #5A5560">Price</div>
+<div style="font-size: 19px; font-weight: 800; color: #2F2B36; font-variant-numeric: tabular-nums">{{priceShort}}</div>
+</div>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="font-weight: 600; font-size: 17px">Where the price goes</div>
+<sc-for list="{{slices}}" as="s" hint-placeholder-count="4">
+<div style="display: flex; align-items: center; gap: 10px; font-variant-numeric: tabular-nums">
+<div style="width: 12px; height: 12px; border-radius: 3px; flex: none; background: {{s.color}}"></div>
+<div style="flex: 1 1 auto; min-width: 0">{{s.name}}</div>
+<div style="font-weight: 600">{{s.pct}}%</div>
+<div style="width: 86px; text-align: right; color: #5A5560">{{s.value}}</div>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+<div style="flex: 1 1 400px; min-width: 0">
+<div style="background: #FFFFFF; color: #2F2B36; border-radius: 8px; font-size: 16px; line-height: 1.45; padding: 26px 26px 12px">
+<div style="text-align: center; font-weight: 700; font-size: 20px">{{productName}}</div>
+<div style="text-align: center; margin-bottom: 14px">Quote worksheet</div>
+<div style="border-top: 2px dashed #2F2B36; padding: 10px 0; display: flex; flex-direction: column; gap: 2px">
+<sc-for list="{{lines}}" as="l" hint-placeholder-count="4">
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>{{l.label}}</span><span>{{l.value}}</span></div>
+</sc-for>
+</div>
+<div style="border-top: 2px dashed #2F2B36; padding: 10px 0; display: flex; flex-direction: column; gap: 2px">
+<sc-for list="{{costs}}" as="l" hint-placeholder-count="5">
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>{{l.label}}</span><span>{{l.value}}</span></div>
+</sc-for>
+<div style="display: flex; justify-content: space-between; gap: 12px; font-weight: 700; margin-top: 4px"><span>What the job costs</span><span>{{cost}}</span></div>
+</div>
+<div style="border-top: 2px dashed #2F2B36; padding: 10px 0">
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>Profit ({{goalPct}}% of price)</span><span>{{profit}}</span></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; align-items: baseline; font-weight: 800; font-size: 30px; color: #BA2A1F; margin-top: 6px"><span>Price</span><span>{{price}}</span></div>
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>Deposit (70%)</span><span>{{deposit}}</span></div>
+</div>
+<div style="border-top: 2px dashed #2F2B36; padding: 10px 0">
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>If sold at {{askText}}</span><span>{{askProfit}} ({{askPct}}%)</span></div>
+<div style="font-weight: 700; margin-top: 2px">{{verdict}}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":860}}'>
+const RATES={warranty:.05,shipping:.15,tax:.07,deposit:.7,minimum:.1};
+const OVERHEAD_HOUR=82.36882716049382;
+function priceJob(parts,hours,rate,goal){
+  const sub=parts.reduce((t,p)=>t+p.cost*p.qty,0),taxed=parts.reduce((t,p)=>t+(p.taxed?p.cost*p.qty:0),0);
+  const shipping=sub*RATES.shipping,tax=(taxed+shipping)*RATES.tax,material=sub+shipping+tax,reserve=material*RATES.warranty;
+  const labor=hours*rate,overhead=hours*OVERHEAD_HOUR,cost=material+reserve+labor+overhead,price=cost/(1-goal);
+  return {sub,shipping,tax,material,reserve,labor,overhead,cost,price,profit:price-cost,deposit:price*RATES.deposit};
+}
+function verdict(pct,goal){
+  if(pct>=goal-.0005)return 'Meets your profit goal';
+  if(pct>=RATES.minimum)return 'Below your goal, above your minimum';
+  if(pct>=0)return 'Below your minimum';
+  return 'You would lose money';
+}
+const money=n=>(n<0?'-$':'$')+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const PRODUCTS=[{id:'garage',name:'Garage door',hours:7,parts:[{id:'door',name:'Door',cost:1000,qty:1,taxed:true,example:true},{id:'motor',name:'Motor',cost:203,qty:1,taxed:true},{id:'remote',name:'Remote',cost:27,qty:2,taxed:true},{id:'keyless',name:'Keyless entry',cost:88,qty:1,taxed:true},{id:'screen',name:'HP screen',cost:270,qty:0,taxed:true},{id:'jack',name:'Jackshaft',cost:526,qty:0,taxed:false}]},{id:'hurricane',name:'Hurricane screen',hours:8,parts:[{id:'screen',name:'Screen',cost:1200,qty:1,taxed:true,example:true},{id:'rgs',name:'RGS',cost:4.71,qty:20,taxed:true},{id:'track',name:'HC track',cost:9.55,qty:20,taxed:true},{id:'carriage',name:'Carriage bolt',cost:9.72,qty:4,taxed:false},{id:'eye',name:'Eye bolt',cost:12.31,qty:4,taxed:true},{id:'notch',name:'Notch',cost:18,qty:0,taxed:false}]},{id:'shade',name:'Shade',hours:6,parts:[{id:'panel',name:'Shade panel',cost:900,qty:1,taxed:true,example:true},{id:'hardware',name:'Mounting hardware',cost:150,qty:1,taxed:true,example:true}]}];
+const CREW=[{id:'lead',name:'Lead',rate:48},{id:'install',name:'Installer',rate:42},{id:'helper',name:'Helper',rate:30}];
+
+function tipState(c){return {tipOpen:!!c.state.tipOpen,showTip:()=>c.setState({tipOpen:true}),hideTip:()=>c.setState({tipOpen:false})};}
+class Component extends DCLogic {
+  constructor(props){super(props);const q={},h={};PRODUCTS.forEach(p=>{q[p.id]={};h[p.id]=p.hours;p.parts.forEach(x=>q[p.id][x.id]=x.qty)});this.state={product:'garage',qty:q,hours:{garage:3,hurricane:3,shade:2},crew:{lead:1,install:0,helper:2},ask:3000,goal:20};}
+  bump(id,d){const s=this.state,cur=s.qty[s.product];this.setState({qty:{...s.qty,[s.product]:{...cur,[id]:Math.max(0,cur[id]+d)}}});}
+  renderVals(){
+    const s=this.state,prod=PRODUCTS.find(p=>p.id===s.product),goalPct=Math.min(90,Math.max(0,Number(s.goal)||0)),goal=goalPct/100,hrs=Math.max(0,Number(s.hours[s.product])||0);
+    const parts=prod.parts.map(p=>({...p,qty:s.qty[s.product][p.id]}));
+    const labor=CREW.map(c=>({...c,count:s.crew[c.id],cost:s.crew[c.id]*hrs*c.rate})),people=labor.reduce((t,c)=>t+c.count,0),manHours=people*hrs,laborCost=labor.reduce((t,c)=>t+c.cost,0);
+    const r=priceJob(parts,manHours,manHours>0?laborCost/manHours:0,goal),ask=Number(s.ask)||0,kept=ask>0?ask-r.cost:0,pct=ask>0?kept/ask:0;
+    const laborLines=labor.filter(c=>c.count>0).map(c=>({label:c.count+' '+c.name+(c.count>1?'s':'')+', '+hrs+' hr x $'+c.rate,value:money(c.cost)}));
+    if(!laborLines.length)laborLines.push({label:'Labor, no crew added',value:money(0)});
+    const C=2*Math.PI*70,parts4=[{name:'Materials and warranty',n:r.material+r.reserve,color:'#2A6FC9'},{name:'Labor',n:r.labor,color:'#E0960C'},{name:'Overhead',n:r.overhead,color:'#0F8F80'},{name:'Profit',n:r.profit,color:'#BA2A1F'}];
+    const raw=parts4.map(x=>r.price>0?x.n/r.price*100:0),whole=raw.map(Math.floor);let left=r.price>0?100-whole.reduce((a,b)=>a+b,0):0;
+    raw.map((x,i)=>[x-whole[i],i]).sort((a,b)=>b[0]-a[0]).forEach(([,i])=>{if(left>0){whole[i]++;left--;}});
+    let run=0;const slices=parts4.map((x,i)=>{const len=r.price>0?x.n/r.price*C:0,sl={name:x.name,color:x.color,pct:whole[i],value:money(x.n),tip:x.name+': '+money(x.n)+' ('+whole[i]+'%)',dash:Math.max(0,len-2).toFixed(2)+' '+C.toFixed(2),offset:(-run).toFixed(2)};run+=len;return sl;});
+    return {
+      ...tipState(this),
+      products:PRODUCTS.map(p=>({name:p.name,on:p.id===s.product,bg:p.id===s.product?'#BA2A1F':'#FFFFFF',fg:p.id===s.product?'#FFFFFF':'#2F2B36',pick:()=>this.setState({product:p.id})})),
+      productName:prod.name,
+      parts:parts.map(p=>({name:p.name+(p.example?' (example)':''),qty:p.qty,inc:()=>this.bump(p.id,1),dec:()=>this.bump(p.id,-1)})),
+      crew:labor.map(c=>({name:c.name,rate:c.rate,count:c.count,lessLabel:'One fewer '+c.name,moreLabel:'One more '+c.name,inc:()=>this.setState({crew:{...s.crew,[c.id]:c.count+1}}),dec:()=>this.setState({crew:{...s.crew,[c.id]:Math.max(0,c.count-1)}})})),
+      hours:s.hours[s.product],setHours:e=>this.setState({hours:{...s.hours,[s.product]:e.target.value}}),noCrew:people===0,
+      lines:parts.filter(p=>p.qty>0).map(p=>({label:p.qty+' x '+p.name,value:money(p.cost*p.qty)})),
+      costs:[{label:'Shipping (15%)',value:money(r.shipping)},{label:'Tax (7%)',value:money(r.tax)},{label:'Warranty cushion (5%)',value:money(r.reserve)},...laborLines,{label:'Overhead, '+manHours+' hr x $'+OVERHEAD_HOUR.toFixed(2),value:money(r.overhead)}],
+      cost:money(r.cost),profit:money(r.profit),price:money(r.price),priceShort:money(r.price),slices,chartLabel:'Price breakdown: '+slices.map(x=>x.name+' '+x.pct+'%').join(', '),deposit:money(r.deposit),
+      goal:s.goal,goalPct,setGoal:e=>this.setState({goal:e.target.value}),ask:s.ask,setAsk:e=>this.setState({ask:e.target.value}),askText:money(ask),verdict:ask>0?verdict(pct,goal):'Type a price to check it',askProfit:money(kept),askPct:(pct*100).toFixed(1)
+    };
+  }
+}
+</script>
+</body>
+</html>

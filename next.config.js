@@ -17,6 +17,9 @@ const nextConfig = {
         { source: '/montanatucker', has: [{ type: 'host', value: STUDIO_HOST }], destination: '/studio/montana-tucker/index.html' },
         { source: '/montanatucker/site', has: [{ type: 'host', value: STUDIO_HOST }], destination: '/studio/montana-tucker/site/index.html' },
         { source: '/montanatucker/:path*', has: [{ type: 'host', value: STUDIO_HOST }], destination: '/studio/montana-tucker/:path*' },
+        // Unlisted quote tool demo (noindex, not linked from the site)
+        { source: '/profitcalculator', has: [{ type: 'host', value: STUDIO_HOST }], destination: '/studio/profit-calculator/index.html' },
+        { source: '/profitcalculator/:path*', has: [{ type: 'host', value: STUDIO_HOST }], destination: '/studio/profit-calculator/:path*' },
       ],
     };
   },
